@@ -29,20 +29,31 @@ function renderTransformerChain() {
         // Create transformer node
         const node = document.createElement('div');
         node.className = 'transformer-node';
-        node.textContent = data.name;
+        node.id = `transformer-${id}`;
+        
+        // Add name and timestamp
+        const nameSpan = document.createElement('div');
+        nameSpan.textContent = data.name;
+        nameSpan.className = 'transformer-name';
+        
+        const timeSpan = document.createElement('div');
+        timeSpan.textContent = `t+${data.timestamp - transformers[0][1].timestamp}ms`;
+        timeSpan.className = 'transformer-timestamp';
+        
+        node.appendChild(nameSpan);
+        node.appendChild(timeSpan);
         node.onclick = () => selectTransformer(id);
         
         container.appendChild(node);
         
-        // Add arrow if not last
         if (index < transformers.length - 1) {
             const arrow = document.createElement('div');
             arrow.className = 'transformer-arrow';
-            arrow.textContent = '→';
+            arrow.innerHTML = '&rarr;';
             container.appendChild(arrow);
         }
     });
-}
+ }
 
 // Tree view functions
 function createTreeView(data, level = 0) {
@@ -57,10 +68,10 @@ function createTreeView(data, level = 0) {
         if (typeof value === 'object' && value !== null) {
             const toggle = document.createElement('span');
             toggle.className = 'node-toggle';
-            toggle.textContent = '▶ ';
+            toggle.innerHTML = '&#9656; ';
             toggle.onclick = () => {
                 const content = node.querySelector('.node-content');
-                toggle.textContent = content.style.display === 'none' ? '▶ ' : '▼ ';
+                toggle.innerHTML = content.style.display === 'none' ? '&#9656; ' : '&#9662; ';
                 content.style.display = content.style.display === 'none' ? 'block' : 'none';
             };
             
@@ -95,38 +106,54 @@ function createTreeView(data, level = 0) {
     return container;
 }
 
-// Diff view functions
 function generateDiff(prev, curr, path = '') {
     const container = document.createElement('div');
     container.className = 'diff-view';
-    
+    let hasChanges = false;
+
     function addLine(content, type) {
+        hasChanges = true;
         const line = document.createElement('div');
         line.className = type ? `diff-${type}` : '';
         line.textContent = content;
         container.appendChild(line);
     }
-    
+
     function compareDeeply(prev, curr, path) {
-        const allKeys = new Set([...Object.keys(prev), ...Object.keys(curr)]);
+        const allKeys = new Set([...Object.keys(prev || {}), ...Object.keys(curr || {})]);
         
         for (const key of allKeys) {
             const currentPath = path ? `${path}.${key}` : key;
-            
-            if (!(key in prev)) {
-                addLine(`+ ${currentPath}: ${JSON.stringify(curr[key])}`, 'added');
-            } else if (!(key in curr)) {
-                addLine(`- ${currentPath}: ${JSON.stringify(prev[key])}`, 'removed');
-            } else if (typeof prev[key] === 'object' && typeof curr[key] === 'object') {
-                compareDeeply(prev[key], curr[key], currentPath);
-            } else if (prev[key] !== curr[key]) {
-                addLine(`- ${currentPath}: ${JSON.stringify(prev[key])}`, 'removed');
-                addLine(`+ ${currentPath}: ${JSON.stringify(curr[key])}`, 'added');
+            const prevValue = prev?.[key];
+            const currValue = curr?.[key];
+
+            if (!prev || !(key in prev)) {
+                addLine(`+ ${currentPath}: ${JSON.stringify(currValue)}`, 'added');
+            } else if (!curr || !(key in curr)) {
+                addLine(`- ${currentPath}: ${JSON.stringify(prevValue)}`, 'removed');
+            } else if (typeof prevValue === 'object' && typeof currValue === 'object') {
+                if (Array.isArray(prevValue) !== Array.isArray(currValue)) {
+                    addLine(`- ${currentPath}: ${JSON.stringify(prevValue)}`, 'removed');
+                    addLine(`+ ${currentPath}: ${JSON.stringify(currValue)}`, 'added');
+                } else {
+                    compareDeeply(prevValue, currValue, currentPath);
+                }
+            } else if (JSON.stringify(prevValue) !== JSON.stringify(currValue)) {
+                addLine(`- ${currentPath}: ${JSON.stringify(prevValue)}`, 'removed');
+                addLine(`+ ${currentPath}: ${JSON.stringify(currValue)}`, 'added');
             }
         }
     }
     
     compareDeeply(prev, curr, path);
+    
+    if (!hasChanges) {
+        const noChanges = document.createElement('div');
+        noChanges.className = 'diff-message';
+        noChanges.textContent = 'No changes in this transformation';
+        container.appendChild(noChanges);
+    }
+    
     return container;
 }
 
@@ -155,10 +182,17 @@ function updateDiffView() {
         return;
     }
     
-    const prevData = transformers[currentIndex - 1][1].content;
-    const currentData = transformers[currentIndex][1].content;
+    const prevId = transformers[currentIndex - 1][0];
+    const prevData = transformerData[prevId].content;
+    const currentData = transformerData[currentTransformer].content;
+    
+    // Debug logs
+    console.log('Previous:', prevData);
+    console.log('Current:', currentData);
     
     const diff = generateDiff(prevData, currentData);
+    
+    // Clear and append
     container.innerHTML = '';
     container.appendChild(diff);
 }
@@ -167,12 +201,15 @@ function updateDiffView() {
 function selectTransformer(id) {
     currentTransformer = id;
     
-    // Update UI
+    // Update UI - use the unique id to find the element
     document.querySelectorAll('.transformer-node').forEach(node => {
         node.classList.remove('active');
     });
-    document.querySelector(`div[onclick="selectTransformer('${id}')"]`)
-        .classList.add('active');
+    
+    const selectedNode = document.getElementById(`transformer-${id}`);
+    if (selectedNode) {
+        selectedNode.classList.add('active');
+    }
     
     // Update header
     document.getElementById('current-transformer').textContent = 
