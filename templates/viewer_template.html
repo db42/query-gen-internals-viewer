@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Spec Transformer Viewer</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <!-- Timeline showing transformation chain -->
+    <div class="timeline">
+        <div id="transformer-chain" class="timeline-chain">
+            <!-- Will be populated by JavaScript -->
+        </div>
+    </div>
+    
+    <!-- Main content area -->
+    <div class="main-content">
+        <!-- Left panel: Current transformer view -->
+        <div class="panel">
+            <div class="panel-header">
+                <div class="toolbar">
+                    <button onclick="setViewMode('tree')" id="btn-tree">Tree View</button>
+                    <button onclick="setViewMode('raw')" id="btn-raw">Raw View</button>
+                </div>
+                <div id="current-transformer">Current Transformer: None</div>
+            </div>
+            <div class="panel-content">
+                <div id="current-view"></div>
+            </div>
+        </div>
+        
+        <!-- Right panel: Diff view -->
+        <div class="panel">
+            <div class="panel-header">
+                <div id="diff-header">Changes from Previous Step</div>
+            </div>
+            <div class="panel-content">
+                <div id="diff-view"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/viewer.js"></script>
+</body>
+</html>
