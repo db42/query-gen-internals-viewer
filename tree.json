@@ -1,0 +1,419 @@
+
+JSON output:
+{
+  "transformers": [
+    {
+      "name": "TopSort",
+      "start": 0,
+      "end": 50,
+      "children": []
+    },
+    {
+      "name": "TableFilter",
+      "start": 53,
+      "end": 59,
+      "children": []
+    },
+    {
+      "name": "WorksheetTableJoin",
+      "start": 64,
+      "end": 66,
+      "children": []
+    },
+    {
+      "name": "Worksheet",
+      "start": 72,
+      "end": 74,
+      "children": []
+    },
+    {
+      "name": "InheritDateBucket",
+      "start": 88,
+      "end": 91,
+      "children": []
+    },
+    {
+      "name": "GroupAggregateOptimization",
+      "start": 94,
+      "end": 98,
+      "children": []
+    },
+    {
+      "name": "TableAggregate",
+      "start": 99,
+      "end": 101,
+      "children": []
+    },
+    {
+      "name": "WindowingFunction",
+      "start": 117,
+      "end": 120,
+      "children": []
+    },
+    {
+      "name": "UniqueCount",
+      "start": 123,
+      "end": 126,
+      "children": []
+    },
+    {
+      "name": "ComplexQuery",
+      "start": 128,
+      "end": 135,
+      "children": []
+    },
+    {
+      "name": "RankRelatedFunction",
+      "start": 136,
+      "end": 137,
+      "children": []
+    },
+    {
+      "name": "ReduceJoinPath",
+      "start": 138,
+      "end": 147,
+      "children": []
+    },
+    {
+      "name": "RLS",
+      "start": 149,
+      "end": 150,
+      "children": []
+    },
+    {
+      "name": "AggregateWorksheet",
+      "start": 151,
+      "end": 162,
+      "children": []
+    },
+    {
+      "name": "MergeQueryTable",
+      "start": 164,
+      "end": 172,
+      "children": []
+    },
+    {
+      "name": "DateExpression",
+      "start": 177,
+      "end": 180,
+      "children": []
+    },
+    {
+      "name": "AggregateConstantExpression",
+      "start": 181,
+      "end": 182,
+      "children": []
+    },
+    {
+      "name": "TopSort",
+      "start": 415,
+      "end": 417,
+      "children": []
+    },
+    {
+      "name": "TableFilter",
+      "start": 418,
+      "end": 422,
+      "children": []
+    },
+    {
+      "name": "WorksheetTableJoin",
+      "start": 424,
+      "end": 426,
+      "children": []
+    },
+    {
+      "name": "Worksheet",
+      "start": 427,
+      "end": 428,
+      "children": []
+    },
+    {
+      "name": "InheritDateBucket",
+      "start": 429,
+      "end": 499,
+      "children": []
+    },
+    {
+      "name": "GroupAggregateOptimization",
+      "start": 501,
+      "end": 505,
+      "children": []
+    },
+    {
+      "name": "TableAggregate",
+      "start": 506,
+      "end": 507,
+      "children": []
+    },
+    {
+      "name": "WindowingFunction",
+      "start": 512,
+      "end": 514,
+      "children": []
+    },
+    {
+      "name": "UniqueCount",
+      "start": 515,
+      "end": 518,
+      "children": []
+    },
+    {
+      "name": "ComplexQuery",
+      "start": 519,
+      "end": 522,
+      "children": []
+    },
+    {
+      "name": "RankRelatedFunction",
+      "start": 523,
+      "end": 524,
+      "children": []
+    },
+    {
+      "name": "ReduceJoinPath",
+      "start": 526,
+      "end": 533,
+      "children": []
+    },
+    {
+      "name": "RLS",
+      "start": 535,
+      "end": 536,
+      "children": []
+    },
+    {
+      "name": "AggregateWorksheet",
+      "start": 537,
+      "end": 539,
+      "children": []
+    },
+    {
+      "name": "MergeQueryTable",
+      "start": 541,
+      "end": 545,
+      "children": []
+    },
+    {
+      "name": "DateExpression",
+      "start": 550,
+      "end": 554,
+      "children": []
+    },
+    {
+      "name": "AggregateConstantExpression",
+      "start": 555,
+      "end": 598,
+      "children": []
+    },
+    {
+      "name": "TopSort",
+      "start": 620,
+      "end": 621,
+      "children": []
+    },
+    {
+      "name": "TableFilter",
+      "start": 622,
+      "end": null,
+      "children": [
+        {
+          "name": "WorksheetTableJoin",
+          "start": 623,
+          "end": 624,
+          "children": []
+        },
+        {
+          "name": "Worksheet",
+          "start": 625,
+          "end": 628,
+          "children": []
+        },
+        {
+          "name": "InheritDateBucket",
+          "start": 629,
+          "end": 630,
+          "children": []
+        },
+        {
+          "name": "GroupAggregateOptimization",
+          "start": 631,
+          "end": 632,
+          "children": []
+        },
+        {
+          "name": "TableAggregate",
+          "start": 633,
+          "end": 633,
+          "children": []
+        },
+        {
+          "name": "WindowingFunction",
+          "start": 636,
+          "end": 640,
+          "children": []
+        },
+        {
+          "name": "UniqueCount",
+          "start": 641,
+          "end": 642,
+          "children": []
+        },
+        {
+          "name": "ComplexQuery",
+          "start": 643,
+          "end": 645,
+          "children": []
+        },
+        {
+          "name": "RankRelatedFunction",
+          "start": 646,
+          "end": 647,
+          "children": []
+        },
+        {
+          "name": "ReduceJoinPath",
+          "start": 648,
+          "end": 651,
+          "children": []
+        },
+        {
+          "name": "RLS",
+          "start": 652,
+          "end": 698,
+          "children": []
+        },
+        {
+          "name": "AggregateWorksheet",
+          "start": 699,
+          "end": 701,
+          "children": []
+        },
+        {
+          "name": "MergeQueryTable",
+          "start": 702,
+          "end": 705,
+          "children": []
+        },
+        {
+          "name": "DateExpression",
+          "start": 710,
+          "end": 712,
+          "children": []
+        },
+        {
+          "name": "AggregateConstantExpression",
+          "start": 713,
+          "end": 713,
+          "children": []
+        },
+        {
+          "name": "TopSort",
+          "start": 747,
+          "end": 748,
+          "children": []
+        },
+        {
+          "name": "TableFilter",
+          "start": 750,
+          "end": 751,
+          "children": []
+        },
+        {
+          "name": "WorksheetTableJoin",
+          "start": 798,
+          "end": 799,
+          "children": []
+        },
+        {
+          "name": "Worksheet",
+          "start": 800,
+          "end": 801,
+          "children": []
+        },
+        {
+          "name": "InheritDateBucket",
+          "start": 802,
+          "end": 802,
+          "children": []
+        },
+        {
+          "name": "GroupAggregateOptimization",
+          "start": 803,
+          "end": null,
+          "children": [
+            {
+              "name": "TableAggregate",
+              "start": 804,
+              "end": 805,
+              "children": []
+            },
+            {
+              "name": "WindowingFunction",
+              "start": 808,
+              "end": null,
+              "children": [
+                {
+                  "name": "UniqueCount",
+                  "start": 809,
+                  "end": 810,
+                  "children": []
+                },
+                {
+                  "name": "ComplexQuery",
+                  "start": 811,
+                  "end": null,
+                  "children": [
+                    {
+                      "name": "RankRelatedFunction",
+                      "start": 813,
+                      "end": 814,
+                      "children": []
+                    },
+                    {
+                      "name": "ReduceJoinPath",
+                      "start": 815,
+                      "end": 817,
+                      "children": []
+                    },
+                    {
+                      "name": "RLS",
+                      "start": 818,
+                      "end": 818,
+                      "children": []
+                    },
+                    {
+                      "name": "AggregateWorksheet",
+                      "start": 819,
+                      "end": null,
+                      "children": [
+                        {
+                          "name": "MergeQueryTable",
+                          "start": 822,
+                          "end": 824,
+                          "children": []
+                        },
+                        {
+                          "name": "DateExpression",
+                          "start": 827,
+                          "end": 829,
+                          "children": []
+                        },
+                        {
+                          "name": "AggregateConstantExpression",
+                          "start": 830,
+                          "end": 830,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

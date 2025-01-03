@@ -90,10 +90,11 @@ const buildTransformerTree = (logs) => {
             }
             stack.push(node);
         } else { // 'after' log
-            const currentNode = stack[stack.length - 1];
-            if (currentNode?.name === log.transformer) {
-                currentNode.end = relativeMs;
-                stack.pop();
+            const nodeToClose = stack.find(node => node.name === log.transformer);
+            if (nodeToClose) {
+                nodeToClose.end = relativeMs;
+                const idx = stack.indexOf(nodeToClose);
+                stack.splice(idx, 1);
             }
         }
     }
@@ -124,10 +125,10 @@ const main = async () => {
     try {
         const tree = await analyzeTransformerLogs('json', '/Users/dushyant.bansal/work/query-spec-generator/output/transformers.json');
         // console.log("Tree structure:");
-        // console.log(printTree(tree));
+        console.log(printTree(tree));
         
         console.log("\nJSON output:");
-        console.log(JSON.stringify(tree, null, 2));
+        // console.log(JSON.stringify(tree, null, 2));
     } catch (error) {
         console.error("Error:", error);
     }

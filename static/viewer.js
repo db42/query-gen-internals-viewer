@@ -2,7 +2,6 @@
 
 // Global state
 let transformerData = null;
-let sortedTransformerKeys = null;
 let currentTransformer = null;
 let viewMode = 'tree';
 
@@ -28,68 +27,48 @@ async function loadTransformerData() {
 
 // Timeline rendering function
 function renderTransformerChain(transformerTree) {
-    console.log(transformerTree);
+    console.log('transformer tree', transformerTree);
     const container = document.getElementById('transformer-chain');
-    container.innerHTML = ''; // Clear existing content
+    container.innerHTML = '';
     
-    // Flatten tree into a timeline of events
-    const events = flattenTreeToTimeline(transformerTree);
-    console.log(events);
-    
-    let stack = [];
-    let lastDepth = 0;
-    
-    events.forEach((event, index) => {
-        if (event.type === TransformerNodeTypes.START) {
-            const node = document.createElement('div');
-            const depth = stack.length;
-            
-            // Add classes for styling
-            node.className = `transformer-node ${depth ? 'transformer-nested' : ''}`;
-            node.id = `transformer-${event.name}-${event.time}`;
-            
-            // Calculate indentation based on nesting level
-            node.style.marginLeft = `${depth * 20}px`;
-            
-            // Create name element
-            const nameDiv = document.createElement('div');
-            nameDiv.className = 'transformer-name';
-            nameDiv.textContent = event.name;
-            
-            // Create timestamp element
-            const timeDiv = document.createElement('div');
-            timeDiv.className = 'transformer-timestamp';
-            timeDiv.textContent = `t+${event.time}ms`;
-            
-            // Add visual indicators for parent-child relationships
-            if (depth > 0) {
-                const lineElement = document.createElement('div');
-                lineElement.className = 'connection-line';
-                node.appendChild(lineElement);
-            }
-            
-            node.appendChild(nameDiv);
-            node.appendChild(timeDiv);
-            
-            // Add click handler
-            node.onclick = () => {
-                //create a id from the name + 'tranformer' + event.time
-
-                //TableAggregateTransformer_after_1735745051070
-                console.log(event.id);
-                selectTransformer(event.id);
-            };
-            
-            container.appendChild(node);
-            stack.push(event.name);
-            lastDepth = depth;
-        } else {
-            // Handle end events
-            if (stack.length && stack[stack.length - 1] === event.name) {
-                stack.pop();
-            }
+    function renderNode(node, depth = 0) {
+        // Create node element
+        const nodeElement = document.createElement('div');
+        nodeElement.className = `transformer-node ${depth > 0 ? 'transformer-nested' : ''}`;
+        nodeElement.id = `transformer-${node.name}-${node.start}`;
+        
+        // Create name element
+        const nameDiv = document.createElement('div');
+        nameDiv.className = 'transformer-name';
+        nameDiv.textContent = node.name;
+        
+        // Create timestamp element
+        const timeDiv = document.createElement('div');
+        timeDiv.className = 'transformer-timestamp';
+        timeDiv.textContent = `t+${node.start}ms`;
+        
+        nodeElement.appendChild(nameDiv);
+        nodeElement.appendChild(timeDiv);
+        
+        // Add click handler
+        nodeElement.onclick = () => {
+            // Create transformer ID in the format expected by selectTransformer
+            const prevTransformerId = `${node.name}Transformer_before_${node.startTimestamp}`;
+            const transformerId = `${node.name}Transformer_after_${node.endTimestamp}`;
+            selectTransformer(transformerId, prevTransformerId);
+        };
+        
+        // Append the node
+        container.appendChild(nodeElement);
+        
+        // Recursively render children
+        for (const child of node.children) {
+            renderNode(child, depth + 1);
         }
-    });
+    }
+    
+    // Render each root level transformer
+    transformerTree.transformers.forEach(node => renderNode(node));
 }
 
 // Helper function to flatten tree into timeline
@@ -314,17 +293,14 @@ function updateCurrentView() {
     }
 }
 
-function updateDiffView() {
+function updateDiffView(currentTransformer, prevId) {
     const container = document.getElementById('diff-view');
     
-    const currentIndex = sortedTransformerKeys.indexOf(currentTransformer);
+    // if (currentIndex === 0) {
+    //     container.innerHTML = '<div class="diff-message">Initial transformation</div>';
+    //     return;
+    // }
     
-    if (currentIndex === 0) {
-        container.innerHTML = '<div class="diff-message">Initial transformation</div>';
-        return;
-    }
-    
-    const prevId = sortedTransformerKeys[currentIndex - 1];
     const prevData = transformerData[prevId].content;
     const currentData = transformerData[currentTransformer].content;
     
@@ -352,7 +328,7 @@ function setViewMode(mode) {
     updateCurrentView();
 }
 
-function selectTransformer(id) {
+function selectTransformer(id, prevId) {
     currentTransformer = id;
     
     // Update UI
@@ -374,7 +350,7 @@ function selectTransformer(id) {
     
     // Update views
     updateCurrentView();
-    updateDiffView();
+    updateDiffView(currentTransformer, prevId);
 }
 
 // Initialization
@@ -397,13 +373,13 @@ async function init() {
         };
     }).filter(entry => entry !== null);
 
-
-    sortedTransformerKeys = _.sortBy(transformerKeys, ['timestamp', log => log.type !== 'before']).map(entry => entry.key);
-    
     // Select first transformer by default
-    const firstTransformer = Object.keys(transformerData)[0];
+    // const firstTransformer = Object.keys(transformerData)[0];
+    const firstTransformer = transformerTree.transformers[0];
+    const firstTransformerId = `${firstTransformer.name}Transformer_after_${firstTransformer.endTimestamp}`;
+    const prevId = `${firstTransformer.name}Transformer_before_${firstTransformer.startTimestamp}`;
     if (firstTransformer) {
-        selectTransformer(firstTransformer);
+        selectTransformer(firstTransformerId, prevId);
     }
 }
 

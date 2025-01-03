@@ -12,6 +12,7 @@ body {
     display: grid;
     grid-template-columns: 300px 1fr;
     height: 100vh;
+    overflow: hidden;
 }
 
 /* Left panel */
@@ -20,13 +21,14 @@ body {
     display: flex;
     flex-direction: column;
     background: white;
+    max-height: 100vh;
 }
 
 /* Right panels container */
 .main-panels {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    max-height: 100vh;
 }
 
 /* Panel headers */
@@ -37,13 +39,17 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 /* Panel content */
 .panel-content {
     flex: 1;
-    overflow: auto;
+    overflow-y: auto;
     padding: 16px;
+    min-height: 0;
 }
 
 /* Query panel and diff panel */
@@ -52,13 +58,16 @@ body {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #e0e0e0;
+    overflow: hidden;
+    min-height: 0;
 }
 
 /* Chain content */
 .chain-content {
     flex: 1;
-    overflow: auto;
+    overflow-y: auto;
     padding: 16px;
+    min-height: 0;
 }
 
 /* Transformer nodes */
