@@ -3,42 +3,36 @@
 <head>
     <title>Query Spec Transformer Viewer</title>
     <link rel="stylesheet" href="static/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
 </head>
 <body>
-    <!-- Timeline showing transformation chain -->
-    <div class="timeline">
-        <div id="transformer-chain" class="timeline-chain">
-            <!-- Will be populated by JavaScript -->
+    <div class="transformer-chain">
+        <div class="panel-header">
+            <span>Transformer Chain</span>
         </div>
+        <div id="transformer-chain"></div>
     </div>
-    
-    <!-- Main content area -->
     <div class="main-content">
-        <!-- Left panel: Current transformer view -->
-        <div class="panel">
+        <div class="query-panel">
             <div class="panel-header">
-                <div class="toolbar">
-                    <button onclick="setViewMode('tree')" id="btn-tree">Tree View</button>
-                    <button onclick="setViewMode('raw')" id="btn-raw">Raw View</button>
+                <div class="panel-title">
+                    <span id="current-transformer">Select a transformer to view query spec</span>
+                    <span id="transformer-time" class="transformer-timestamp"></span>
                 </div>
-                <div id="current-transformer">Current Transformer: None</div>
+                <div class="view-mode-toggle">
+                    <button id="btn-tree" onclick="setViewMode('tree')">Tree View</button>
+                    <button id="btn-raw" onclick="setViewMode('raw')">Raw View</button>
+                </div>
             </div>
-            <div class="panel-content">
-                <div id="current-view"></div>
-            </div>
+            <div id="current-view" class="panel-content"></div>
         </div>
-        
-        <!-- Right panel: Diff view -->
-        <div class="panel">
+        <div class="diff-panel">
             <div class="panel-header">
-                <div id="diff-header">Changes from Previous Step</div>
+                <span>Changes from Previous Step</span>
             </div>
-            <div class="panel-content">
-                <div id="diff-view"></div>
-            </div>
+            <div id="diff-view" class="panel-content"></div>
         </div>
     </div>
-
     <script src="static/viewer.js"></script>
 </body>
 </html>

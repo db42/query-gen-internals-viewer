@@ -5,6 +5,12 @@ let transformerData = null;
 let currentTransformer = null;
 let viewMode = 'tree';
 
+// First, let's create interfaces for type clarity
+const TransformerNodeTypes = {
+    START: 'start',
+    END: 'end'
+};
+
 // Data loading
 async function loadTransformerData() {
     try {
@@ -19,41 +25,162 @@ async function loadTransformerData() {
     }
 }
 
-// Timeline functions
-function renderTransformerChain() {
+// Timeline rendering function
+function renderTransformerChain(transformerTree) {
+    console.log(transformerTree);
     const container = document.getElementById('transformer-chain');
-    const transformers = Object.entries(transformerData)
-        .sort((a, b) => a[1].timestamp - b[1].timestamp);
+    container.innerHTML = ''; // Clear existing content
     
-    transformers.forEach(([id, data], index) => {
-        // Create transformer node
-        const node = document.createElement('div');
-        node.className = 'transformer-node';
-        node.id = `transformer-${id}`;
-        
-        // Add name and timestamp
-        const nameSpan = document.createElement('div');
-        nameSpan.textContent = data.name;
-        nameSpan.className = 'transformer-name';
-        
-        const timeSpan = document.createElement('div');
-        timeSpan.textContent = `t+${data.timestamp - transformers[0][1].timestamp}ms`;
-        timeSpan.className = 'transformer-timestamp';
-        
-        node.appendChild(nameSpan);
-        node.appendChild(timeSpan);
-        node.onclick = () => selectTransformer(id);
-        
-        container.appendChild(node);
-        
-        if (index < transformers.length - 1) {
-            const arrow = document.createElement('div');
-            arrow.className = 'transformer-arrow';
-            arrow.innerHTML = '&rarr;';
-            container.appendChild(arrow);
+    // Flatten tree into a timeline of events
+    const events = flattenTreeToTimeline(transformerTree);
+    
+    let stack = [];
+    let lastDepth = 0;
+    
+    events.forEach((event, index) => {
+        if (event.type === TransformerNodeTypes.START) {
+            const node = document.createElement('div');
+            const depth = stack.length;
+            
+            // Add classes for styling
+            node.className = `transformer-node ${depth ? 'transformer-nested' : ''}`;
+            node.id = `transformer-${event.name}-${event.time}`;
+            
+            // Calculate indentation based on nesting level
+            node.style.marginLeft = `${depth * 20}px`;
+            
+            // Create name element
+            const nameDiv = document.createElement('div');
+            nameDiv.className = 'transformer-name';
+            nameDiv.textContent = event.name;
+            
+            // Create timestamp element
+            const timeDiv = document.createElement('div');
+            timeDiv.className = 'transformer-timestamp';
+            timeDiv.textContent = `t+${event.time}ms`;
+            
+            // Add visual indicators for parent-child relationships
+            if (depth > 0) {
+                const lineElement = document.createElement('div');
+                lineElement.className = 'connection-line';
+                node.appendChild(lineElement);
+            }
+            
+            node.appendChild(nameDiv);
+            node.appendChild(timeDiv);
+            
+            // Add click handler
+            node.onclick = () => selectTransformer(event.name, event.time);
+            
+            container.appendChild(node);
+            stack.push(event.name);
+            lastDepth = depth;
+        } else {
+            // Handle end events
+            if (stack.length && stack[stack.length - 1] === event.name) {
+                stack.pop();
+            }
         }
     });
- }
+}
+
+// Helper function to flatten tree into timeline
+function flattenTreeToTimeline(tree) {
+    const events = [];
+    
+    function processNode(node, parentStartTime = 0) {
+        // Add start event
+        events.push({
+            type: TransformerNodeTypes.START,
+            name: node.name,
+            time: node.start,
+            parentStartTime
+        });
+        
+        // Process children
+        if (node.children && node.children.length > 0) {
+            node.children.forEach(child => {
+                processNode(child, node.start);
+            });
+        }
+        
+        // Add end event
+        if (node.end !== null) {
+            events.push({
+                type: TransformerNodeTypes.END,
+                name: node.name,
+                time: node.end
+            });
+        }
+    }
+    
+    // Process all root level transformers
+    tree.transformers.forEach(node => processNode(node));
+    
+    // Sort by timestamp and handle concurrent events
+    return events.sort((a, b) => {
+        if (a.time === b.time) {
+            // If timestamps are equal, prefer:
+            // 1. Parent before child
+            // 2. Start before end
+            if (a.parentStartTime !== b.parentStartTime) {
+                return a.parentStartTime - b.parentStartTime;
+            }
+            return a.type === TransformerNodeTypes.START ? -1 : 1;
+        }
+        return a.time - b.time;
+    });
+}
+
+// Build tree from parsed logs
+const buildTransformerTree = (transformerData) => {
+    // Convert object keys to log entries
+    logs = Object.keys(transformerData).map(key => {
+        const match = key.match(/(.+?)_(before|after)_(\d+)/);
+        if (!match) return null;
+        
+        return {
+            transformer: match[1].replace('Transformer', ''),
+            type: match[2],
+            timestamp: parseInt(match[3])
+        };
+    }).filter(entry => entry !== null);
+
+    const sortedLogs = _.sortBy(logs, ['timestamp', log => log.type !== 'before']);
+    const startTime = sortedLogs[0]?.timestamp ?? 0;
+    
+    const root = { transformers: [] };
+    const stack = [];
+    
+    for (const log of sortedLogs) {
+        const relativeMs = (log.timestamp - startTime) % 1000;
+        
+        if (log.type === 'before') {
+            const node = {
+                name: log.transformer,
+                start: relativeMs,
+                end: null,
+                children: []
+            };
+            
+            if (stack.length > 0) {
+                stack[stack.length - 1].children.push(node);
+            } else {
+                root.transformers.push(node);
+            }
+            stack.push(node);
+        } else { // 'after' log
+            const currentNode = stack[stack.length - 1];
+            if (currentNode?.name === log.transformer) {
+                currentNode.end = relativeMs;
+                stack.pop();
+            }
+        }
+    }
+    
+    return root;
+};
+
 
 // Tree view functions
 function createTreeView(data, level = 0) {
@@ -237,7 +364,8 @@ async function init() {
     transformerData = await loadTransformerData();
     if (!transformerData) return;
     
-    renderTransformerChain();
+    transformerTree = buildTransformerTree(transformerData);
+    renderTransformerChain(transformerTree);
     
     // Select first transformer by default
     const firstTransformer = Object.keys(transformerData)[0];

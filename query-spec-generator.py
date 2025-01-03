@@ -5,6 +5,7 @@ import argparse
 import sys
 import os
 import shutil
+import re
 
 def load_template(template_path: str = None) -> str:
     """Load HTML template from file."""
@@ -102,75 +103,81 @@ def parse_proto_file(file_path: str, debug: bool = False) -> dict:
         raise
 
 def process_directory(input_dir: str, output_dir: str = None, debug: bool = False):
-    """Process directory and generate viewer HTML.
-    
-    Args:
-        input_dir: Directory containing transformer files
-        output_dir: Directory where output files will be generated
-        debug: Enable debug logging
-    
-    Returns:
-        Path to the generated HTML file
-    """
     try:
-        # Setup directories
+        # Setup directories (unchanged)
         input_dir = os.path.abspath(input_dir)
         script_dir = Path(__file__).parent
-        
-        # Set output directory
-        if output_dir is None:
-            output_dir = script_dir / "output"
-        else:
-            output_dir = Path(output_dir)
-            
-        # Create output directory
+        output_dir = script_dir / "output" if output_dir is None else Path(output_dir)
         output_dir.mkdir(parents=True, exist_ok=True)
-            
-        # Generate the HTML file path
+        
+        # Create directories and copy static files (unchanged)
         output_path = output_dir / "query_spec_viewer.html"
-        
-        # Create static directory next to HTML file
         static_dir = output_dir / "static"
-        static_dir.mkdir(exist_ok=True)
-        
-        # Create json directory next to HTML file
         json_dir = output_dir / "json"
+        static_dir.mkdir(exist_ok=True)
         json_dir.mkdir(exist_ok=True)
         
-        # Copy static files
         shutil.copy2(script_dir / "static" / "viewer.js", static_dir)
         shutil.copy2(script_dir / "static" / "styles.css", static_dir)
         
         print(f"Processing files in: {input_dir}")
-            
-        # Find all transformer files
+        
+        # Find all transformer files with before/after states
         files = glob.glob(os.path.join(input_dir, "*Transformer_*.txt"))
         if not files:
             raise ValueError(f"No transformer files found in {input_dir}")
             
+        # Parse files and track hierarchy
         transformers = {}
+        stack = []
+        start_time = None
+        
         for file_path in files:
             try:
-                name = Path(file_path).stem
-                transformer_name, timestamp = name.split('_', 1)
+                filename = Path(file_path).stem
+                match = re.match(r'(.+?)_(before|after)_(\d+)', filename)
+                if not match:
+                    continue
+                    
+                transformer_name, state, timestamp = match.groups()
+                timestamp = int(timestamp)
                 
-                # Parse proto file
+                # Track first timestamp for relative time
+                if start_time is None:
+                    start_time = timestamp
+                
+                # relative_ms = (timestamp - start_time) % 1000
+                
+                # if state == 'before':
+                    # Parse proto and save content
                 content_dict = parse_proto_file(file_path, debug=debug)
-                transformers[name] = {
-                    'name': transformer_name,
-                    'timestamp': int(timestamp),
+                transformer_id = file_path.replace('.txt', '').split('/')[-1]
+                    # transformer_id = f"{transformer_name}_{timestamp}"
+                    
+                transformers[transformer_id] = {
+                    # 'name': transformer_name,
+                    # 'timestamp': relative_ms,
+                    # 'parent': stack[-1] if stack else None,
                     'content': content_dict
                 }
-                
-                # Save individual JSON file
-                json_path = json_dir / f"{name}.json"
+                    
+                    # Save individual JSON
+                json_path = json_dir / f"{filename}.json"
                 with open(json_path, 'w') as f:
                     json.dump(content_dict, f, indent=2)
-                
-                if debug:
-                    print(f"Successfully processed: {name}")
-                    print(f"Saved JSON to: {json_path}")
                     
+                #     stack.append(transformer_id)
+                    
+                #     if debug:
+                #         print(f"Processed start of {transformer_name} at t+{relative_ms}ms")
+                        
+                # elif state == 'after':
+                #     if stack and stack[-1].startswith(transformer_name):
+                #         stack.pop()
+                    
+                #     if debug:
+                #         print(f"Processed end of {transformer_name} at t+{relative_ms}ms")
+                
             except Exception as e:
                 print(f"Error processing {file_path}: {str(e)}")
                 continue
@@ -178,16 +185,16 @@ def process_directory(input_dir: str, output_dir: str = None, debug: bool = Fals
         if not transformers:
             raise ValueError("No valid transformer files could be processed")
         
-        # Save consolidated JSON
+        # Save consolidated JSON (unchanged)
         consolidated_path = output_dir / "transformers.json"
         with open(consolidated_path, 'w') as f:
             json.dump(transformers, f, indent=2)
         print(f"Saved consolidated JSON to: {consolidated_path}")
-            
-        # Generate HTML
-        generate_html(transformers, output_path, template_path=None)
+        
+        # Generate HTML (unchanged)
+        generate_html(output_path, template_path=None)
         print(f"Generated viewer at: {output_path}")
-        print(f"Processed {len(transformers)} transformer files")
+        # print(f"Processed {len(transformers)} transformer files")
         
         return output_path
         
@@ -195,7 +202,7 @@ def process_directory(input_dir: str, output_dir: str = None, debug: bool = Fals
         print(f"Error: {str(e)}")
         return None
 
-def generate_html(transformers: dict, output_path: str, template_path: str = None):
+def generate_html(output_path: str, template_path: str = None):
     """Generate HTML file with embedded transformer data."""
     output_dir = os.path.dirname(output_path)
     if output_dir and not os.path.exists(output_dir):
@@ -205,12 +212,12 @@ def generate_html(transformers: dict, output_path: str, template_path: str = Non
     template = load_template(template_path)
     
     # Insert transformer data
-    transformer_json = json.dumps(transformers)
-    html_content = template.replace('{DATA_PLACEHOLDER}', transformer_json)
+    # transformer_json = #json.dumps(transformers)
+    # html_content = template.replace('{DATA_PLACEHOLDER}', transformer_json)
     
     # Write output file
     with open(output_path, 'w') as f:
-        f.write(html_content)
+        f.write(template)
 
 def main():
     parser = argparse.ArgumentParser(

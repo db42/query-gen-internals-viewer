@@ -98,10 +98,15 @@ body {
     border-bottom: 1px solid #e0e0e0;
 }
 
+.panel-title {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
 .panel-content {
-    flex: 1;
+    height: calc(100% - 60px);
     overflow: auto;
-    padding: 15px;
 }
 
 /* Tree view styles */
