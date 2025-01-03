@@ -27,15 +27,19 @@ async function loadTransformerData() {
 
 // Timeline rendering function
 function renderTransformerChain(transformerTree) {
-    console.log('transformer tree', transformerTree);
     const container = document.getElementById('transformer-chain');
     container.innerHTML = '';
     
     function renderNode(node, depth = 0) {
         // Create node element
         const nodeElement = document.createElement('div');
-        nodeElement.className = `transformer-node ${depth > 0 ? 'transformer-nested' : ''}`;
+        nodeElement.className = 'transformer-node';
+        nodeElement.style.paddingLeft = `${depth * 24}px`;  // 24px = 2 spaces worth of indentation
         nodeElement.id = `transformer-${node.name}-${node.start}`;
+        
+        // Create content wrapper
+        const contentWrapper = document.createElement('div');
+        contentWrapper.className = 'transformer-content';
         
         // Create name element
         const nameDiv = document.createElement('div');
@@ -47,14 +51,16 @@ function renderTransformerChain(transformerTree) {
         timeDiv.className = 'transformer-timestamp';
         timeDiv.textContent = `t+${node.start}ms`;
         
-        nodeElement.appendChild(nameDiv);
-        nodeElement.appendChild(timeDiv);
+        contentWrapper.appendChild(nameDiv);
+        contentWrapper.appendChild(timeDiv);
+        nodeElement.appendChild(contentWrapper);
         
         // Add click handler
-        nodeElement.onclick = () => {
-            // Create transformer ID in the format expected by selectTransformer
+        nodeElement.onclick = (e) => {
+            e.stopPropagation(); // Prevent triggering parent handlers
             const prevTransformerId = `${node.name}Transformer_before_${node.startTimestamp}`;
             const transformerId = `${node.name}Transformer_after_${node.endTimestamp}`;
+            // const transformerId = `${node.name}Transformer_after_${node.start}`;
             selectTransformer(transformerId, prevTransformerId);
         };
         
@@ -62,13 +68,15 @@ function renderTransformerChain(transformerTree) {
         container.appendChild(nodeElement);
         
         // Recursively render children
-        for (const child of node.children) {
-            renderNode(child, depth + 1);
+        if (node.children && node.children.length > 0) {
+            for (const child of node.children) {
+                renderNode(child, depth + 1);
+            }
         }
     }
     
     // Render each root level transformer
-    transformerTree.transformers.forEach(node => renderNode(node));
+    transformerTree.transformers.forEach(node => renderNode(node, 0));
 }
 
 // Helper function to flatten tree into timeline
