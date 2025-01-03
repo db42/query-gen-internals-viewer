@@ -2,6 +2,7 @@
 
 // Global state
 let transformerData = null;
+let sortedTransformerKeys = null;
 let currentTransformer = null;
 let viewMode = 'tree';
 
@@ -158,6 +159,7 @@ const buildTransformerTree = (transformerData) => {
         };
     }).filter(entry => entry !== null);
 
+
     const sortedLogs = _.sortBy(logs, ['timestamp', log => log.type !== 'before']);
     const startTime = sortedLogs[0]?.timestamp ?? 0;
     
@@ -183,11 +185,12 @@ const buildTransformerTree = (transformerData) => {
             }
             stack.push(node);
         } else { // 'after' log
-            const currentNode = stack[stack.length - 1];
-            if (currentNode?.name === log.transformer) {
-                currentNode.endTimestamp = log.timestamp;
-                currentNode.end = relativeMs;
-                stack.pop();
+            const nodeToClose = stack.find(node => node.name === log.transformer);
+            if (nodeToClose) {
+                nodeToClose.endTimestamp = log.timestamp;
+                nodeToClose.end = relativeMs;
+                const idx = stack.indexOf(nodeToClose);
+                stack.splice(idx, 1);
             }
         }
     }
@@ -313,17 +316,15 @@ function updateCurrentView() {
 
 function updateDiffView() {
     const container = document.getElementById('diff-view');
-    const transformers = Object.entries(transformerData)
-        .sort((a, b) => a[1].timestamp - b[1].timestamp);
     
-    const currentIndex = transformers.findIndex(([id]) => id === currentTransformer);
+    const currentIndex = sortedTransformerKeys.indexOf(currentTransformer);
     
     if (currentIndex === 0) {
         container.innerHTML = '<div class="diff-message">Initial transformation</div>';
         return;
     }
     
-    const prevId = transformers[currentIndex - 1][0];
+    const prevId = sortedTransformerKeys[currentIndex - 1];
     const prevData = transformerData[prevId].content;
     const currentData = transformerData[currentTransformer].content;
     
@@ -384,6 +385,20 @@ async function init() {
     
     transformerTree = buildTransformerTree(transformerData);
     renderTransformerChain(transformerTree);
+
+    const transformerKeys = Object.keys(transformerData).map(key => {
+        const match = key.match(/(.+?)_(before|after)_(\d+)/);
+        if (!match) return null;
+        
+        return {
+            key,
+            type: match[2],
+            timestamp: parseInt(match[3])
+        };
+    }).filter(entry => entry !== null);
+
+
+    sortedTransformerKeys = _.sortBy(transformerKeys, ['timestamp', log => log.type !== 'before']).map(entry => entry.key);
     
     // Select first transformer by default
     const firstTransformer = Object.keys(transformerData)[0];
