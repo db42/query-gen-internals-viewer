@@ -33,6 +33,7 @@ function renderTransformerChain(transformerTree) {
     
     // Flatten tree into a timeline of events
     const events = flattenTreeToTimeline(transformerTree);
+    console.log(events);
     
     let stack = [];
     let lastDepth = 0;
@@ -70,7 +71,13 @@ function renderTransformerChain(transformerTree) {
             node.appendChild(timeDiv);
             
             // Add click handler
-            node.onclick = () => selectTransformer(event.name, event.time);
+            node.onclick = () => {
+                //create a id from the name + 'tranformer' + event.time
+
+                //TableAggregateTransformer_after_1735745051070
+                console.log(event.id);
+                selectTransformer(event.id);
+            };
             
             container.appendChild(node);
             stack.push(event.name);
@@ -89,9 +96,13 @@ function flattenTreeToTimeline(tree) {
     const events = [];
     
     function processNode(node, parentStartTime = 0) {
+
+        const id = `${node.name}Transformer_after_${node.endTimestamp}`;
         // Add start event
         events.push({
             type: TransformerNodeTypes.START,
+            timestamp: node.startTimestamp,
+            id: id,
             name: node.name,
             time: node.start,
             parentStartTime
@@ -108,6 +119,7 @@ function flattenTreeToTimeline(tree) {
         if (node.end !== null) {
             events.push({
                 type: TransformerNodeTypes.END,
+                timestamp: node.endTimestamp,
                 name: node.name,
                 time: node.end
             });
@@ -119,7 +131,7 @@ function flattenTreeToTimeline(tree) {
     
     // Sort by timestamp and handle concurrent events
     return events.sort((a, b) => {
-        if (a.time === b.time) {
+        if (a.timestamp === b.timestamp) {
             // If timestamps are equal, prefer:
             // 1. Parent before child
             // 2. Start before end
@@ -158,6 +170,7 @@ const buildTransformerTree = (transformerData) => {
         if (log.type === 'before') {
             const node = {
                 name: log.transformer,
+                startTimestamp: log.timestamp,
                 start: relativeMs,
                 end: null,
                 children: []
@@ -172,6 +185,7 @@ const buildTransformerTree = (transformerData) => {
         } else { // 'after' log
             const currentNode = stack[stack.length - 1];
             if (currentNode?.name === log.transformer) {
+                currentNode.endTimestamp = log.timestamp;
                 currentNode.end = relativeMs;
                 stack.pop();
             }
@@ -314,6 +328,8 @@ function updateDiffView() {
     const currentData = transformerData[currentTransformer].content;
     
     // Debug logs
+    console.log('Previous id:', prevId);
+    console.log('Current id:', currentTransformer);
     console.log('Previous:', prevData);
     console.log('Current:', currentData);
     
@@ -322,29 +338,6 @@ function updateDiffView() {
     // Clear and append
     container.innerHTML = '';
     container.appendChild(diff);
-}
-
-// Event handlers
-function selectTransformer(id) {
-    currentTransformer = id;
-    
-    // Update UI - use the unique id to find the element
-    document.querySelectorAll('.transformer-node').forEach(node => {
-        node.classList.remove('active');
-    });
-    
-    const selectedNode = document.getElementById(`transformer-${id}`);
-    if (selectedNode) {
-        selectedNode.classList.add('active');
-    }
-    
-    // Update header
-    document.getElementById('current-transformer').textContent = 
-        `Current Transformer: ${transformerData[id].name}`;
-    
-    // Update views
-    updateCurrentView();
-    updateDiffView();
 }
 
 function setViewMode(mode) {
@@ -356,6 +349,31 @@ function setViewMode(mode) {
     
     // Update view
     updateCurrentView();
+}
+
+function selectTransformer(id) {
+    currentTransformer = id;
+    
+    // Update UI
+    document.querySelectorAll('.transformer-node').forEach(node => {
+        node.classList.remove('active');
+    });
+    
+    const selectedNode = document.getElementById(`transformer-${id}`);
+    if (selectedNode) {
+        selectedNode.classList.add('active');
+        
+        // Update header
+        const transformer = transformerData[id];
+        document.getElementById('current-transformer').textContent = 
+            transformer.name || 'Selected Transformer';
+        document.getElementById('transformer-time').textContent = 
+            `t+${transformer.timestamp}ms`;
+    }
+    
+    // Update views
+    updateCurrentView();
+    updateDiffView();
 }
 
 // Initialization
