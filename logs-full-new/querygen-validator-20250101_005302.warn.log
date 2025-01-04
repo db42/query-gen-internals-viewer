@@ -1,0 +1,15 @@
+2025-01-01 00:53:05.387 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : S3 info not set, skipping upload/download from S3.
+2025-01-01 00:53:07.550 ERROR {BackendRequestFetcherMain-0-0} [c.t.c.m.m.f.FeedbackManagerMunshiImpl] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Exception when creating znode: com.thoughtspot.common.ThoughtSpotException: ORION_SERVICE_NAME property not set
+2025-01-01 00:53:09.074 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : exportTML program arg is set to False. Skipping TML export of failed or changed objects.
+2025-01-01 00:53:09.074 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Found 1 guids
+2025-01-01 00:53:09.537 WARN  {validator-0-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-01 00:53:09.953 WARN  {validator-0-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb found in index."
+
+2025-01-01 00:53:10.053 WARN  {validator-1-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-01 00:53:10.082 WARN  {validator-1-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb found in index."
+
+2025-01-01 00:53:10.098 WARN  {validator-2-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-01 00:53:10.140 WARN  {validator-3-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-01 00:53:10.173 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Found 0 guids

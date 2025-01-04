@@ -1,0 +1,2661 @@
+2025-01-03 23:55:50.943 INFO  {main} [c.t.c.common.orion.OrionMasterManager] : About to track znode for orion master with znode of 
+2025-01-03 23:55:51.324 INFO  {main} [c.t.c.common.orion.OrionMasterManager] : Updating orion master address...
+2025-01-03 23:55:51.334 INFO  {main} [c.t.c.common.orion.OrionMasterManager] : Updated orion master address to: host_port {
+  host: "172.32.27.151"
+  port: 2200
+}
+
+2025-01-03 23:55:51.873 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Got config override of : true for key: enableCallosumDebugInfo
+2025-01-03 23:55:51.873 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Overriding value for property: enableCallosumDebugInfo with value true
+2025-01-03 23:55:51.875 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Got config override of : true for key: isSoftware
+2025-01-03 23:55:51.875 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Overriding value for property: isSoftware with value true
+2025-01-03 23:55:51.875 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Got config override of : true for key: firstTimePasswordForceReset
+2025-01-03 23:55:51.876 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Overriding value for property: firstTimePasswordForceReset with value true
+2025-01-03 23:55:51.876 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Got config override of : false for key: objectsUpgraderConfig.isVersionControlUpgradeNeeded
+2025-01-03 23:55:51.876 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Overriding value for property: objectsUpgraderConfig.isVersionControlUpgradeNeeded with value false
+2025-01-03 23:55:53.721 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a orgPerCustomEmbedUrl fetched flag value: false
+2025-01-03 23:55:55.227 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : S3 info not set, skipping upload/download from S3.
+2025-01-03 23:55:55.277 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Setting up initial configuration.
+2025-01-03 23:55:55.278 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Initializing Atlas client.
+2025-01-03 23:55:57.567 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Initializing Munshi client.
+2025-01-03 23:55:57.597 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Initializing MetadataProvider.
+2025-01-03 23:55:57.744 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.MetadataManagerFactory] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a MMF using thick atlas client
+2025-01-03 23:55:57.769 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.p.DummyPhysicalModelManager] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Initializing DummyPhysicalModelManager
+2025-01-03 23:55:57.786 ERROR {BackendRequestFetcherMain-0-0} [c.t.c.m.m.f.FeedbackManagerMunshiImpl] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Exception when creating znode: com.thoughtspot.common.ThoughtSpotException: ORION_SERVICE_NAME property not set
+2025-01-03 23:55:57.841 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.MetadataManagerFactory] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Connecting to DB store since not connected yet.
+2025-01-03 23:55:58.712 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataRepository] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not initializing already available physical model manager
+2025-01-03 23:55:58.712 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataRepository] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not initializing as the mv status manager is available already.
+2025-01-03 23:55:58.712 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataRepository] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not initializing as the cluster stats manager is available.
+2025-01-03 23:55:58.714 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataRepository] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Pinned snapshot token=737b4e65-b5ef-405a-9f80-1f03385e24c0
+2025-01-03 23:55:58.780 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Enabling AtlasStorableCache with caches (request: true, object: true, redis: false)
+2025-01-03 23:55:58.999 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.MetadataManagerFactory] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Metadata schema version read from store: 4
+2025-01-03 23:55:58.999 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.MetadataManagerFactory] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Installed Metadata schema version read from store: 4.4.0
+2025-01-03 23:55:59.000 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataSnapshot] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin close snapshot=737b4e65-b5ef-405a-9f80-1f03385e24c0
+2025-01-03 23:55:59.000 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataSnapshot] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a End close snapshot=737b4e65-b5ef-405a-9f80-1f03385e24c0
+2025-01-03 23:55:59.001 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataRepository] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Pinned snapshot token=e8449895-d8c7-4698-8d23-6557e16b9ce0
+2025-01-03 23:55:59.001 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Enabling AtlasStorableCache with caches (request: true, object: true, redis: false)
+2025-01-03 23:55:59.086 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.l.UnsecuredLogicalModelManager] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin UnsecuredLogicalModelManager::getDataSourceLiteObjects
+2025-01-03 23:55:59.086 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getDataSourceLiteObjects guids=1, hidden=true
+2025-01-03 23:55:59.087 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Retrieved nodes=1
+2025-01-03 23:55:59.087 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin DataSourceLiteReader::read id=43121d86-347a-4dbb-bea8-5e5bb899e427, name=Default
+2025-01-03 23:55:59.090 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a End DataSourceLiteReader::read id=43121d86-347a-4dbb-bea8-5e5bb899e427, name=Default
+2025-01-03 23:55:59.100 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Parsed dataSourceLites=1
+2025-01-03 23:55:59.100 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a End getDataSourceLiteObjects
+2025-01-03 23:55:59.101 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=0 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getDataSourceLiteObjects guids=0, hidden=true
+2025-01-03 23:55:59.101 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=0 user=59481331-ee53-42be-a548-bd87be6ddd4a Retrieved nodes=0
+2025-01-03 23:55:59.102 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=0 user=59481331-ee53-42be-a548-bd87be6ddd4a Parsed dataSourceLites=0
+2025-01-03 23:55:59.102 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=0 user=59481331-ee53-42be-a548-bd87be6ddd4a End getDataSourceLiteObjects
+2025-01-03 23:55:59.125 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-03 23:55:59.251 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Object cache write : LOGICAL_TABLEa7316e8d-d4dd-4eaf-9294-396db951b422
+2025-01-03 23:55:59.255 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.c.CustomCalendarMetadataManagerImpl] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Global available calendars size : 1
+2025-01-03 23:55:59.259 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : exportTML program arg is set to False. Skipping TML export of failed or changed objects.
+2025-01-03 23:55:59.259 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Fetching backend request objects.
+2025-01-03 23:55:59.260 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Fetching guids by view count. type = QUESTION_ANSWER_BOOK, remainingGuids = -1
+2025-01-03 23:55:59.260 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : No more guids needed, continuing.
+2025-01-03 23:55:59.260 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Fetching guids by last date modified. type = QUESTION_ANSWER_BOOK, remainingGuids = -1
+2025-01-03 23:55:59.260 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : No more guids needed, continuing.
+2025-01-03 23:55:59.260 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Found 1 guids
+2025-01-03 23:55:59.260 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : List of guids
+2025-01-03 23:55:59.260 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : end of guids
+2025-01-03 23:55:59.263 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Invoking all threads
+2025-01-03 23:55:59.267 INFO  {write-artifacts-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-03 23:55:59.624 INFO  {write-artifacts-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-03 23:55:59.767 INFO  {write-artifacts-0-0} [c.t.c.m.m.l.AtlasLogicalSchemaStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Parsed tables=1
+2025-01-03 23:55:59.774 INFO  {write-artifacts-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Object cache write : LOGICAL_TABLE95158c5f-7805-48f0-8802-c727d1785a04
+2025-01-03 23:55:59.778 INFO  {write-artifacts-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Object cache write : LOGICAL_TABLE2445fe81-30d6-46fa-9f42-f6b1b4e01623
+2025-01-03 23:55:59.782 INFO  {write-artifacts-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Object cache write : LOGICAL_TABLEa7fc012e-bdb3-4e75-9ce4-b3f731d90136
+2025-01-03 23:55:59.784 INFO  {write-artifacts-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Object cache write : LOGICAL_TABLE1c97ce56-e803-41c5-9132-3075425c8b41
+2025-01-03 23:55:59.835 INFO  {write-artifacts-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Object cache write : ANSWER_SPEC186d5a92-d5f1-44a0-9793-7cadc6c8b4b1
+2025-01-03 23:55:59.852 INFO  {validator-0-0} [c.t.c.v.querygen.QuerygenValidator] : Creating Falcon Query Spec for guid = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and vizID = c7398a14-2eba-4a6c-9a07-e77c76d90faa
+2025-01-03 23:55:59.911 WARN  {validator-0-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-03 23:55:59.927 INFO  {validator-0-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-03 23:55:59.934 INFO  {validator-0-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 2.91375E-4 ms
+2025-01-03 23:55:59.967 INFO  {validator-0-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-03 23:55:59.967 INFO  {validator-0-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 3.2713800000000004E-4 ms
+2025-01-03 23:55:59.976 INFO  {validator-0-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-03 23:55:59.977 INFO  {validator-0-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 3.60909E-4 ms
+2025-01-03 23:56:00.438 INFO  {validator-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-03 23:56:00.438 WARN  {validator-0-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=3a983117-9cd8-4760-990f-8f6edcd12648 found in index."
+
+2025-01-03 23:56:00.454 INFO  {validator-0-0} [c.t.c.d.q.t.MergeQueryTableTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No queries were able to be merged.
+2025-01-03 23:56:00.457 INFO  {validator-0-0} [c.t.c.d.q.t.MergeQueryTableTransformerV0] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a MergeQueryTableTransformer is enabled. Therefore skippingMergeQueryTableTransformerV0
+2025-01-03 23:56:00.467 INFO  {validator-0-0} [c.t.c.data.querygen.AnswerSpecQueryGen] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for answerspec=[186d5a92-d5f1-44a0-9793-7cadc6c8b4b1] took #answerspecqgenlatency=499 ms
+2025-01-03 23:56:00.469 INFO  {validator-0-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec for guid: "c7398a14-2eba-4a6c-9a07-e77c76d90faa"
+name: "Viz [id: c7398a14-2eba-4a6c-9a07-e77c76d90faa, name: Headline Viz average revenue by part partkey year supplier region europe]"
+description: "HEADLINE Viz Query for average revenue by part partkey year supplier region europe"
+/nquery_schema {
+  table {
+    alias {
+      guid: "1133155e-e167-45f3-bac7-a8f87d7dfcd8"
+      name: "PART"
+    }
+    table {
+      guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+      name: "PART"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+        name: "PART"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "a573955f-2fa2-44ce-b2c7-73c8778251de"
+          name: "Lineorder PartKey"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+          name: "PART"
+        }
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "0cdba617-fa08-4deb-9a04-6d31ff60cb48"
+      name: "DATE"
+    }
+    table {
+      guid: "1c97ce56-e803-41c5-9132-3075425c8b41"
+      name: "DATE"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "1c97ce56-e803-41c5-9132-3075425c8b41"
+        name: "DATE"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "f92abc45-3df2-462c-a3ee-1e9721d16ea0"
+          name: "Commit Date"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "1c97ce56-e803-41c5-9132-3075425c8b41"
+          name: "DATE"
+        }
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "26e20687-7a64-4d05-b641-9c581fa9c8f5"
+      name: "SUPPLIER"
+    }
+    table {
+      guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+      name: "SUPPLIER"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+        name: "SUPPLIER"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "fdde92f9-833a-42ab-bb61-6769bb260853"
+          name: "Lineorder Suppkey"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+          name: "SUPPLIER"
+        }
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "0dc40868-d90e-48b4-8f69-d53e78fa3168"
+      name: "LINEORDER"
+    }
+    table {
+      guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+      name: "LINEORDER"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      is_connected: true
+    }
+  }
+  table {
+    alias {
+      guid: "176d63c3-686d-4a0c-b6ad-b9006c1262f4"
+      name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+    }
+    table {
+      guid: "3a983117-9cd8-4760-990f-8f6edcd12648"
+      name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+      description: "TABLE Viz Query for average revenue by part partkey year supplier region europe"
+    }
+    join_path {
+      root_table {
+        guid: "3a983117-9cd8-4760-990f-8f6edcd12648"
+        name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+        description: "TABLE Viz Query for average revenue by part partkey year supplier region europe"
+      }
+      leaf_table {
+        guid: "3a983117-9cd8-4760-990f-8f6edcd12648"
+        name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+        description: "TABLE Viz Query for average revenue by part partkey year supplier region europe"
+      }
+    }
+  }
+  column {
+    alias {
+      guid: "8e801c95-c8a6-4bb3-8baf-7415b6f83204"
+      name: "Part PartKey"
+    }
+    column {
+      guid: "ae5e8fe0-ef00-4539-894a-c7267341e2d8"
+      name: "Part PartKey"
+    }
+    table_alias {
+      guid: "1133155e-e167-45f3-bac7-a8f87d7dfcd8"
+      name: "PART"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "3667f7e8-a884-4ec5-b614-e2a0f7f8ebfb"
+      name: "Year"
+    }
+    column {
+      guid: "f1f13666-15fa-48ed-bf9f-c6a3f42f25ea"
+      name: "Year"
+    }
+    table_alias {
+      guid: "0cdba617-fa08-4deb-9a04-6d31ff60cb48"
+      name: "DATE"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "2ee1833f-307a-44ec-8e64-af7eff206eba"
+      name: "Supplier Region"
+    }
+    column {
+      guid: "0f7361ca-de08-43b8-8170-a759d92ec654"
+      name: "Supplier Region"
+    }
+    table_alias {
+      guid: "26e20687-7a64-4d05-b641-9c581fa9c8f5"
+      name: "SUPPLIER"
+    }
+    data_type: CHAR
+  }
+  column {
+    alias {
+      guid: "4049722e-a90e-4947-af7e-a1e2545dc10b"
+      name: "Revenue"
+    }
+    column {
+      guid: "d8cd8978-bd01-4d57-910d-4781e8b33123"
+      name: "Revenue"
+    }
+    table_alias {
+      guid: "0dc40868-d90e-48b4-8f69-d53e78fa3168"
+      name: "LINEORDER"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "e22dcc5e-c3a3-4ba8-b93a-c9ee6ed66765"
+      name: "Part PartKey"
+    }
+    column {
+      guid: "9ff2daa1-b490-35ed-91bc-4f14e1787086"
+      name: "Part PartKey"
+    }
+    table_alias {
+      guid: "176d63c3-686d-4a0c-b6ad-b9006c1262f4"
+      name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+    }
+    data_type: INT64
+  }
+  formula {
+    alias {
+      guid: "1c0395f3-e50b-49c4-83d1-fac4fda94974"
+      name: "Average(Revenue)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Average"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "4049722e-a90e-4947-af7e-a1e2545dc10b"
+              name: "Revenue"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: DOUBLE
+    }
+    table_alias {
+      guid: "0dc40868-d90e-48b4-8f69-d53e78fa3168"
+      name: "LINEORDER"
+    }
+  }
+  formula {
+    alias {
+      guid: "90cf08dc-e0bc-42d7-bd3d-848b2d620015"
+      name: "UniqueCount(Part PartKey)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "UniqueCount"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "e22dcc5e-c3a3-4ba8-b93a-c9ee6ed66765"
+              name: "Part PartKey"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "176d63c3-686d-4a0c-b6ad-b9006c1262f4"
+      name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+    }
+  }
+}
+table {
+  id {
+    guid: "3a983117-9cd8-4760-990f-8f6edcd12648"
+    name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+    description: "TABLE Viz Query for average revenue by part partkey year supplier region europe"
+  }
+  filter {
+    id {
+      guid: "2ee1833f-307a-44ec-8e64-af7eff206eba"
+      name: "Supplier Region"
+    }
+    operatorValues {
+      op: EQ
+      value {
+        string_value: "europe"
+      }
+    }
+    negate_filter: false
+    type: SIMPLE
+  }
+  column {
+    id {
+      guid: "8e801c95-c8a6-4bb3-8baf-7415b6f83204"
+      name: "Part PartKey"
+    }
+    output_id {
+      guid: "9ff2daa1-b490-35ed-91bc-4f14e1787086"
+      name: "Part PartKey"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "3667f7e8-a884-4ec5-b614-e2a0f7f8ebfb"
+      name: "Year"
+    }
+    output_id {
+      guid: "59a8f1be-b073-3eac-a1a6-fc340bba18eb"
+      name: "Year"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "2ee1833f-307a-44ec-8e64-af7eff206eba"
+      name: "Supplier Region"
+    }
+    output_id {
+      guid: "d3b8e31c-9225-384e-a562-de2d262ff93c"
+      name: "Supplier Region"
+    }
+    column_type: ATTRIBUTE
+    data_type: CHAR
+  }
+  column {
+    id {
+      guid: "1c0395f3-e50b-49c4-83d1-fac4fda94974"
+      name: "Average(Revenue)"
+    }
+    output_id {
+      guid: "dbd1fd4b-2041-3ea5-869e-8d87a9f0282f"
+      name: "Average Revenue"
+    }
+    column_type: MEASURE
+    data_type: DOUBLE
+  }
+  group_by {
+    id {
+      guid: "8e801c95-c8a6-4bb3-8baf-7415b6f83204"
+      name: "Part PartKey"
+    }
+  }
+  group_by {
+    id {
+      guid: "3667f7e8-a884-4ec5-b614-e2a0f7f8ebfb"
+      name: "Year"
+    }
+  }
+  group_by {
+    id {
+      guid: "2ee1833f-307a-44ec-8e64-af7eff206eba"
+      name: "Supplier Region"
+    }
+  }
+  order_by {
+    id {
+      guid: "8e801c95-c8a6-4bb3-8baf-7415b6f83204"
+      name: "Part PartKey"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  order_by {
+    id {
+      guid: "3667f7e8-a884-4ec5-b614-e2a0f7f8ebfb"
+      name: "Year"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  order_by {
+    id {
+      guid: "2ee1833f-307a-44ec-8e64-af7eff206eba"
+      name: "Supplier Region"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "c7398a14-2eba-4a6c-9a07-e77c76d90faa"
+    name: "Viz [id: c7398a14-2eba-4a6c-9a07-e77c76d90faa, name: Headline Viz average revenue by part partkey year supplier region europe]"
+    description: "HEADLINE Viz Query for average revenue by part partkey year supplier region europe"
+  }
+  column {
+    id {
+      guid: "90cf08dc-e0bc-42d7-bd3d-848b2d620015"
+      name: "UniqueCount(Part PartKey)"
+    }
+    output_id {
+      guid: "09e46bba-4c0b-3ff5-bacc-9c425a660166"
+      name: "Part PartKey_COUNT_DISTINCT"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: true
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+
+2025-01-03 23:56:00.470 INFO  {validator-0-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec generated for 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and c7398a14-2eba-4a6c-9a07-e77c76d90faa
+2025-01-03 23:56:00.592 INFO  {validator-0-0} [c.t.c.v.querygen.QuerygenValidator] : Falcon Request generated for GUID = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and VizId = c7398a14-2eba-4a6c-9a07-e77c76d90faa
+2025-01-03 23:56:00.594 INFO  {validator-1-0} [c.t.c.v.querygen.QuerygenValidator] : Creating Falcon Query Spec for guid = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and vizID = 44d20322-87a5-435a-a0ea-1f566f34a867
+2025-01-03 23:56:00.600 WARN  {validator-1-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-03 23:56:00.603 INFO  {validator-1-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-03 23:56:00.603 INFO  {validator-1-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 3.75313E-4 ms
+2025-01-03 23:56:00.603 INFO  {validator-1-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-03 23:56:00.604 INFO  {validator-1-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 3.90403E-4 ms
+2025-01-03 23:56:00.604 INFO  {validator-1-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-03 23:56:00.604 INFO  {validator-1-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 4.0346E-4 ms
+2025-01-03 23:56:00.693 INFO  {validator-1-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-03 23:56:00.694 WARN  {validator-1-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=3a983117-9cd8-4760-990f-8f6edcd12648 found in index."
+
+2025-01-03 23:56:00.699 INFO  {validator-1-0} [c.t.c.d.q.t.MergeQueryTableTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No queries were able to be merged.
+2025-01-03 23:56:00.700 INFO  {validator-1-0} [c.t.c.d.q.t.MergeQueryTableTransformerV0] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a MergeQueryTableTransformer is enabled. Therefore skippingMergeQueryTableTransformerV0
+2025-01-03 23:56:00.743 INFO  {validator-1-0} [c.t.c.data.querygen.AnswerSpecQueryGen] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for answerspec=[186d5a92-d5f1-44a0-9793-7cadc6c8b4b1] took #answerspecqgenlatency=140 ms
+2025-01-03 23:56:00.744 INFO  {validator-1-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec for guid: "44d20322-87a5-435a-a0ea-1f566f34a867"
+name: "Viz [id: 44d20322-87a5-435a-a0ea-1f566f34a867, name: Headline Viz average revenue by part partkey year supplier region europe]"
+description: "HEADLINE Viz Query for average revenue by part partkey year supplier region europe"
+/nquery_schema {
+  table {
+    alias {
+      guid: "c7a5c16c-8b11-4021-b85b-d26914943aa2"
+      name: "PART"
+    }
+    table {
+      guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+      name: "PART"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+        name: "PART"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "a573955f-2fa2-44ce-b2c7-73c8778251de"
+          name: "Lineorder PartKey"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+          name: "PART"
+        }
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "27139745-12ce-4740-9853-d9201c8f87ed"
+      name: "DATE"
+    }
+    table {
+      guid: "1c97ce56-e803-41c5-9132-3075425c8b41"
+      name: "DATE"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "1c97ce56-e803-41c5-9132-3075425c8b41"
+        name: "DATE"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "f92abc45-3df2-462c-a3ee-1e9721d16ea0"
+          name: "Commit Date"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "1c97ce56-e803-41c5-9132-3075425c8b41"
+          name: "DATE"
+        }
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "945fd416-7f40-4295-9157-94aeb15086ca"
+      name: "SUPPLIER"
+    }
+    table {
+      guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+      name: "SUPPLIER"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+        name: "SUPPLIER"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "fdde92f9-833a-42ab-bb61-6769bb260853"
+          name: "Lineorder Suppkey"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+          name: "SUPPLIER"
+        }
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "2f4820f4-07b9-4cf7-9886-5229005fbb78"
+      name: "LINEORDER"
+    }
+    table {
+      guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+      name: "LINEORDER"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      is_connected: true
+    }
+  }
+  table {
+    alias {
+      guid: "bea10b80-3e26-4779-ab1d-305e82b54e2c"
+      name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+    }
+    table {
+      guid: "3a983117-9cd8-4760-990f-8f6edcd12648"
+      name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+      description: "TABLE Viz Query for average revenue by part partkey year supplier region europe"
+    }
+    join_path {
+      root_table {
+        guid: "3a983117-9cd8-4760-990f-8f6edcd12648"
+        name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+        description: "TABLE Viz Query for average revenue by part partkey year supplier region europe"
+      }
+      leaf_table {
+        guid: "3a983117-9cd8-4760-990f-8f6edcd12648"
+        name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+        description: "TABLE Viz Query for average revenue by part partkey year supplier region europe"
+      }
+    }
+  }
+  column {
+    alias {
+      guid: "d1471941-c79d-426d-a934-8c4cace8a69d"
+      name: "Part PartKey"
+    }
+    column {
+      guid: "ae5e8fe0-ef00-4539-894a-c7267341e2d8"
+      name: "Part PartKey"
+    }
+    table_alias {
+      guid: "c7a5c16c-8b11-4021-b85b-d26914943aa2"
+      name: "PART"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "732aaac3-b6af-4cd1-924e-75a79175de0c"
+      name: "Year"
+    }
+    column {
+      guid: "f1f13666-15fa-48ed-bf9f-c6a3f42f25ea"
+      name: "Year"
+    }
+    table_alias {
+      guid: "27139745-12ce-4740-9853-d9201c8f87ed"
+      name: "DATE"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "6d19cb10-8d42-4e6b-add9-58a4bc8cdbb9"
+      name: "Supplier Region"
+    }
+    column {
+      guid: "0f7361ca-de08-43b8-8170-a759d92ec654"
+      name: "Supplier Region"
+    }
+    table_alias {
+      guid: "945fd416-7f40-4295-9157-94aeb15086ca"
+      name: "SUPPLIER"
+    }
+    data_type: CHAR
+  }
+  column {
+    alias {
+      guid: "a790120e-b26f-47d2-9030-35c81850f7bb"
+      name: "Revenue"
+    }
+    column {
+      guid: "d8cd8978-bd01-4d57-910d-4781e8b33123"
+      name: "Revenue"
+    }
+    table_alias {
+      guid: "2f4820f4-07b9-4cf7-9886-5229005fbb78"
+      name: "LINEORDER"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "2eebbba6-6cfc-42e3-9cad-f69a33351c1a"
+      name: "Year"
+    }
+    column {
+      guid: "59a8f1be-b073-3eac-a1a6-fc340bba18eb"
+      name: "Year"
+    }
+    table_alias {
+      guid: "bea10b80-3e26-4779-ab1d-305e82b54e2c"
+      name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+    }
+    data_type: INT64
+  }
+  formula {
+    alias {
+      guid: "c00acf47-4269-41af-91f5-279ff543752e"
+      name: "Average(Revenue)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Average"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "a790120e-b26f-47d2-9030-35c81850f7bb"
+              name: "Revenue"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: DOUBLE
+    }
+    table_alias {
+      guid: "2f4820f4-07b9-4cf7-9886-5229005fbb78"
+      name: "LINEORDER"
+    }
+  }
+  formula {
+    alias {
+      guid: "0f5bd4e7-bf25-4201-ad6a-29053d8c06b7"
+      name: "UniqueCount(Year)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "UniqueCount"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "2eebbba6-6cfc-42e3-9cad-f69a33351c1a"
+              name: "Year"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "bea10b80-3e26-4779-ab1d-305e82b54e2c"
+      name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+    }
+  }
+}
+table {
+  id {
+    guid: "3a983117-9cd8-4760-990f-8f6edcd12648"
+    name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+    description: "TABLE Viz Query for average revenue by part partkey year supplier region europe"
+  }
+  filter {
+    id {
+      guid: "6d19cb10-8d42-4e6b-add9-58a4bc8cdbb9"
+      name: "Supplier Region"
+    }
+    operatorValues {
+      op: EQ
+      value {
+        string_value: "europe"
+      }
+    }
+    negate_filter: false
+    type: SIMPLE
+  }
+  column {
+    id {
+      guid: "d1471941-c79d-426d-a934-8c4cace8a69d"
+      name: "Part PartKey"
+    }
+    output_id {
+      guid: "9ff2daa1-b490-35ed-91bc-4f14e1787086"
+      name: "Part PartKey"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "732aaac3-b6af-4cd1-924e-75a79175de0c"
+      name: "Year"
+    }
+    output_id {
+      guid: "59a8f1be-b073-3eac-a1a6-fc340bba18eb"
+      name: "Year"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "6d19cb10-8d42-4e6b-add9-58a4bc8cdbb9"
+      name: "Supplier Region"
+    }
+    output_id {
+      guid: "d3b8e31c-9225-384e-a562-de2d262ff93c"
+      name: "Supplier Region"
+    }
+    column_type: ATTRIBUTE
+    data_type: CHAR
+  }
+  column {
+    id {
+      guid: "c00acf47-4269-41af-91f5-279ff543752e"
+      name: "Average(Revenue)"
+    }
+    output_id {
+      guid: "dbd1fd4b-2041-3ea5-869e-8d87a9f0282f"
+      name: "Average Revenue"
+    }
+    column_type: MEASURE
+    data_type: DOUBLE
+  }
+  group_by {
+    id {
+      guid: "d1471941-c79d-426d-a934-8c4cace8a69d"
+      name: "Part PartKey"
+    }
+  }
+  group_by {
+    id {
+      guid: "732aaac3-b6af-4cd1-924e-75a79175de0c"
+      name: "Year"
+    }
+  }
+  group_by {
+    id {
+      guid: "6d19cb10-8d42-4e6b-add9-58a4bc8cdbb9"
+      name: "Supplier Region"
+    }
+  }
+  order_by {
+    id {
+      guid: "d1471941-c79d-426d-a934-8c4cace8a69d"
+      name: "Part PartKey"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  order_by {
+    id {
+      guid: "732aaac3-b6af-4cd1-924e-75a79175de0c"
+      name: "Year"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  order_by {
+    id {
+      guid: "6d19cb10-8d42-4e6b-add9-58a4bc8cdbb9"
+      name: "Supplier Region"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "44d20322-87a5-435a-a0ea-1f566f34a867"
+    name: "Viz [id: 44d20322-87a5-435a-a0ea-1f566f34a867, name: Headline Viz average revenue by part partkey year supplier region europe]"
+    description: "HEADLINE Viz Query for average revenue by part partkey year supplier region europe"
+  }
+  column {
+    id {
+      guid: "0f5bd4e7-bf25-4201-ad6a-29053d8c06b7"
+      name: "UniqueCount(Year)"
+    }
+    output_id {
+      guid: "87a8ab5b-8029-3817-9249-cb22d32d58f6"
+      name: "Year_COUNT_DISTINCT"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: true
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+
+2025-01-03 23:56:00.744 INFO  {validator-1-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec generated for 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and 44d20322-87a5-435a-a0ea-1f566f34a867
+2025-01-03 23:56:00.748 INFO  {validator-1-0} [c.t.c.v.querygen.QuerygenValidator] : Falcon Request generated for GUID = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and VizId = 44d20322-87a5-435a-a0ea-1f566f34a867
+2025-01-03 23:56:00.750 INFO  {validator-2-0} [c.t.c.v.querygen.QuerygenValidator] : Creating Falcon Query Spec for guid = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and vizID = 3a4f88c0-3c68-487d-93dc-526c8166f230
+2025-01-03 23:56:00.755 WARN  {validator-2-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-03 23:56:00.757 INFO  {validator-2-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-03 23:56:00.757 INFO  {validator-2-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 4.1845200000000004E-4 ms
+2025-01-03 23:56:00.758 INFO  {validator-2-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-03 23:56:00.758 INFO  {validator-2-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 5.094230000000001E-4 ms
+2025-01-03 23:56:00.758 INFO  {validator-2-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-03 23:56:00.758 INFO  {validator-2-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 5.303580000000001E-4 ms
+2025-01-03 23:56:00.870 INFO  {validator-2-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-03 23:56:00.870 WARN  {validator-2-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=3a983117-9cd8-4760-990f-8f6edcd12648 found in index."
+
+2025-01-03 23:56:00.938 INFO  {validator-2-0} [c.t.c.d.q.t.MergeQueryTableTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No queries were able to be merged.
+2025-01-03 23:56:00.942 INFO  {validator-2-0} [c.t.c.d.q.t.MergeQueryTableTransformerV0] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a MergeQueryTableTransformer is enabled. Therefore skippingMergeQueryTableTransformerV0
+2025-01-03 23:56:00.951 INFO  {validator-2-0} [c.t.c.data.querygen.AnswerSpecQueryGen] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for answerspec=[186d5a92-d5f1-44a0-9793-7cadc6c8b4b1] took #answerspecqgenlatency=193 ms
+2025-01-03 23:56:00.952 INFO  {validator-2-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec for guid: "3a4f88c0-3c68-487d-93dc-526c8166f230"
+name: "Viz [id: 3a4f88c0-3c68-487d-93dc-526c8166f230, name: Headline Viz average revenue by part partkey year supplier region europe]"
+description: "HEADLINE Viz Query for average revenue by part partkey year supplier region europe"
+/nquery_schema {
+  table {
+    alias {
+      guid: "9ae5ab17-c3e0-4b64-81a3-b8f69b82e27f"
+      name: "PART"
+    }
+    table {
+      guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+      name: "PART"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+        name: "PART"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "a573955f-2fa2-44ce-b2c7-73c8778251de"
+          name: "Lineorder PartKey"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+          name: "PART"
+        }
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "59c984ce-30fa-4e27-a52c-1bf67527c04b"
+      name: "DATE"
+    }
+    table {
+      guid: "1c97ce56-e803-41c5-9132-3075425c8b41"
+      name: "DATE"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "1c97ce56-e803-41c5-9132-3075425c8b41"
+        name: "DATE"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "f92abc45-3df2-462c-a3ee-1e9721d16ea0"
+          name: "Commit Date"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "1c97ce56-e803-41c5-9132-3075425c8b41"
+          name: "DATE"
+        }
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "024e806f-d896-41c6-8576-0eeb04051943"
+      name: "SUPPLIER"
+    }
+    table {
+      guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+      name: "SUPPLIER"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+        name: "SUPPLIER"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "fdde92f9-833a-42ab-bb61-6769bb260853"
+          name: "Lineorder Suppkey"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+          name: "SUPPLIER"
+        }
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "d802e284-76fe-4bae-8f52-e1d6d5f5ed19"
+      name: "LINEORDER"
+    }
+    table {
+      guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+      name: "LINEORDER"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      is_connected: true
+    }
+  }
+  table {
+    alias {
+      guid: "761d79ea-1112-412d-9168-3316bb256d50"
+      name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+    }
+    table {
+      guid: "3a983117-9cd8-4760-990f-8f6edcd12648"
+      name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+      description: "TABLE Viz Query for average revenue by part partkey year supplier region europe"
+    }
+    join_path {
+      root_table {
+        guid: "3a983117-9cd8-4760-990f-8f6edcd12648"
+        name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+        description: "TABLE Viz Query for average revenue by part partkey year supplier region europe"
+      }
+      leaf_table {
+        guid: "3a983117-9cd8-4760-990f-8f6edcd12648"
+        name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+        description: "TABLE Viz Query for average revenue by part partkey year supplier region europe"
+      }
+    }
+  }
+  column {
+    alias {
+      guid: "f1c69f16-d0d0-4fc3-9dad-20790b82e197"
+      name: "Part PartKey"
+    }
+    column {
+      guid: "ae5e8fe0-ef00-4539-894a-c7267341e2d8"
+      name: "Part PartKey"
+    }
+    table_alias {
+      guid: "9ae5ab17-c3e0-4b64-81a3-b8f69b82e27f"
+      name: "PART"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "86e5b943-cc0d-47bf-86f7-ecac200daccc"
+      name: "Year"
+    }
+    column {
+      guid: "f1f13666-15fa-48ed-bf9f-c6a3f42f25ea"
+      name: "Year"
+    }
+    table_alias {
+      guid: "59c984ce-30fa-4e27-a52c-1bf67527c04b"
+      name: "DATE"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "114ba428-a1b0-4381-bcaf-24f8b15e04b6"
+      name: "Supplier Region"
+    }
+    column {
+      guid: "0f7361ca-de08-43b8-8170-a759d92ec654"
+      name: "Supplier Region"
+    }
+    table_alias {
+      guid: "024e806f-d896-41c6-8576-0eeb04051943"
+      name: "SUPPLIER"
+    }
+    data_type: CHAR
+  }
+  column {
+    alias {
+      guid: "85aaba5e-c5d6-43f3-b144-f5caa4422f98"
+      name: "Revenue"
+    }
+    column {
+      guid: "d8cd8978-bd01-4d57-910d-4781e8b33123"
+      name: "Revenue"
+    }
+    table_alias {
+      guid: "d802e284-76fe-4bae-8f52-e1d6d5f5ed19"
+      name: "LINEORDER"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "cfe262da-190d-45bd-bb77-9ce8eae0cc62"
+      name: "Supplier Region"
+    }
+    column {
+      guid: "d3b8e31c-9225-384e-a562-de2d262ff93c"
+      name: "Supplier Region"
+    }
+    table_alias {
+      guid: "761d79ea-1112-412d-9168-3316bb256d50"
+      name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+    }
+    data_type: CHAR
+  }
+  formula {
+    alias {
+      guid: "f463eaef-102e-40b9-b8b1-34f19e574772"
+      name: "Average(Revenue)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Average"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "85aaba5e-c5d6-43f3-b144-f5caa4422f98"
+              name: "Revenue"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: DOUBLE
+    }
+    table_alias {
+      guid: "d802e284-76fe-4bae-8f52-e1d6d5f5ed19"
+      name: "LINEORDER"
+    }
+  }
+  formula {
+    alias {
+      guid: "5d6d01a0-a937-4e74-ad41-7b5f84a8ee97"
+      name: "UniqueCount(Supplier Region)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "UniqueCount"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: CHAR
+          expr_ref {
+            ref_id {
+              guid: "cfe262da-190d-45bd-bb77-9ce8eae0cc62"
+              name: "Supplier Region"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "761d79ea-1112-412d-9168-3316bb256d50"
+      name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+    }
+  }
+}
+table {
+  id {
+    guid: "3a983117-9cd8-4760-990f-8f6edcd12648"
+    name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+    description: "TABLE Viz Query for average revenue by part partkey year supplier region europe"
+  }
+  filter {
+    id {
+      guid: "114ba428-a1b0-4381-bcaf-24f8b15e04b6"
+      name: "Supplier Region"
+    }
+    operatorValues {
+      op: EQ
+      value {
+        string_value: "europe"
+      }
+    }
+    negate_filter: false
+    type: SIMPLE
+  }
+  column {
+    id {
+      guid: "f1c69f16-d0d0-4fc3-9dad-20790b82e197"
+      name: "Part PartKey"
+    }
+    output_id {
+      guid: "9ff2daa1-b490-35ed-91bc-4f14e1787086"
+      name: "Part PartKey"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "86e5b943-cc0d-47bf-86f7-ecac200daccc"
+      name: "Year"
+    }
+    output_id {
+      guid: "59a8f1be-b073-3eac-a1a6-fc340bba18eb"
+      name: "Year"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "114ba428-a1b0-4381-bcaf-24f8b15e04b6"
+      name: "Supplier Region"
+    }
+    output_id {
+      guid: "d3b8e31c-9225-384e-a562-de2d262ff93c"
+      name: "Supplier Region"
+    }
+    column_type: ATTRIBUTE
+    data_type: CHAR
+  }
+  column {
+    id {
+      guid: "f463eaef-102e-40b9-b8b1-34f19e574772"
+      name: "Average(Revenue)"
+    }
+    output_id {
+      guid: "dbd1fd4b-2041-3ea5-869e-8d87a9f0282f"
+      name: "Average Revenue"
+    }
+    column_type: MEASURE
+    data_type: DOUBLE
+  }
+  group_by {
+    id {
+      guid: "f1c69f16-d0d0-4fc3-9dad-20790b82e197"
+      name: "Part PartKey"
+    }
+  }
+  group_by {
+    id {
+      guid: "86e5b943-cc0d-47bf-86f7-ecac200daccc"
+      name: "Year"
+    }
+  }
+  group_by {
+    id {
+      guid: "114ba428-a1b0-4381-bcaf-24f8b15e04b6"
+      name: "Supplier Region"
+    }
+  }
+  order_by {
+    id {
+      guid: "f1c69f16-d0d0-4fc3-9dad-20790b82e197"
+      name: "Part PartKey"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  order_by {
+    id {
+      guid: "86e5b943-cc0d-47bf-86f7-ecac200daccc"
+      name: "Year"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  order_by {
+    id {
+      guid: "114ba428-a1b0-4381-bcaf-24f8b15e04b6"
+      name: "Supplier Region"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "3a4f88c0-3c68-487d-93dc-526c8166f230"
+    name: "Viz [id: 3a4f88c0-3c68-487d-93dc-526c8166f230, name: Headline Viz average revenue by part partkey year supplier region europe]"
+    description: "HEADLINE Viz Query for average revenue by part partkey year supplier region europe"
+  }
+  column {
+    id {
+      guid: "5d6d01a0-a937-4e74-ad41-7b5f84a8ee97"
+      name: "UniqueCount(Supplier Region)"
+    }
+    output_id {
+      guid: "f2d62b24-ecbf-3103-8ad0-ab4500e37e52"
+      name: "Supplier Region_COUNT_DISTINCT"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: true
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+
+2025-01-03 23:56:00.953 INFO  {validator-2-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec generated for 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and 3a4f88c0-3c68-487d-93dc-526c8166f230
+2025-01-03 23:56:00.957 INFO  {validator-2-0} [c.t.c.v.querygen.QuerygenValidator] : Falcon Request generated for GUID = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and VizId = 3a4f88c0-3c68-487d-93dc-526c8166f230
+2025-01-03 23:56:00.960 INFO  {validator-3-0} [c.t.c.v.querygen.QuerygenValidator] : Creating Falcon Query Spec for guid = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and vizID = 9bfe1bfc-8741-4033-9edd-d6f2e4971167
+2025-01-03 23:56:00.966 WARN  {validator-3-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-03 23:56:00.969 INFO  {validator-3-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-03 23:56:00.969 INFO  {validator-3-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 5.573110000000001E-4 ms
+2025-01-03 23:56:00.970 INFO  {validator-3-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-03 23:56:00.970 INFO  {validator-3-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 5.750020000000001E-4 ms
+2025-01-03 23:56:00.970 INFO  {validator-3-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-03 23:56:00.970 INFO  {validator-3-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 5.905000000000001E-4 ms
+2025-01-03 23:56:01.063 INFO  {validator-3-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-03 23:56:01.063 WARN  {validator-3-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=3a983117-9cd8-4760-990f-8f6edcd12648 found in index."
+
+2025-01-03 23:56:01.066 INFO  {validator-3-0} [c.t.c.d.q.t.MergeQueryTableTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No queries were able to be merged.
+2025-01-03 23:56:01.067 INFO  {validator-3-0} [c.t.c.d.q.t.MergeQueryTableTransformerV0] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a MergeQueryTableTransformer is enabled. Therefore skippingMergeQueryTableTransformerV0
+2025-01-03 23:56:01.073 INFO  {validator-3-0} [c.t.c.data.querygen.AnswerSpecQueryGen] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for answerspec=[186d5a92-d5f1-44a0-9793-7cadc6c8b4b1] took #answerspecqgenlatency=103 ms
+2025-01-03 23:56:01.073 INFO  {validator-3-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec for guid: "9bfe1bfc-8741-4033-9edd-d6f2e4971167"
+name: "Viz [id: 9bfe1bfc-8741-4033-9edd-d6f2e4971167, name: Headline Viz average revenue by part partkey year supplier region europe]"
+description: "HEADLINE Viz Query for average revenue by part partkey year supplier region europe"
+/nquery_schema {
+  table {
+    alias {
+      guid: "fb71319a-8504-403c-8bfe-f113c995f740"
+      name: "PART"
+    }
+    table {
+      guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+      name: "PART"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+        name: "PART"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "a573955f-2fa2-44ce-b2c7-73c8778251de"
+          name: "Lineorder PartKey"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+          name: "PART"
+        }
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "d07906a6-2298-423b-8395-6285bf632b6b"
+      name: "DATE"
+    }
+    table {
+      guid: "1c97ce56-e803-41c5-9132-3075425c8b41"
+      name: "DATE"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "1c97ce56-e803-41c5-9132-3075425c8b41"
+        name: "DATE"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "f92abc45-3df2-462c-a3ee-1e9721d16ea0"
+          name: "Commit Date"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "1c97ce56-e803-41c5-9132-3075425c8b41"
+          name: "DATE"
+        }
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "7b17b480-9f17-4869-a2af-c907d086990a"
+      name: "SUPPLIER"
+    }
+    table {
+      guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+      name: "SUPPLIER"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+        name: "SUPPLIER"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "fdde92f9-833a-42ab-bb61-6769bb260853"
+          name: "Lineorder Suppkey"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+          name: "SUPPLIER"
+        }
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "5296db22-3f4f-422a-aa9e-b0969f3247aa"
+      name: "LINEORDER"
+    }
+    table {
+      guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+      name: "LINEORDER"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      is_connected: true
+    }
+  }
+  table {
+    alias {
+      guid: "6829071f-5c5a-4dc0-8f38-a210a65d02b9"
+      name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+    }
+    table {
+      guid: "3a983117-9cd8-4760-990f-8f6edcd12648"
+      name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+      description: "TABLE Viz Query for average revenue by part partkey year supplier region europe"
+    }
+    join_path {
+      root_table {
+        guid: "3a983117-9cd8-4760-990f-8f6edcd12648"
+        name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+        description: "TABLE Viz Query for average revenue by part partkey year supplier region europe"
+      }
+      leaf_table {
+        guid: "3a983117-9cd8-4760-990f-8f6edcd12648"
+        name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+        description: "TABLE Viz Query for average revenue by part partkey year supplier region europe"
+      }
+    }
+  }
+  column {
+    alias {
+      guid: "93cdf25b-3a1a-45d4-864a-8621bf133939"
+      name: "Part PartKey"
+    }
+    column {
+      guid: "ae5e8fe0-ef00-4539-894a-c7267341e2d8"
+      name: "Part PartKey"
+    }
+    table_alias {
+      guid: "fb71319a-8504-403c-8bfe-f113c995f740"
+      name: "PART"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "1ac1c176-ba99-47c4-bbbe-2fafcd7cdc66"
+      name: "Year"
+    }
+    column {
+      guid: "f1f13666-15fa-48ed-bf9f-c6a3f42f25ea"
+      name: "Year"
+    }
+    table_alias {
+      guid: "d07906a6-2298-423b-8395-6285bf632b6b"
+      name: "DATE"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "a8d8e37e-fc3f-45af-9747-249e4080aa3f"
+      name: "Supplier Region"
+    }
+    column {
+      guid: "0f7361ca-de08-43b8-8170-a759d92ec654"
+      name: "Supplier Region"
+    }
+    table_alias {
+      guid: "7b17b480-9f17-4869-a2af-c907d086990a"
+      name: "SUPPLIER"
+    }
+    data_type: CHAR
+  }
+  column {
+    alias {
+      guid: "ef777331-8819-4b2f-bb38-e906c09846ea"
+      name: "Revenue"
+    }
+    column {
+      guid: "d8cd8978-bd01-4d57-910d-4781e8b33123"
+      name: "Revenue"
+    }
+    table_alias {
+      guid: "5296db22-3f4f-422a-aa9e-b0969f3247aa"
+      name: "LINEORDER"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "13f37654-e3a0-4edc-9842-90396ad63434"
+      name: "Average Revenue"
+    }
+    column {
+      guid: "dbd1fd4b-2041-3ea5-869e-8d87a9f0282f"
+      name: "Average Revenue"
+    }
+    table_alias {
+      guid: "6829071f-5c5a-4dc0-8f38-a210a65d02b9"
+      name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+    }
+    data_type: DOUBLE
+  }
+  formula {
+    alias {
+      guid: "31be442c-0299-4bb3-b3c4-b1507a0fd8ae"
+      name: "Average(Revenue)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Average"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "ef777331-8819-4b2f-bb38-e906c09846ea"
+              name: "Revenue"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: DOUBLE
+    }
+    table_alias {
+      guid: "5296db22-3f4f-422a-aa9e-b0969f3247aa"
+      name: "LINEORDER"
+    }
+  }
+  formula {
+    alias {
+      guid: "f3a86a85-87cf-4254-9ff8-fa0421308190"
+      name: "Min(Average Revenue)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Min"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: DOUBLE
+          expr_ref {
+            ref_id {
+              guid: "13f37654-e3a0-4edc-9842-90396ad63434"
+              name: "Average Revenue"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: DOUBLE
+    }
+    table_alias {
+      guid: "6829071f-5c5a-4dc0-8f38-a210a65d02b9"
+      name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+    }
+  }
+}
+table {
+  id {
+    guid: "3a983117-9cd8-4760-990f-8f6edcd12648"
+    name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+    description: "TABLE Viz Query for average revenue by part partkey year supplier region europe"
+  }
+  filter {
+    id {
+      guid: "a8d8e37e-fc3f-45af-9747-249e4080aa3f"
+      name: "Supplier Region"
+    }
+    operatorValues {
+      op: EQ
+      value {
+        string_value: "europe"
+      }
+    }
+    negate_filter: false
+    type: SIMPLE
+  }
+  column {
+    id {
+      guid: "93cdf25b-3a1a-45d4-864a-8621bf133939"
+      name: "Part PartKey"
+    }
+    output_id {
+      guid: "9ff2daa1-b490-35ed-91bc-4f14e1787086"
+      name: "Part PartKey"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "1ac1c176-ba99-47c4-bbbe-2fafcd7cdc66"
+      name: "Year"
+    }
+    output_id {
+      guid: "59a8f1be-b073-3eac-a1a6-fc340bba18eb"
+      name: "Year"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "a8d8e37e-fc3f-45af-9747-249e4080aa3f"
+      name: "Supplier Region"
+    }
+    output_id {
+      guid: "d3b8e31c-9225-384e-a562-de2d262ff93c"
+      name: "Supplier Region"
+    }
+    column_type: ATTRIBUTE
+    data_type: CHAR
+  }
+  column {
+    id {
+      guid: "31be442c-0299-4bb3-b3c4-b1507a0fd8ae"
+      name: "Average(Revenue)"
+    }
+    output_id {
+      guid: "dbd1fd4b-2041-3ea5-869e-8d87a9f0282f"
+      name: "Average Revenue"
+    }
+    column_type: MEASURE
+    data_type: DOUBLE
+  }
+  group_by {
+    id {
+      guid: "93cdf25b-3a1a-45d4-864a-8621bf133939"
+      name: "Part PartKey"
+    }
+  }
+  group_by {
+    id {
+      guid: "1ac1c176-ba99-47c4-bbbe-2fafcd7cdc66"
+      name: "Year"
+    }
+  }
+  group_by {
+    id {
+      guid: "a8d8e37e-fc3f-45af-9747-249e4080aa3f"
+      name: "Supplier Region"
+    }
+  }
+  order_by {
+    id {
+      guid: "93cdf25b-3a1a-45d4-864a-8621bf133939"
+      name: "Part PartKey"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  order_by {
+    id {
+      guid: "1ac1c176-ba99-47c4-bbbe-2fafcd7cdc66"
+      name: "Year"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  order_by {
+    id {
+      guid: "a8d8e37e-fc3f-45af-9747-249e4080aa3f"
+      name: "Supplier Region"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "9bfe1bfc-8741-4033-9edd-d6f2e4971167"
+    name: "Viz [id: 9bfe1bfc-8741-4033-9edd-d6f2e4971167, name: Headline Viz average revenue by part partkey year supplier region europe]"
+    description: "HEADLINE Viz Query for average revenue by part partkey year supplier region europe"
+  }
+  column {
+    id {
+      guid: "f3a86a85-87cf-4254-9ff8-fa0421308190"
+      name: "Min(Average Revenue)"
+    }
+    output_id {
+      guid: "8fb659ef-bc5c-3bd1-9741-d19520f87820"
+      name: "Average(Revenue)_MIN"
+    }
+    column_type: MEASURE
+    data_type: DOUBLE
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: true
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+
+2025-01-03 23:56:01.074 INFO  {validator-3-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec generated for 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and 9bfe1bfc-8741-4033-9edd-d6f2e4971167
+2025-01-03 23:56:01.076 INFO  {validator-3-0} [c.t.c.v.querygen.QuerygenValidator] : Falcon Request generated for GUID = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and VizId = 9bfe1bfc-8741-4033-9edd-d6f2e4971167
+2025-01-03 23:56:01.078 INFO  {validator-4-0} [c.t.c.v.querygen.QuerygenValidator] : Creating Falcon Query Spec for guid = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and vizID = b9002e0b-9672-4781-b4be-48259e629a23
+2025-01-03 23:56:01.081 WARN  {validator-4-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-03 23:56:01.083 INFO  {validator-4-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-03 23:56:01.083 INFO  {validator-4-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 6.068690000000001E-4 ms
+2025-01-03 23:56:01.083 INFO  {validator-4-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-03 23:56:01.083 INFO  {validator-4-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 6.194980000000001E-4 ms
+2025-01-03 23:56:01.144 INFO  {validator-4-0} [c.t.c.d.q.t.MergeQueryTableTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No queries were able to be merged.
+2025-01-03 23:56:01.145 INFO  {validator-4-0} [c.t.c.d.q.t.MergeQueryTableTransformerV0] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a MergeQueryTableTransformer is enabled. Therefore skippingMergeQueryTableTransformerV0
+2025-01-03 23:56:01.147 INFO  {validator-4-0} [c.t.c.data.querygen.AnswerSpecQueryGen] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for answerspec=[186d5a92-d5f1-44a0-9793-7cadc6c8b4b1] took #answerspecqgenlatency=64 ms
+2025-01-03 23:56:01.147 INFO  {validator-4-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec for guid: "b9002e0b-9672-4781-b4be-48259e629a23"
+name: "Viz [id: b9002e0b-9672-4781-b4be-48259e629a23, name: Filter Viz average revenue by part partkey year supplier region europe Row: 0]"
+description: "FILTER Viz Query for average revenue by part partkey year supplier region europe"
+/nquery_schema {
+  table {
+    alias {
+      guid: "ca90a8b0-fc1f-4a18-8d28-3d36c5d67c78"
+      name: "SUPPLIER"
+    }
+    table {
+      guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+      name: "SUPPLIER"
+    }
+    join_path {
+      root_table {
+        guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+        name: "SUPPLIER"
+      }
+      leaf_table {
+        guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+        name: "SUPPLIER"
+      }
+    }
+  }
+  column {
+    alias {
+      guid: "187b807c-17c0-4d55-a15a-f300a1ed0731"
+      name: "Supplier Region"
+    }
+    column {
+      guid: "0f7361ca-de08-43b8-8170-a759d92ec654"
+      name: "Supplier Region"
+    }
+    table_alias {
+      guid: "ca90a8b0-fc1f-4a18-8d28-3d36c5d67c78"
+      name: "SUPPLIER"
+    }
+    data_type: CHAR
+  }
+}
+table {
+  id {
+    guid: "b9002e0b-9672-4781-b4be-48259e629a23"
+    name: "Viz [id: b9002e0b-9672-4781-b4be-48259e629a23, name: Filter Viz average revenue by part partkey year supplier region europe Row: 0]"
+    description: "FILTER Viz Query for average revenue by part partkey year supplier region europe"
+  }
+  column {
+    id {
+      guid: "187b807c-17c0-4d55-a15a-f300a1ed0731"
+      name: "Supplier Region"
+    }
+    output_id {
+      guid: "50d9cf79-36b4-39b5-a1f4-4a1f888bd287"
+      name: "Supplier Region"
+    }
+    column_type: ATTRIBUTE
+    data_type: CHAR
+  }
+  group_by {
+    id {
+      guid: "187b807c-17c0-4d55-a15a-f300a1ed0731"
+      name: "Supplier Region"
+    }
+  }
+  order_by {
+    id {
+      guid: "187b807c-17c0-4d55-a15a-f300a1ed0731"
+      name: "Supplier Region"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: true
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: false
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+
+2025-01-03 23:56:01.147 INFO  {validator-4-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec generated for 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and b9002e0b-9672-4781-b4be-48259e629a23
+2025-01-03 23:56:01.148 INFO  {validator-4-0} [c.t.c.v.querygen.QuerygenValidator] : Falcon Request generated for GUID = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and VizId = b9002e0b-9672-4781-b4be-48259e629a23
+2025-01-03 23:56:01.149 INFO  {validator-5-0} [c.t.c.v.querygen.QuerygenValidator] : Creating Falcon Query Spec for guid = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and vizID = 3a983117-9cd8-4760-990f-8f6edcd12648
+2025-01-03 23:56:01.152 WARN  {validator-5-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-03 23:56:01.154 INFO  {validator-5-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-03 23:56:01.154 INFO  {validator-5-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 6.358370000000001E-4 ms
+2025-01-03 23:56:01.154 INFO  {validator-5-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-03 23:56:01.154 INFO  {validator-5-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 6.480180000000001E-4 ms
+2025-01-03 23:56:01.154 INFO  {validator-5-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-03 23:56:01.154 INFO  {validator-5-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 6.591750000000001E-4 ms
+2025-01-03 23:56:01.191 INFO  {validator-5-0} [c.t.c.d.q.t.MergeQueryTableTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No queries were able to be merged.
+2025-01-03 23:56:01.192 INFO  {validator-5-0} [c.t.c.d.q.t.MergeQueryTableTransformerV0] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a MergeQueryTableTransformer is enabled. Therefore skippingMergeQueryTableTransformerV0
+2025-01-03 23:56:01.196 INFO  {validator-5-0} [c.t.c.data.querygen.AnswerSpecQueryGen] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for answerspec=[186d5a92-d5f1-44a0-9793-7cadc6c8b4b1] took #answerspecqgenlatency=42 ms
+2025-01-03 23:56:01.197 INFO  {validator-5-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec for guid: "3a983117-9cd8-4760-990f-8f6edcd12648"
+name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+description: "TABLE Viz Query for average revenue by part partkey year supplier region europe"
+/nquery_schema {
+  table {
+    alias {
+      guid: "9acdefe1-5bfa-45b7-a690-22d290371ab2"
+      name: "PART"
+    }
+    table {
+      guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+      name: "PART"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+        name: "PART"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "a573955f-2fa2-44ce-b2c7-73c8778251de"
+          name: "Lineorder PartKey"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+          name: "PART"
+        }
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "e26130cb-e60d-4cc8-82da-7450027ab1b7"
+      name: "DATE"
+    }
+    table {
+      guid: "1c97ce56-e803-41c5-9132-3075425c8b41"
+      name: "DATE"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "1c97ce56-e803-41c5-9132-3075425c8b41"
+        name: "DATE"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "f92abc45-3df2-462c-a3ee-1e9721d16ea0"
+          name: "Commit Date"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "1c97ce56-e803-41c5-9132-3075425c8b41"
+          name: "DATE"
+        }
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "bb64ee8f-1f9a-47cc-b1e0-b84351bcd8b7"
+      name: "SUPPLIER"
+    }
+    table {
+      guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+      name: "SUPPLIER"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+        name: "SUPPLIER"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "fdde92f9-833a-42ab-bb61-6769bb260853"
+          name: "Lineorder Suppkey"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+          name: "SUPPLIER"
+        }
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "71bd71b9-506e-4d9a-b73c-da0306f32ccf"
+      name: "LINEORDER"
+    }
+    table {
+      guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+      name: "LINEORDER"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      is_connected: true
+    }
+  }
+  column {
+    alias {
+      guid: "e2e8246c-e2d2-4ff5-ac20-8b5c7bcf0ebb"
+      name: "Part PartKey"
+    }
+    column {
+      guid: "ae5e8fe0-ef00-4539-894a-c7267341e2d8"
+      name: "Part PartKey"
+    }
+    table_alias {
+      guid: "9acdefe1-5bfa-45b7-a690-22d290371ab2"
+      name: "PART"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "28debadb-1d81-4ace-8e4f-e0bb07b61323"
+      name: "Year"
+    }
+    column {
+      guid: "f1f13666-15fa-48ed-bf9f-c6a3f42f25ea"
+      name: "Year"
+    }
+    table_alias {
+      guid: "e26130cb-e60d-4cc8-82da-7450027ab1b7"
+      name: "DATE"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "6ea42954-a093-4a78-9a31-1d3628ae5023"
+      name: "Supplier Region"
+    }
+    column {
+      guid: "0f7361ca-de08-43b8-8170-a759d92ec654"
+      name: "Supplier Region"
+    }
+    table_alias {
+      guid: "bb64ee8f-1f9a-47cc-b1e0-b84351bcd8b7"
+      name: "SUPPLIER"
+    }
+    data_type: CHAR
+  }
+  column {
+    alias {
+      guid: "a81590d9-79a9-4619-a6f5-b0480545454c"
+      name: "Revenue"
+    }
+    column {
+      guid: "d8cd8978-bd01-4d57-910d-4781e8b33123"
+      name: "Revenue"
+    }
+    table_alias {
+      guid: "71bd71b9-506e-4d9a-b73c-da0306f32ccf"
+      name: "LINEORDER"
+    }
+    data_type: INT64
+  }
+  formula {
+    alias {
+      guid: "784b445f-0362-4eab-9c9c-aae4af2c671a"
+      name: "Average(Revenue)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Average"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "a81590d9-79a9-4619-a6f5-b0480545454c"
+              name: "Revenue"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: DOUBLE
+    }
+    table_alias {
+      guid: "71bd71b9-506e-4d9a-b73c-da0306f32ccf"
+      name: "LINEORDER"
+    }
+  }
+}
+table {
+  id {
+    guid: "3a983117-9cd8-4760-990f-8f6edcd12648"
+    name: "Viz [id: 3a983117-9cd8-4760-990f-8f6edcd12648, name: Table Viz average revenue by part partkey year supplier region europe]"
+    description: "TABLE Viz Query for average revenue by part partkey year supplier region europe"
+  }
+  filter {
+    id {
+      guid: "6ea42954-a093-4a78-9a31-1d3628ae5023"
+      name: "Supplier Region"
+    }
+    operatorValues {
+      op: EQ
+      value {
+        string_value: "europe"
+      }
+    }
+    negate_filter: false
+    type: SIMPLE
+  }
+  column {
+    id {
+      guid: "e2e8246c-e2d2-4ff5-ac20-8b5c7bcf0ebb"
+      name: "Part PartKey"
+    }
+    output_id {
+      guid: "9ff2daa1-b490-35ed-91bc-4f14e1787086"
+      name: "Part PartKey"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "28debadb-1d81-4ace-8e4f-e0bb07b61323"
+      name: "Year"
+    }
+    output_id {
+      guid: "59a8f1be-b073-3eac-a1a6-fc340bba18eb"
+      name: "Year"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "6ea42954-a093-4a78-9a31-1d3628ae5023"
+      name: "Supplier Region"
+    }
+    output_id {
+      guid: "d3b8e31c-9225-384e-a562-de2d262ff93c"
+      name: "Supplier Region"
+    }
+    column_type: ATTRIBUTE
+    data_type: CHAR
+  }
+  column {
+    id {
+      guid: "784b445f-0362-4eab-9c9c-aae4af2c671a"
+      name: "Average(Revenue)"
+    }
+    output_id {
+      guid: "dbd1fd4b-2041-3ea5-869e-8d87a9f0282f"
+      name: "Average Revenue"
+    }
+    column_type: MEASURE
+    data_type: DOUBLE
+  }
+  group_by {
+    id {
+      guid: "e2e8246c-e2d2-4ff5-ac20-8b5c7bcf0ebb"
+      name: "Part PartKey"
+    }
+  }
+  group_by {
+    id {
+      guid: "28debadb-1d81-4ace-8e4f-e0bb07b61323"
+      name: "Year"
+    }
+  }
+  group_by {
+    id {
+      guid: "6ea42954-a093-4a78-9a31-1d3628ae5023"
+      name: "Supplier Region"
+    }
+  }
+  order_by {
+    id {
+      guid: "e2e8246c-e2d2-4ff5-ac20-8b5c7bcf0ebb"
+      name: "Part PartKey"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  order_by {
+    id {
+      guid: "28debadb-1d81-4ace-8e4f-e0bb07b61323"
+      name: "Year"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  order_by {
+    id {
+      guid: "6ea42954-a093-4a78-9a31-1d3628ae5023"
+      name: "Supplier Region"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: true
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+
+2025-01-03 23:56:01.234 INFO  {validator-5-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec generated for 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and 3a983117-9cd8-4760-990f-8f6edcd12648
+2025-01-03 23:56:01.237 INFO  {validator-5-0} [c.t.c.v.querygen.QuerygenValidator] : Falcon Request generated for GUID = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and VizId = 3a983117-9cd8-4760-990f-8f6edcd12648
+2025-01-03 23:56:01.238 INFO  {validator-6-0} [c.t.c.v.querygen.QuerygenValidator] : Creating Falcon Query Spec for guid = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and vizID = c57c5af2-ebc7-464f-9bb7-7c66357d5141
+2025-01-03 23:56:01.242 WARN  {validator-6-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-03 23:56:01.244 INFO  {validator-6-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-03 23:56:01.244 INFO  {validator-6-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 6.828050000000001E-4 ms
+2025-01-03 23:56:01.245 INFO  {validator-6-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-03 23:56:01.245 INFO  {validator-6-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 7.057340000000001E-4 ms
+2025-01-03 23:56:01.285 INFO  {validator-6-0} [c.t.c.d.q.t.MergeQueryTableTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No queries were able to be merged.
+2025-01-03 23:56:01.286 INFO  {validator-6-0} [c.t.c.d.q.t.MergeQueryTableTransformerV0] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a MergeQueryTableTransformer is enabled. Therefore skippingMergeQueryTableTransformerV0
+2025-01-03 23:56:01.291 INFO  {validator-6-0} [c.t.c.data.querygen.AnswerSpecQueryGen] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for answerspec=[186d5a92-d5f1-44a0-9793-7cadc6c8b4b1] took #answerspecqgenlatency=46 ms
+2025-01-03 23:56:01.291 INFO  {validator-6-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec for guid: "bbe40a33-e113-319e-a839-68311c901657"
+name: "bbe40a33-e113-319e-a839-68311c901657"
+description: "Chart Viz Query for average revenue by part partkey year supplier region europe"
+/nquery_schema {
+  table {
+    alias {
+      guid: "118b6db1-748c-4edf-9b43-291c669a3ee6"
+      name: "SUPPLIER"
+    }
+    table {
+      guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+      name: "SUPPLIER"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+        name: "SUPPLIER"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "fdde92f9-833a-42ab-bb61-6769bb260853"
+          name: "Lineorder Suppkey"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "95158c5f-7805-48f0-8802-c727d1785a04"
+          name: "SUPPLIER"
+        }
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "e4d9337c-3e70-4fb6-b1cf-a1151e0cb894"
+      name: "DATE"
+    }
+    table {
+      guid: "1c97ce56-e803-41c5-9132-3075425c8b41"
+      name: "DATE"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "1c97ce56-e803-41c5-9132-3075425c8b41"
+        name: "DATE"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "f92abc45-3df2-462c-a3ee-1e9721d16ea0"
+          name: "Commit Date"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "1c97ce56-e803-41c5-9132-3075425c8b41"
+          name: "DATE"
+        }
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "b9640567-b63b-4df5-8e54-4c0915c034da"
+      name: "LINEORDER"
+    }
+    table {
+      guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+      name: "LINEORDER"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      is_connected: true
+    }
+  }
+  column {
+    alias {
+      guid: "d09d0a8b-b69b-4a50-b39f-9362e21ef582"
+      name: "Supplier Region"
+    }
+    column {
+      guid: "0f7361ca-de08-43b8-8170-a759d92ec654"
+      name: "Supplier Region"
+    }
+    table_alias {
+      guid: "118b6db1-748c-4edf-9b43-291c669a3ee6"
+      name: "SUPPLIER"
+    }
+    data_type: CHAR
+  }
+  column {
+    alias {
+      guid: "cd2321b4-e1d1-4223-8470-37ab9d5a5ac7"
+      name: "Year"
+    }
+    column {
+      guid: "f1f13666-15fa-48ed-bf9f-c6a3f42f25ea"
+      name: "Year"
+    }
+    table_alias {
+      guid: "e4d9337c-3e70-4fb6-b1cf-a1151e0cb894"
+      name: "DATE"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "e1c21fe6-22f0-44f2-aabd-7cb38a3f63c1"
+      name: "Revenue"
+    }
+    column {
+      guid: "d8cd8978-bd01-4d57-910d-4781e8b33123"
+      name: "Revenue"
+    }
+    table_alias {
+      guid: "b9640567-b63b-4df5-8e54-4c0915c034da"
+      name: "LINEORDER"
+    }
+    data_type: INT64
+  }
+  formula {
+    alias {
+      guid: "2aa8aefe-5d19-464c-b13e-fc3eb76dd70b"
+      name: "Average(Revenue)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Average"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "e1c21fe6-22f0-44f2-aabd-7cb38a3f63c1"
+              name: "Revenue"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: DOUBLE
+    }
+    table_alias {
+      guid: "b9640567-b63b-4df5-8e54-4c0915c034da"
+      name: "LINEORDER"
+    }
+  }
+}
+table {
+  id {
+    guid: "bbe40a33-e113-319e-a839-68311c901657"
+    name: "bbe40a33-e113-319e-a839-68311c901657"
+    description: "Chart Viz Query for average revenue by part partkey year supplier region europe"
+  }
+  filter {
+    id {
+      guid: "d09d0a8b-b69b-4a50-b39f-9362e21ef582"
+      name: "Supplier Region"
+    }
+    operatorValues {
+      op: EQ
+      value {
+        string_value: "europe"
+      }
+    }
+    negate_filter: false
+    type: SIMPLE
+  }
+  column {
+    id {
+      guid: "d09d0a8b-b69b-4a50-b39f-9362e21ef582"
+      name: "Supplier Region"
+    }
+    output_id {
+      guid: "2ecbc399-ec3e-3e7c-a159-c29d4ad60620"
+      name: "Supplier Region"
+    }
+    column_type: ATTRIBUTE
+    data_type: CHAR
+  }
+  column {
+    id {
+      guid: "cd2321b4-e1d1-4223-8470-37ab9d5a5ac7"
+      name: "Year"
+    }
+    output_id {
+      guid: "66969160-08d1-3f72-8ea1-4f4f8c99d03c"
+      name: "Year"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "2aa8aefe-5d19-464c-b13e-fc3eb76dd70b"
+      name: "Average(Revenue)"
+    }
+    output_id {
+      guid: "ae4cd748-b15e-30c7-b7a0-5c77eccfe5f1"
+      name: "Average Revenue"
+    }
+    column_type: MEASURE
+    data_type: DOUBLE
+  }
+  group_by {
+    id {
+      guid: "d09d0a8b-b69b-4a50-b39f-9362e21ef582"
+      name: "Supplier Region"
+    }
+  }
+  group_by {
+    id {
+      guid: "cd2321b4-e1d1-4223-8470-37ab9d5a5ac7"
+      name: "Year"
+    }
+  }
+  order_by {
+    id {
+      guid: "d09d0a8b-b69b-4a50-b39f-9362e21ef582"
+      name: "Supplier Region"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  order_by {
+    id {
+      guid: "cd2321b4-e1d1-4223-8470-37ab9d5a5ac7"
+      name: "Year"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: true
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+
+2025-01-03 23:56:01.292 INFO  {validator-6-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec generated for 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and c57c5af2-ebc7-464f-9bb7-7c66357d5141
+2025-01-03 23:56:01.294 INFO  {validator-6-0} [c.t.c.v.querygen.QuerygenValidator] : Falcon Request generated for GUID = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and VizId = c57c5af2-ebc7-464f-9bb7-7c66357d5141
+2025-01-03 23:56:01.297 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Answer errors = {}
+2025-01-03 23:56:01.297 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Fetching guids by view count. type = PINBOARD_ANSWER_BOOK, remainingGuids = 0
+2025-01-03 23:56:01.297 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : No more guids needed, continuing.
+2025-01-03 23:56:01.297 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Fetching guids by last date modified. type = PINBOARD_ANSWER_BOOK, remainingGuids = 0
+2025-01-03 23:56:01.298 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : No more guids needed, continuing.
+2025-01-03 23:56:01.298 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Found 0 guids
+2025-01-03 23:56:01.298 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : List of guids
+2025-01-03 23:56:01.298 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : end of guids
+2025-01-03 23:56:01.298 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Invoking all threads
+2025-01-03 23:56:01.302 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Pinboard errors = {}
+2025-01-03 23:56:01.302 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Run ended in: 2043 ms
+2025-01-03 23:56:01.337 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Backend Request Fetcher finished successfully

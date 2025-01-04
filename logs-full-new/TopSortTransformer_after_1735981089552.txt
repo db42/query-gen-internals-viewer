@@ -1,0 +1,293 @@
+query_schema {
+  table {
+    alias {
+      guid: "dcf68bdb-2929-48ed-821b-667304669f27"
+      name: "Chasmtrap"
+    }
+    table {
+      guid: "07a8af30-cd9d-4ab0-a58a-544a818ddac7"
+      name: "Chasmtrap"
+    }
+    join_path {
+      root_table {
+        guid: "07a8af30-cd9d-4ab0-a58a-544a818ddac7"
+        name: "Chasmtrap"
+      }
+      leaf_table {
+        guid: "07a8af30-cd9d-4ab0-a58a-544a818ddac7"
+        name: "Chasmtrap"
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "2d9bf938-2632-4e05-96fc-31de3eb0d286"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+    }
+    table {
+      guid: "23bbbfa1-6c20-4374-90b8-14340006f135"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+      description: "TABLE Viz Query for product cost sale cost product id"
+    }
+    join_path {
+      root_table {
+        guid: "23bbbfa1-6c20-4374-90b8-14340006f135"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+        description: "TABLE Viz Query for product cost sale cost product id"
+      }
+      leaf_table {
+        guid: "23bbbfa1-6c20-4374-90b8-14340006f135"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+        description: "TABLE Viz Query for product cost sale cost product id"
+      }
+    }
+  }
+  column {
+    alias {
+      guid: "56de9cce-c0f6-4f8c-a1bc-37127c5df3e1"
+      name: "Product Id"
+    }
+    column {
+      guid: "1b9feee2-d55c-4142-9cc3-e75c166e9125"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "dcf68bdb-2929-48ed-821b-667304669f27"
+      name: "Chasmtrap"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "409ba61b-4de7-440c-a8da-e29ae5bd7f30"
+      name: "Product Cost"
+    }
+    column {
+      guid: "52abed9b-bc46-46c7-88d7-ba1b1402e104"
+      name: "Product Cost"
+    }
+    table_alias {
+      guid: "dcf68bdb-2929-48ed-821b-667304669f27"
+      name: "Chasmtrap"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "d07dd540-024e-481b-9434-dc2e8871820a"
+      name: "Sale Cost"
+    }
+    column {
+      guid: "072fb446-22b9-4827-840f-4c17dcd1cfc8"
+      name: "Sale Cost"
+    }
+    table_alias {
+      guid: "dcf68bdb-2929-48ed-821b-667304669f27"
+      name: "Chasmtrap"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "a176a3af-0593-44fa-ba75-cccc9ff10e11"
+      name: "Product Id"
+    }
+    column {
+      guid: "04e8e2cf-6e0f-386b-8380-41dfcec52479"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "2d9bf938-2632-4e05-96fc-31de3eb0d286"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+    }
+    data_type: INT64
+  }
+  formula {
+    alias {
+      guid: "52676f7f-37f1-40ea-8086-89a128d08c86"
+      name: "Sum(Product Cost)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "409ba61b-4de7-440c-a8da-e29ae5bd7f30"
+              name: "Product Cost"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "dcf68bdb-2929-48ed-821b-667304669f27"
+      name: "Chasmtrap"
+    }
+  }
+  formula {
+    alias {
+      guid: "3abbb7bb-3495-4094-8245-71e9844f7822"
+      name: "Sum(Sale Cost)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "d07dd540-024e-481b-9434-dc2e8871820a"
+              name: "Sale Cost"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "dcf68bdb-2929-48ed-821b-667304669f27"
+      name: "Chasmtrap"
+    }
+  }
+  formula {
+    alias {
+      guid: "b4bd8e95-dda5-4cb4-a731-3bbcd5447ef7"
+      name: "UniqueCount(Product Id)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "UniqueCount"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "a176a3af-0593-44fa-ba75-cccc9ff10e11"
+              name: "Product Id"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "2d9bf938-2632-4e05-96fc-31de3eb0d286"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+    }
+  }
+}
+table {
+  id {
+    guid: "23bbbfa1-6c20-4374-90b8-14340006f135"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+    description: "TABLE Viz Query for product cost sale cost product id"
+  }
+  column {
+    id {
+      guid: "56de9cce-c0f6-4f8c-a1bc-37127c5df3e1"
+      name: "Product Id"
+    }
+    output_id {
+      guid: "04e8e2cf-6e0f-386b-8380-41dfcec52479"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "52676f7f-37f1-40ea-8086-89a128d08c86"
+      name: "Sum(Product Cost)"
+    }
+    output_id {
+      guid: "00ee9d1b-4f36-36a1-89b9-905ce012b141"
+      name: "Total Product Cost"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "3abbb7bb-3495-4094-8245-71e9844f7822"
+      name: "Sum(Sale Cost)"
+    }
+    output_id {
+      guid: "d4a429c9-bbeb-36de-adba-a9af3801f58a"
+      name: "Total Sale Cost"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  group_by {
+    id {
+      guid: "56de9cce-c0f6-4f8c-a1bc-37127c5df3e1"
+      name: "Product Id"
+    }
+  }
+  order_by {
+    id {
+      guid: "56de9cce-c0f6-4f8c-a1bc-37127c5df3e1"
+      name: "Product Id"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "0c53d6cc-c27d-4399-903e-700d730b5738"
+    name: "Viz [id: 0c53d6cc-c27d-4399-903e-700d730b5738, name: Headline Product Id]"
+    description: "HEADLINE Viz Query for product cost sale cost product id"
+  }
+  column {
+    id {
+      guid: "b4bd8e95-dda5-4cb4-a731-3bbcd5447ef7"
+      name: "UniqueCount(Product Id)"
+    }
+    output_id {
+      guid: "91054c4b-be73-3de0-8b93-13c96487688d"
+      name: "Product Id_COUNT_DISTINCT"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: true
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}

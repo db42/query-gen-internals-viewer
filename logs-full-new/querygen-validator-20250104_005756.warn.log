@@ -1,0 +1,112 @@
+2025-01-04 00:58:01.167 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : S3 info not set, skipping upload/download from S3.
+2025-01-04 00:58:04.245 ERROR {BackendRequestFetcherMain-0-0} [c.t.c.m.m.f.FeedbackManagerMunshiImpl] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Exception when creating znode: com.thoughtspot.common.ThoughtSpotException: ORION_SERVICE_NAME property not set
+2025-01-04 00:58:06.028 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : exportTML program arg is set to False. Skipping TML export of failed or changed objects.
+2025-01-04 00:58:06.028 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Found 1 guids
+2025-01-04 00:58:08.113 WARN  {validator-0-0} [c.t.c.m.m.l.AtlasLogicalSchemaStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Failed to retrieve table id for entity=00ee9d1b-4f36-36a1-89b9-905ce012b141, error=code: INVALID_EDGE_KEY
+msg: "No edge found key=[src=, name=table_to_column, destination=00ee9d1b-4f36-36a1-89b9-905ce012b141]"
+
+2025-01-04 00:58:08.142 WARN  {validator-0-0} [c.t.c.m.m.l.AtlasLogicalSchemaStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Failed to retrieve table id for entity=00ee9d1b-4f36-36a1-89b9-905ce012b141, error=code: INVALID_EDGE_KEY
+msg: "No edge found key=[src=, name=table_to_column, destination=00ee9d1b-4f36-36a1-89b9-905ce012b141]"
+
+2025-01-04 00:58:08.519 WARN  {validator-0-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "114b71e9-2e37-4d64-9d5d-61200108e111"
+name: "Product Id"
+
+2025-01-04 00:58:08.519 WARN  {validator-0-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "114b71e9-2e37-4d64-9d5d-61200108e111"
+name: "Product Id"
+
+2025-01-04 00:58:08.665 WARN  {validator-0-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=23bbbfa1-6c20-4374-90b8-14340006f135 found in index."
+
+2025-01-04 00:58:08.666 WARN  {validator-0-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=f7dd64e1-5cef-32f1-bb5c-665198a78dea found in index."
+
+2025-01-04 00:58:08.667 WARN  {validator-0-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=ec842a9d-7d81-32a0-8e8b-a3cb095cc039 found in index."
+
+2025-01-04 00:58:09.008 WARN  {validator-1-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "b27628f6-60cb-4384-8da9-cfb56fa9b615"
+name: "Product Id"
+
+2025-01-04 00:58:09.008 WARN  {validator-1-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "b27628f6-60cb-4384-8da9-cfb56fa9b615"
+name: "Product Id"
+
+2025-01-04 00:58:09.068 WARN  {validator-1-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=f7dd64e1-5cef-32f1-bb5c-665198a78dea found in index."
+
+2025-01-04 00:58:09.069 WARN  {validator-1-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=ec842a9d-7d81-32a0-8e8b-a3cb095cc039 found in index."
+
+2025-01-04 00:58:09.202 WARN  {validator-2-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "211bb7d0-a43a-4212-943b-44869e26f43d"
+name: "Product Id"
+
+2025-01-04 00:58:09.203 WARN  {validator-2-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "211bb7d0-a43a-4212-943b-44869e26f43d"
+name: "Product Id"
+
+2025-01-04 00:58:09.257 WARN  {validator-2-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=90d0dfe7-0836-3c7e-9795-f7e8adc486ab found in index."
+
+2025-01-04 00:58:09.257 WARN  {validator-2-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=8dc46a69-6c3c-3c9b-8895-ac436b22fc99 found in index."
+
+2025-01-04 00:58:09.342 WARN  {validator-3-0} [c.t.c.m.m.l.AtlasLogicalSchemaStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Failed to retrieve table id for entity=d4a429c9-bbeb-36de-adba-a9af3801f58a, error=code: INVALID_EDGE_KEY
+msg: "No edge found key=[src=, name=table_to_column, destination=d4a429c9-bbeb-36de-adba-a9af3801f58a]"
+
+2025-01-04 00:58:09.347 WARN  {validator-3-0} [c.t.c.m.m.l.AtlasLogicalSchemaStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Failed to retrieve table id for entity=d4a429c9-bbeb-36de-adba-a9af3801f58a, error=code: INVALID_EDGE_KEY
+msg: "No edge found key=[src=, name=table_to_column, destination=d4a429c9-bbeb-36de-adba-a9af3801f58a]"
+
+2025-01-04 00:58:09.394 WARN  {validator-3-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "420e13f8-9e3a-47c7-aece-9cc60041a0c1"
+name: "Product Id"
+
+2025-01-04 00:58:09.394 WARN  {validator-3-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "420e13f8-9e3a-47c7-aece-9cc60041a0c1"
+name: "Product Id"
+
+2025-01-04 00:58:09.471 WARN  {validator-3-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=23bbbfa1-6c20-4374-90b8-14340006f135 found in index."
+
+2025-01-04 00:58:09.471 WARN  {validator-3-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=f7dd64e1-5cef-32f1-bb5c-665198a78dea found in index."
+
+2025-01-04 00:58:09.472 WARN  {validator-3-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=ec842a9d-7d81-32a0-8e8b-a3cb095cc039 found in index."
+
+2025-01-04 00:58:09.558 WARN  {validator-4-0} [c.t.c.m.m.l.AtlasLogicalSchemaStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Failed to retrieve table id for entity=04e8e2cf-6e0f-386b-8380-41dfcec52479, error=code: INVALID_EDGE_KEY
+msg: "No edge found key=[src=, name=table_to_column, destination=04e8e2cf-6e0f-386b-8380-41dfcec52479]"
+
+2025-01-04 00:58:09.561 WARN  {validator-4-0} [c.t.c.m.m.l.AtlasLogicalSchemaStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Failed to retrieve table id for entity=04e8e2cf-6e0f-386b-8380-41dfcec52479, error=code: INVALID_EDGE_KEY
+msg: "No edge found key=[src=, name=table_to_column, destination=04e8e2cf-6e0f-386b-8380-41dfcec52479]"
+
+2025-01-04 00:58:09.593 WARN  {validator-4-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "340d340f-7c86-4c17-abb7-d3647f075f4c"
+name: "Product Id"
+
+2025-01-04 00:58:09.594 WARN  {validator-4-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "340d340f-7c86-4c17-abb7-d3647f075f4c"
+name: "Product Id"
+
+2025-01-04 00:58:09.696 WARN  {validator-4-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=23bbbfa1-6c20-4374-90b8-14340006f135 found in index."
+
+2025-01-04 00:58:09.696 WARN  {validator-4-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=f7dd64e1-5cef-32f1-bb5c-665198a78dea found in index."
+
+2025-01-04 00:58:09.697 WARN  {validator-4-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=ec842a9d-7d81-32a0-8e8b-a3cb095cc039 found in index."
+
+2025-01-04 00:58:09.737 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Found 0 guids

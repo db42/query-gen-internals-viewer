@@ -1,0 +1,24 @@
+2025-01-03 23:55:55.227 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : S3 info not set, skipping upload/download from S3.
+2025-01-03 23:55:57.786 ERROR {BackendRequestFetcherMain-0-0} [c.t.c.m.m.f.FeedbackManagerMunshiImpl] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Exception when creating znode: com.thoughtspot.common.ThoughtSpotException: ORION_SERVICE_NAME property not set
+2025-01-03 23:55:59.259 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : exportTML program arg is set to False. Skipping TML export of failed or changed objects.
+2025-01-03 23:55:59.260 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Found 1 guids
+2025-01-03 23:55:59.911 WARN  {validator-0-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-03 23:56:00.438 WARN  {validator-0-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=3a983117-9cd8-4760-990f-8f6edcd12648 found in index."
+
+2025-01-03 23:56:00.600 WARN  {validator-1-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-03 23:56:00.694 WARN  {validator-1-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=3a983117-9cd8-4760-990f-8f6edcd12648 found in index."
+
+2025-01-03 23:56:00.755 WARN  {validator-2-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-03 23:56:00.870 WARN  {validator-2-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=3a983117-9cd8-4760-990f-8f6edcd12648 found in index."
+
+2025-01-03 23:56:00.966 WARN  {validator-3-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-03 23:56:01.063 WARN  {validator-3-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=3a983117-9cd8-4760-990f-8f6edcd12648 found in index."
+
+2025-01-03 23:56:01.081 WARN  {validator-4-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-03 23:56:01.152 WARN  {validator-5-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-03 23:56:01.242 WARN  {validator-6-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-03 23:56:01.298 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Found 0 guids

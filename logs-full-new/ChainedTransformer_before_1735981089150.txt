@@ -1,0 +1,194 @@
+query_schema {
+  table {
+    alias {
+      guid: "3e3a8d1c-a792-420a-8496-2c0c4c861451"
+      name: "Chasmtrap"
+    }
+    table {
+      guid: "07a8af30-cd9d-4ab0-a58a-544a818ddac7"
+      name: "Chasmtrap"
+    }
+    join_path {
+      root_table {
+        guid: "07a8af30-cd9d-4ab0-a58a-544a818ddac7"
+        name: "Chasmtrap"
+      }
+      leaf_table {
+        guid: "07a8af30-cd9d-4ab0-a58a-544a818ddac7"
+        name: "Chasmtrap"
+      }
+    }
+  }
+  column {
+    alias {
+      guid: "752404fb-718c-4848-b19d-2c156bde1f8d"
+      name: "Product Id"
+    }
+    column {
+      guid: "1b9feee2-d55c-4142-9cc3-e75c166e9125"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "3e3a8d1c-a792-420a-8496-2c0c4c861451"
+      name: "Chasmtrap"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "6bcd9f40-e128-4304-bf5e-f6d24b49c4ee"
+      name: "Product Cost"
+    }
+    column {
+      guid: "52abed9b-bc46-46c7-88d7-ba1b1402e104"
+      name: "Product Cost"
+    }
+    table_alias {
+      guid: "3e3a8d1c-a792-420a-8496-2c0c4c861451"
+      name: "Chasmtrap"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "790d282b-0225-4cfd-ab6d-14c39b5b8997"
+      name: "Sale Cost"
+    }
+    column {
+      guid: "072fb446-22b9-4827-840f-4c17dcd1cfc8"
+      name: "Sale Cost"
+    }
+    table_alias {
+      guid: "3e3a8d1c-a792-420a-8496-2c0c4c861451"
+      name: "Chasmtrap"
+    }
+    data_type: INT64
+  }
+  formula {
+    alias {
+      guid: "d31334bc-1484-4128-98ad-08dbcd91e7cb"
+      name: "Sum(Product Cost)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "6bcd9f40-e128-4304-bf5e-f6d24b49c4ee"
+              name: "Product Cost"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "3e3a8d1c-a792-420a-8496-2c0c4c861451"
+      name: "Chasmtrap"
+    }
+  }
+  formula {
+    alias {
+      guid: "a6834b3d-531a-4f1e-ae51-82ade3ba04b0"
+      name: "Sum(Sale Cost)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "790d282b-0225-4cfd-ab6d-14c39b5b8997"
+              name: "Sale Cost"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "3e3a8d1c-a792-420a-8496-2c0c4c861451"
+      name: "Chasmtrap"
+    }
+  }
+}
+table {
+  id {
+    guid: "6a6ff6f9-a313-321f-96f1-ef57c63e6543"
+    name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543"
+    description: "Chart Viz Query for product cost sale cost product id"
+  }
+  column {
+    id {
+      guid: "752404fb-718c-4848-b19d-2c156bde1f8d"
+      name: "Product Id"
+    }
+    output_id {
+      guid: "498c14c4-53c3-3547-a843-071f3f2a5f22"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "d31334bc-1484-4128-98ad-08dbcd91e7cb"
+      name: "Sum(Product Cost)"
+    }
+    output_id {
+      guid: "32e68d85-34c8-3c9c-8335-51cfde60d3d4"
+      name: "Total Product Cost"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "a6834b3d-531a-4f1e-ae51-82ade3ba04b0"
+      name: "Sum(Sale Cost)"
+    }
+    output_id {
+      guid: "4b18e118-874a-3808-b6e6-6c30219d417c"
+      name: "Total Sale Cost"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  group_by {
+    id {
+      guid: "752404fb-718c-4848-b19d-2c156bde1f8d"
+      name: "Product Id"
+    }
+  }
+  order_by {
+    id {
+      guid: "752404fb-718c-4848-b19d-2c156bde1f8d"
+      name: "Product Id"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: true
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}

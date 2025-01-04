@@ -1,0 +1,652 @@
+query_schema {
+  table {
+    alias {
+      guid: "2cbf9e19-ce7a-48d8-aa86-2fdabd8fa161"
+      name: "PRODUCTS"
+    }
+    table {
+      guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+      name: "PRODUCTS"
+    }
+    join_path {
+      root_table {
+        guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+        name: "PURCHASES"
+      }
+      leaf_table {
+        guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+        name: "PRODUCTS"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "4a4fa114-b819-4ddc-a64e-92ea438db7a8"
+          name: "Product Id - Product Id"
+        }
+        source {
+          guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+          name: "PURCHASES"
+        }
+        destination {
+          guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+          name: "PRODUCTS"
+        }
+        join_type: INNER
+        one_to_one: false
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "4d838eba-d27f-4e45-9377-2fbb6a774681"
+      name: "PRODUCTS"
+    }
+    table {
+      guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+      name: "PRODUCTS"
+    }
+    join_path {
+      root_table {
+        guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+        name: "SALES"
+      }
+      leaf_table {
+        guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+        name: "PRODUCTS"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "a650ef99-4c90-4d99-ae54-c0627a6ba925"
+          name: "Product Id - Product Id"
+        }
+        source {
+          guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+          name: "SALES"
+        }
+        destination {
+          guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+          name: "PRODUCTS"
+        }
+        join_type: INNER
+        one_to_one: false
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "bd3fa744-6279-4f69-88b7-214613a71b43"
+      name: "PURCHASES"
+    }
+    table {
+      guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+      name: "PURCHASES"
+    }
+    join_path {
+      root_table {
+        guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+        name: "PURCHASES"
+      }
+      leaf_table {
+        guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+        name: "PURCHASES"
+      }
+      is_connected: true
+    }
+  }
+  table {
+    alias {
+      guid: "2e97354f-8dd7-4911-9e3a-0e4c496c507e"
+      name: "SALES"
+    }
+    table {
+      guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+      name: "SALES"
+    }
+    join_path {
+      root_table {
+        guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+        name: "SALES"
+      }
+      leaf_table {
+        guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+        name: "SALES"
+      }
+      is_connected: true
+    }
+  }
+  table {
+    alias {
+      guid: "205f28f0-64ba-474d-9404-f2d41141be24"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+    }
+    table {
+      guid: "90d0dfe7-0836-3c7e-9795-f7e8adc486ab"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+    }
+    join_path {
+      root_table {
+        guid: "90d0dfe7-0836-3c7e-9795-f7e8adc486ab"
+        name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+      }
+      leaf_table {
+        guid: "90d0dfe7-0836-3c7e-9795-f7e8adc486ab"
+        name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "68c71bde-ca7e-4432-9074-bc4242dc5f90"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+    }
+    table {
+      guid: "8dc46a69-6c3c-3c9b-8895-ac436b22fc99"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+    }
+    join_path {
+      root_table {
+        guid: "90d0dfe7-0836-3c7e-9795-f7e8adc486ab"
+        name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+      }
+      leaf_table {
+        guid: "8dc46a69-6c3c-3c9b-8895-ac436b22fc99"
+        name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+      }
+      join {
+        id {
+          guid: "f4474c28-e25f-3a01-bc25-c7f312b3fdf1"
+          name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0_6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+        }
+        source {
+          guid: "90d0dfe7-0836-3c7e-9795-f7e8adc486ab"
+          name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+        }
+        destination {
+          guid: "8dc46a69-6c3c-3c9b-8895-ac436b22fc99"
+          name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+        }
+        join_type: FULL_OUTER
+        source_column {
+          guid: "0b4995ba-6444-408c-89d8-903880d7fcf0"
+          name: "Product Id"
+        }
+        dest_column {
+          guid: "e2a2d6b5-3f1c-482a-86e7-19f5b2ca05d1"
+          name: "Product Id"
+        }
+        join_nulls: true
+      }
+    }
+  }
+  column {
+    alias {
+      guid: "9729f133-292c-4d98-9201-c80f9020b42b"
+      name: "Product Cost"
+    }
+    column {
+      guid: "6e00ae7c-529e-424a-95ce-db79df6638ca"
+      name: "Product Cost"
+    }
+    table_alias {
+      guid: "bd3fa744-6279-4f69-88b7-214613a71b43"
+      name: "PURCHASES"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "d2cb453d-c8c3-464d-89d9-db6ded979ded"
+      name: "Sale Cost"
+    }
+    column {
+      guid: "28b9315c-ab1d-4a32-a1e9-bfbe9cfe3040"
+      name: "Sale Cost"
+    }
+    table_alias {
+      guid: "2e97354f-8dd7-4911-9e3a-0e4c496c507e"
+      name: "SALES"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "211bb7d0-a43a-4212-943b-44869e26f43d"
+      name: "Product Id"
+    }
+    column {
+      guid: "fae73f8f-c427-4362-a991-51a2da074bb0"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "2cbf9e19-ce7a-48d8-aa86-2fdabd8fa161"
+      name: "PRODUCTS"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "68579fd6-a951-4f18-8690-e3d9bf07230e"
+      name: "Product Id"
+    }
+    column {
+      guid: "fae73f8f-c427-4362-a991-51a2da074bb0"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "4d838eba-d27f-4e45-9377-2fbb6a774681"
+      name: "PRODUCTS"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "00ab2938-332d-4e8b-9697-d55de0afa8d8"
+      name: "Sum(Product Cost)"
+    }
+    column {
+      guid: "36689cc1-3532-49af-a406-e64217ff84cf"
+      name: "Sum(Product Cost)"
+    }
+    table_alias {
+      guid: "205f28f0-64ba-474d-9404-f2d41141be24"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "6bab0493-194f-415e-a4b4-31989c65360a"
+      name: "Sum(Sale Cost)"
+    }
+    column {
+      guid: "11075d5a-ff11-4642-a57a-c4c85bde5c8e"
+      name: "Sum(Sale Cost)"
+    }
+    table_alias {
+      guid: "68c71bde-ca7e-4432-9074-bc4242dc5f90"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "19281622-098d-4896-a88e-099c5cf1b20c"
+      name: "Product Id"
+    }
+    column {
+      guid: "0b4995ba-6444-408c-89d8-903880d7fcf0"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "205f28f0-64ba-474d-9404-f2d41141be24"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "fcd9cb95-bbd2-4076-a6de-60fdb58bf5b6"
+      name: "Product Id"
+    }
+    column {
+      guid: "e2a2d6b5-3f1c-482a-86e7-19f5b2ca05d1"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "68c71bde-ca7e-4432-9074-bc4242dc5f90"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+    }
+    data_type: INT64
+  }
+  formula {
+    alias {
+      guid: "1abc5934-50ae-43bb-b96b-5ff62242d0e2"
+      name: "Sum(Sale Cost)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "d2cb453d-c8c3-464d-89d9-db6ded979ded"
+              name: "Sale Cost"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "2e97354f-8dd7-4911-9e3a-0e4c496c507e"
+      name: "SALES"
+    }
+  }
+  formula {
+    alias {
+      guid: "899b3e13-5fd5-4c38-82ab-b2088efed94b"
+      name: "Sum(Product Cost)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "9729f133-292c-4d98-9201-c80f9020b42b"
+              name: "Product Cost"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "bd3fa744-6279-4f69-88b7-214613a71b43"
+      name: "PURCHASES"
+    }
+  }
+  formula {
+    alias {
+      guid: "c1111a3a-f15c-4dc9-9059-b3317566578a"
+      name: "IfNull(Product Id,Product Id)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "IfNull"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "19281622-098d-4896-a88e-099c5cf1b20c"
+              name: "Product Id"
+            }
+          }
+        }
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "fcd9cb95-bbd2-4076-a6de-60fdb58bf5b6"
+              name: "Product Id"
+            }
+          }
+        }
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "205f28f0-64ba-474d-9404-f2d41141be24"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+    }
+  }
+  formula {
+    alias {
+      guid: "01337ccd-684c-4ca4-8c7c-b7de6c42b105"
+      name: "IfNull(Sum(Product Cost),Constant_0)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "IfNull"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "00ab2938-332d-4e8b-9697-d55de0afa8d8"
+              name: "Sum(Product Cost)"
+            }
+          }
+        }
+        arguments {
+          expr_class: EXPR_CONSTANT
+          constant {
+            int_value: 0
+          }
+          data_type: INT64
+        }
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "205f28f0-64ba-474d-9404-f2d41141be24"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+    }
+  }
+  formula {
+    alias {
+      guid: "4db3f4b4-1a58-45ef-8600-6ea53e023699"
+      name: "IfNull(Sum(Sale Cost),Constant_0)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "IfNull"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "6bab0493-194f-415e-a4b4-31989c65360a"
+              name: "Sum(Sale Cost)"
+            }
+          }
+        }
+        arguments {
+          expr_class: EXPR_CONSTANT
+          constant {
+            int_value: 0
+          }
+          data_type: INT64
+        }
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "68c71bde-ca7e-4432-9074-bc4242dc5f90"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+    }
+  }
+}
+table {
+  id {
+    guid: "90d0dfe7-0836-3c7e-9795-f7e8adc486ab"
+    name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+  }
+  column {
+    id {
+      guid: "211bb7d0-a43a-4212-943b-44869e26f43d"
+      name: "Product Id"
+    }
+    output_id {
+      guid: "0b4995ba-6444-408c-89d8-903880d7fcf0"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "899b3e13-5fd5-4c38-82ab-b2088efed94b"
+      name: "Sum(Product Cost)"
+    }
+    output_id {
+      guid: "36689cc1-3532-49af-a406-e64217ff84cf"
+      name: "Sum(Product Cost)"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  group_by {
+    id {
+      guid: "211bb7d0-a43a-4212-943b-44869e26f43d"
+      name: "Product Id"
+    }
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "8dc46a69-6c3c-3c9b-8895-ac436b22fc99"
+    name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+  }
+  column {
+    id {
+      guid: "68579fd6-a951-4f18-8690-e3d9bf07230e"
+      name: "Product Id"
+    }
+    output_id {
+      guid: "e2a2d6b5-3f1c-482a-86e7-19f5b2ca05d1"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "1abc5934-50ae-43bb-b96b-5ff62242d0e2"
+      name: "Sum(Sale Cost)"
+    }
+    output_id {
+      guid: "11075d5a-ff11-4642-a57a-c4c85bde5c8e"
+      name: "Sum(Sale Cost)"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  group_by {
+    id {
+      guid: "68579fd6-a951-4f18-8690-e3d9bf07230e"
+      name: "Product Id"
+    }
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "6a6ff6f9-a313-321f-96f1-ef57c63e6543"
+    name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543"
+    description: "Chart Viz Query for product cost sale cost product id"
+  }
+  column {
+    id {
+      guid: "c1111a3a-f15c-4dc9-9059-b3317566578a"
+      name: "IfNull(Product Id,Product Id)"
+    }
+    output_id {
+      guid: "498c14c4-53c3-3547-a843-071f3f2a5f22"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "01337ccd-684c-4ca4-8c7c-b7de6c42b105"
+      name: "IfNull(Sum(Product Cost),Constant_0)"
+    }
+    output_id {
+      guid: "32e68d85-34c8-3c9c-8335-51cfde60d3d4"
+      name: "Total Product Cost"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "4db3f4b4-1a58-45ef-8600-6ea53e023699"
+      name: "IfNull(Sum(Sale Cost),Constant_0)"
+    }
+    output_id {
+      guid: "4b18e118-874a-3808-b6e6-6c30219d417c"
+      name: "Total Sale Cost"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  order_by {
+    id {
+      guid: "c1111a3a-f15c-4dc9-9059-b3317566578a"
+      name: "IfNull(Product Id,Product Id)"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: true
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+join {
+  id {
+    guid: "f4474c28-e25f-3a01-bc25-c7f312b3fdf1"
+    name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0_6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+  }
+  source {
+    guid: "90d0dfe7-0836-3c7e-9795-f7e8adc486ab"
+    name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+  }
+  destination {
+    guid: "8dc46a69-6c3c-3c9b-8895-ac436b22fc99"
+    name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+  }
+  join_type: FULL_OUTER
+  source_column {
+    guid: "0b4995ba-6444-408c-89d8-903880d7fcf0"
+    name: "Product Id"
+  }
+  dest_column {
+    guid: "e2a2d6b5-3f1c-482a-86e7-19f5b2ca05d1"
+    name: "Product Id"
+  }
+  join_nulls: true
+}

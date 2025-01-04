@@ -1,0 +1,3898 @@
+2025-01-04 00:57:57.052 INFO  {main} [c.t.c.common.orion.OrionMasterManager] : About to track znode for orion master with znode of 
+2025-01-04 00:57:57.570 INFO  {main} [c.t.c.common.orion.OrionMasterManager] : Updating orion master address...
+2025-01-04 00:57:57.580 INFO  {main} [c.t.c.common.orion.OrionMasterManager] : Updated orion master address to: host_port {
+  host: "172.32.27.151"
+  port: 2200
+}
+
+2025-01-04 00:57:58.138 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Got config override of : true for key: enableCallosumDebugInfo
+2025-01-04 00:57:58.139 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Overriding value for property: enableCallosumDebugInfo with value true
+2025-01-04 00:57:58.141 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Got config override of : true for key: isSoftware
+2025-01-04 00:57:58.141 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Overriding value for property: isSoftware with value true
+2025-01-04 00:57:58.142 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Got config override of : true for key: firstTimePasswordForceReset
+2025-01-04 00:57:58.142 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Overriding value for property: firstTimePasswordForceReset with value true
+2025-01-04 00:57:58.143 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Got config override of : false for key: objectsUpgraderConfig.isVersionControlUpgradeNeeded
+2025-01-04 00:57:58.143 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Overriding value for property: objectsUpgraderConfig.isVersionControlUpgradeNeeded with value false
+2025-01-04 00:57:59.652 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a orgPerCustomEmbedUrl fetched flag value: false
+2025-01-04 00:58:01.167 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : S3 info not set, skipping upload/download from S3.
+2025-01-04 00:58:01.222 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Setting up initial configuration.
+2025-01-04 00:58:01.222 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Initializing Atlas client.
+2025-01-04 00:58:03.988 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Initializing Munshi client.
+2025-01-04 00:58:04.013 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Initializing MetadataProvider.
+2025-01-04 00:58:04.212 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.MetadataManagerFactory] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a MMF using thick atlas client
+2025-01-04 00:58:04.236 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.p.DummyPhysicalModelManager] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Initializing DummyPhysicalModelManager
+2025-01-04 00:58:04.245 ERROR {BackendRequestFetcherMain-0-0} [c.t.c.m.m.f.FeedbackManagerMunshiImpl] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Exception when creating znode: com.thoughtspot.common.ThoughtSpotException: ORION_SERVICE_NAME property not set
+2025-01-04 00:58:04.303 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.MetadataManagerFactory] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Connecting to DB store since not connected yet.
+2025-01-04 00:58:05.352 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataRepository] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not initializing already available physical model manager
+2025-01-04 00:58:05.352 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataRepository] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not initializing as the mv status manager is available already.
+2025-01-04 00:58:05.352 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataRepository] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not initializing as the cluster stats manager is available.
+2025-01-04 00:58:05.354 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataRepository] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Pinned snapshot token=6c0f793b-5cef-4719-859b-1e460ae803b8
+2025-01-04 00:58:05.420 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Enabling AtlasStorableCache with caches (request: true, object: true, redis: false)
+2025-01-04 00:58:05.695 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.MetadataManagerFactory] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Metadata schema version read from store: 4
+2025-01-04 00:58:05.695 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.MetadataManagerFactory] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Installed Metadata schema version read from store: 4.4.0
+2025-01-04 00:58:05.695 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataSnapshot] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin close snapshot=6c0f793b-5cef-4719-859b-1e460ae803b8
+2025-01-04 00:58:05.696 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataSnapshot] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a End close snapshot=6c0f793b-5cef-4719-859b-1e460ae803b8
+2025-01-04 00:58:05.697 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataRepository] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Pinned snapshot token=3dbb651c-bc6d-4e38-a23a-880f6c8549c2
+2025-01-04 00:58:05.697 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Enabling AtlasStorableCache with caches (request: true, object: true, redis: false)
+2025-01-04 00:58:05.807 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.l.UnsecuredLogicalModelManager] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin UnsecuredLogicalModelManager::getDataSourceLiteObjects
+2025-01-04 00:58:05.807 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getDataSourceLiteObjects guids=1, hidden=true
+2025-01-04 00:58:05.808 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Retrieved nodes=1
+2025-01-04 00:58:05.808 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin DataSourceLiteReader::read id=43121d86-347a-4dbb-bea8-5e5bb899e427, name=Default
+2025-01-04 00:58:05.812 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a End DataSourceLiteReader::read id=43121d86-347a-4dbb-bea8-5e5bb899e427, name=Default
+2025-01-04 00:58:05.831 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Parsed dataSourceLites=1
+2025-01-04 00:58:05.831 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a End getDataSourceLiteObjects
+2025-01-04 00:58:05.832 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=0 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getDataSourceLiteObjects guids=0, hidden=true
+2025-01-04 00:58:05.832 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=0 user=59481331-ee53-42be-a548-bd87be6ddd4a Retrieved nodes=0
+2025-01-04 00:58:05.832 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=0 user=59481331-ee53-42be-a548-bd87be6ddd4a Parsed dataSourceLites=0
+2025-01-04 00:58:05.832 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=0 user=59481331-ee53-42be-a548-bd87be6ddd4a End getDataSourceLiteObjects
+2025-01-04 00:58:05.868 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-04 00:58:06.017 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Object cache write : LOGICAL_TABLEa7316e8d-d4dd-4eaf-9294-396db951b422
+2025-01-04 00:58:06.024 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.c.CustomCalendarMetadataManagerImpl] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Global available calendars size : 1
+2025-01-04 00:58:06.028 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : exportTML program arg is set to False. Skipping TML export of failed or changed objects.
+2025-01-04 00:58:06.028 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Fetching backend request objects.
+2025-01-04 00:58:06.028 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Fetching guids by view count. type = QUESTION_ANSWER_BOOK, remainingGuids = -1
+2025-01-04 00:58:06.028 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : No more guids needed, continuing.
+2025-01-04 00:58:06.028 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Fetching guids by last date modified. type = QUESTION_ANSWER_BOOK, remainingGuids = -1
+2025-01-04 00:58:06.028 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : No more guids needed, continuing.
+2025-01-04 00:58:06.028 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Found 1 guids
+2025-01-04 00:58:06.028 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : List of guids
+2025-01-04 00:58:06.028 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : end of guids
+2025-01-04 00:58:06.031 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Invoking all threads
+2025-01-04 00:58:06.037 INFO  {write-artifacts-0-2} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-04 00:58:06.644 INFO  {write-artifacts-0-2} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-04 00:58:06.757 INFO  {write-artifacts-0-2} [c.t.c.m.m.l.AtlasLogicalSchemaStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Parsed tables=3
+2025-01-04 00:58:06.772 INFO  {write-artifacts-0-2} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Object cache write : LOGICAL_TABLE07a8af30-cd9d-4ab0-a58a-544a818ddac7
+2025-01-04 00:58:06.797 INFO  {write-artifacts-0-2} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Object cache write : ANSWER_SPEC186d5a92-d5f1-44a0-9793-7cadc6c8b4b1
+2025-01-04 00:58:06.813 INFO  {validator-0-0} [c.t.c.v.querygen.QuerygenValidator] : Creating Falcon Query Spec for guid = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and vizID = 5cc0f8ba-55a8-4b1c-866f-58d14a1ed5ee
+2025-01-04 00:58:06.931 INFO  {validator-0-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-04 00:58:06.933 INFO  {validator-0-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 3.98649E-4 ms
+2025-01-04 00:58:06.979 INFO  {validator-0-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-04 00:58:06.980 INFO  {validator-0-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 4.36832E-4 ms
+2025-01-04 00:58:06.992 INFO  {validator-0-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-04 00:58:06.992 INFO  {validator-0-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 4.75657E-4 ms
+2025-01-04 00:58:08.088 INFO  {validator-0-0} [c.t.c.d.q.t.UnaggregateWorksheetTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a UnaggregateWorksheetTransformer for worksheet=[07a8af30-cd9d-4ab0-a58a-544a818ddac7] took #wstransformerlatency=14 ms 
+2025-01-04 00:58:08.107 INFO  {validator-0-0} [c.t.c.d.q.metadata.MetadataProviderImpl] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for worksheet=[07a8af30-cd9d-4ab0-a58a-544a818ddac7] took #wsqspecgenlatency=38 ms 
+2025-01-04 00:58:08.113 WARN  {validator-0-0} [c.t.c.m.m.l.AtlasLogicalSchemaStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Failed to retrieve table id for entity=00ee9d1b-4f36-36a1-89b9-905ce012b141, error=code: INVALID_EDGE_KEY
+msg: "No edge found key=[src=, name=table_to_column, destination=00ee9d1b-4f36-36a1-89b9-905ce012b141]"
+
+2025-01-04 00:58:08.142 WARN  {validator-0-0} [c.t.c.m.m.l.AtlasLogicalSchemaStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Failed to retrieve table id for entity=00ee9d1b-4f36-36a1-89b9-905ce012b141, error=code: INVALID_EDGE_KEY
+msg: "No edge found key=[src=, name=table_to_column, destination=00ee9d1b-4f36-36a1-89b9-905ce012b141]"
+
+2025-01-04 00:58:08.143 INFO  {validator-0-0} [c.t.c.d.q.t.CohortColumnTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No cohort columns found. Skipping transformation.
+2025-01-04 00:58:08.391 INFO  {validator-0-0} [c.t.c.d.q.planner.QueryJoinPlanner] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Total shared columns between guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+ and guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+: 2
+2025-01-04 00:58:08.392 INFO  {validator-0-0} [c.t.c.d.q.planner.QueryJoinPlanner] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Adding edge:Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0 Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1 1
+2025-01-04 00:58:08.398 INFO  {validator-0-0} [c.t.c.d.q.planner.QueryJoinPlanner] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Joining guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+ and guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+
+2025-01-04 00:58:08.519 WARN  {validator-0-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "114b71e9-2e37-4d64-9d5d-61200108e111"
+name: "Product Id"
+
+2025-01-04 00:58:08.519 WARN  {validator-0-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "114b71e9-2e37-4d64-9d5d-61200108e111"
+name: "Product Id"
+
+2025-01-04 00:58:08.664 INFO  {validator-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-04 00:58:08.665 WARN  {validator-0-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=23bbbfa1-6c20-4374-90b8-14340006f135 found in index."
+
+2025-01-04 00:58:08.666 INFO  {validator-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-04 00:58:08.666 WARN  {validator-0-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=f7dd64e1-5cef-32f1-bb5c-665198a78dea found in index."
+
+2025-01-04 00:58:08.667 INFO  {validator-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-04 00:58:08.667 WARN  {validator-0-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=ec842a9d-7d81-32a0-8e8b-a3cb095cc039 found in index."
+
+2025-01-04 00:58:08.685 INFO  {validator-0-0} [c.t.c.d.q.t.MergeQueryTableTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No queries were able to be merged.
+2025-01-04 00:58:08.694 INFO  {validator-0-0} [c.t.c.d.q.t.MergeQueryTableTransformerV0] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a MergeQueryTableTransformer is enabled. Therefore skippingMergeQueryTableTransformerV0
+2025-01-04 00:58:08.760 INFO  {validator-0-0} [c.t.c.data.querygen.AnswerSpecQueryGen] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for answerspec=[186d5a92-d5f1-44a0-9793-7cadc6c8b4b1] took #answerspecqgenlatency=1781 ms
+2025-01-04 00:58:08.763 INFO  {validator-0-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec for guid: "5cc0f8ba-55a8-4b1c-866f-58d14a1ed5ee"
+name: "Viz [id: 5cc0f8ba-55a8-4b1c-866f-58d14a1ed5ee, name: Headline Total Product Cost]"
+description: "HEADLINE Viz Query for product cost sale cost product id"
+/nquery_schema {
+  table {
+    alias {
+      guid: "b603cd60-1222-4a80-8103-da85a5b16ccc"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+    }
+    table {
+      guid: "23bbbfa1-6c20-4374-90b8-14340006f135"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+      description: "TABLE Viz Query for product cost sale cost product id"
+    }
+    join_path {
+      root_table {
+        guid: "23bbbfa1-6c20-4374-90b8-14340006f135"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+        description: "TABLE Viz Query for product cost sale cost product id"
+      }
+      leaf_table {
+        guid: "23bbbfa1-6c20-4374-90b8-14340006f135"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+        description: "TABLE Viz Query for product cost sale cost product id"
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "2cbf9e19-ce7a-48d8-aa86-2fdabd8fa161"
+      name: "PRODUCTS"
+    }
+    table {
+      guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+      name: "PRODUCTS"
+    }
+    join_path {
+      root_table {
+        guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+        name: "PURCHASES"
+      }
+      leaf_table {
+        guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+        name: "PRODUCTS"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "4a4fa114-b819-4ddc-a64e-92ea438db7a8"
+          name: "Product Id - Product Id"
+        }
+        source {
+          guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+          name: "PURCHASES"
+        }
+        destination {
+          guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+          name: "PRODUCTS"
+        }
+        join_type: INNER
+        one_to_one: false
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "4d838eba-d27f-4e45-9377-2fbb6a774681"
+      name: "PRODUCTS"
+    }
+    table {
+      guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+      name: "PRODUCTS"
+    }
+    join_path {
+      root_table {
+        guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+        name: "SALES"
+      }
+      leaf_table {
+        guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+        name: "PRODUCTS"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "a650ef99-4c90-4d99-ae54-c0627a6ba925"
+          name: "Product Id - Product Id"
+        }
+        source {
+          guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+          name: "SALES"
+        }
+        destination {
+          guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+          name: "PRODUCTS"
+        }
+        join_type: INNER
+        one_to_one: false
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "bd3fa744-6279-4f69-88b7-214613a71b43"
+      name: "PURCHASES"
+    }
+    table {
+      guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+      name: "PURCHASES"
+    }
+    join_path {
+      root_table {
+        guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+        name: "PURCHASES"
+      }
+      leaf_table {
+        guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+        name: "PURCHASES"
+      }
+      is_connected: true
+    }
+  }
+  table {
+    alias {
+      guid: "2e97354f-8dd7-4911-9e3a-0e4c496c507e"
+      name: "SALES"
+    }
+    table {
+      guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+      name: "SALES"
+    }
+    join_path {
+      root_table {
+        guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+        name: "SALES"
+      }
+      leaf_table {
+        guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+        name: "SALES"
+      }
+      is_connected: true
+    }
+  }
+  table {
+    alias {
+      guid: "d7967dbd-6012-4979-b3c5-65960db2323c"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+    table {
+      guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+    join_path {
+      root_table {
+        guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+      }
+      leaf_table {
+        guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "5dfdcd48-cfb0-44ec-933d-baed522c8e1e"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+    table {
+      guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+    join_path {
+      root_table {
+        guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+      }
+      leaf_table {
+        guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+      }
+      join {
+        id {
+          guid: "3fcedeb3-00ce-3f98-877f-61df8b9a1a00"
+          name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0_Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+        }
+        source {
+          guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+          name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+        }
+        destination {
+          guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+          name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+        }
+        join_type: FULL_OUTER
+        source_column {
+          guid: "cade24ae-2eb3-4c5f-9784-52f8cffc0a5c"
+          name: "Product Id"
+        }
+        dest_column {
+          guid: "49146061-1992-4a45-ab86-68848627defc"
+          name: "Product Id"
+        }
+        join_nulls: true
+      }
+    }
+  }
+  column {
+    alias {
+      guid: "a7df749f-d6c9-4ed7-a477-c0180c148ce5"
+      name: "Total Product Cost"
+    }
+    column {
+      guid: "00ee9d1b-4f36-36a1-89b9-905ce012b141"
+      name: "Total Product Cost"
+    }
+    table_alias {
+      guid: "b603cd60-1222-4a80-8103-da85a5b16ccc"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "9729f133-292c-4d98-9201-c80f9020b42b"
+      name: "Product Cost"
+    }
+    column {
+      guid: "6e00ae7c-529e-424a-95ce-db79df6638ca"
+      name: "Product Cost"
+    }
+    table_alias {
+      guid: "bd3fa744-6279-4f69-88b7-214613a71b43"
+      name: "PURCHASES"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "d2cb453d-c8c3-464d-89d9-db6ded979ded"
+      name: "Sale Cost"
+    }
+    column {
+      guid: "28b9315c-ab1d-4a32-a1e9-bfbe9cfe3040"
+      name: "Sale Cost"
+    }
+    table_alias {
+      guid: "2e97354f-8dd7-4911-9e3a-0e4c496c507e"
+      name: "SALES"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "114b71e9-2e37-4d64-9d5d-61200108e111"
+      name: "Product Id"
+    }
+    column {
+      guid: "fae73f8f-c427-4362-a991-51a2da074bb0"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "2cbf9e19-ce7a-48d8-aa86-2fdabd8fa161"
+      name: "PRODUCTS"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "07ce2157-a395-4de3-9a72-bd97b4ebcbdd"
+      name: "Product Id"
+    }
+    column {
+      guid: "fae73f8f-c427-4362-a991-51a2da074bb0"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "4d838eba-d27f-4e45-9377-2fbb6a774681"
+      name: "PRODUCTS"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "6813dbdd-2691-440a-a48f-62d4a433772c"
+      name: "Sum(Product Cost)"
+    }
+    column {
+      guid: "ab69270d-74f0-452c-9fde-6abe54681dcd"
+      name: "Sum(Product Cost)"
+    }
+    table_alias {
+      guid: "d7967dbd-6012-4979-b3c5-65960db2323c"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "1e211bad-3954-4b68-beab-8c713ba696c2"
+      name: "Sum(Sale Cost)"
+    }
+    column {
+      guid: "ddb6c69d-e9b0-4117-a156-8f62af40518f"
+      name: "Sum(Sale Cost)"
+    }
+    table_alias {
+      guid: "5dfdcd48-cfb0-44ec-933d-baed522c8e1e"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "7f1f7333-1c86-495d-b4f7-a72bb7e7eace"
+      name: "Product Id"
+    }
+    column {
+      guid: "cade24ae-2eb3-4c5f-9784-52f8cffc0a5c"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "d7967dbd-6012-4979-b3c5-65960db2323c"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "3fbc1e97-82a5-42d0-9624-5739ad1840dc"
+      name: "Product Id"
+    }
+    column {
+      guid: "49146061-1992-4a45-ab86-68848627defc"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "5dfdcd48-cfb0-44ec-933d-baed522c8e1e"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+    data_type: INT64
+  }
+  formula {
+    alias {
+      guid: "5e3cfb8a-4dcd-47a4-8a9e-53bdc8bbc4f5"
+      name: "Sum(Total Product Cost)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "a7df749f-d6c9-4ed7-a477-c0180c148ce5"
+              name: "Total Product Cost"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "b603cd60-1222-4a80-8103-da85a5b16ccc"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+    }
+  }
+  formula {
+    alias {
+      guid: "2dda2f74-f9e3-436a-9f77-391ea513f7ae"
+      name: "Sum(Sale Cost)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "d2cb453d-c8c3-464d-89d9-db6ded979ded"
+              name: "Sale Cost"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "2e97354f-8dd7-4911-9e3a-0e4c496c507e"
+      name: "SALES"
+    }
+  }
+  formula {
+    alias {
+      guid: "20120307-4242-4a09-bcab-a7938cb840f0"
+      name: "Sum(Product Cost)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "9729f133-292c-4d98-9201-c80f9020b42b"
+              name: "Product Cost"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "bd3fa744-6279-4f69-88b7-214613a71b43"
+      name: "PURCHASES"
+    }
+  }
+  formula {
+    alias {
+      guid: "f7b002dd-b778-4ca7-8681-6ab066e1f883"
+      name: "IfNull(Product Id,Product Id)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "IfNull"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "7f1f7333-1c86-495d-b4f7-a72bb7e7eace"
+              name: "Product Id"
+            }
+          }
+        }
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "3fbc1e97-82a5-42d0-9624-5739ad1840dc"
+              name: "Product Id"
+            }
+          }
+        }
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "d7967dbd-6012-4979-b3c5-65960db2323c"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+  }
+  formula {
+    alias {
+      guid: "6836f18b-6ecd-40c1-8bd4-01e149c8fdf1"
+      name: "IfNull(Sum(Product Cost),Constant_0)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "IfNull"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "6813dbdd-2691-440a-a48f-62d4a433772c"
+              name: "Sum(Product Cost)"
+            }
+          }
+        }
+        arguments {
+          expr_class: EXPR_CONSTANT
+          constant {
+            int_value: 0
+          }
+          data_type: INT64
+        }
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "d7967dbd-6012-4979-b3c5-65960db2323c"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+  }
+  formula {
+    alias {
+      guid: "6782208d-e4b4-47d1-8124-fde1183efb8f"
+      name: "IfNull(Sum(Sale Cost),Constant_0)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "IfNull"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "1e211bad-3954-4b68-beab-8c713ba696c2"
+              name: "Sum(Sale Cost)"
+            }
+          }
+        }
+        arguments {
+          expr_class: EXPR_CONSTANT
+          constant {
+            int_value: 0
+          }
+          data_type: INT64
+        }
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "5dfdcd48-cfb0-44ec-933d-baed522c8e1e"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+  }
+}
+table {
+  id {
+    guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+  }
+  column {
+    id {
+      guid: "114b71e9-2e37-4d64-9d5d-61200108e111"
+      name: "Product Id"
+    }
+    output_id {
+      guid: "cade24ae-2eb3-4c5f-9784-52f8cffc0a5c"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "20120307-4242-4a09-bcab-a7938cb840f0"
+      name: "Sum(Product Cost)"
+    }
+    output_id {
+      guid: "ab69270d-74f0-452c-9fde-6abe54681dcd"
+      name: "Sum(Product Cost)"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  group_by {
+    id {
+      guid: "114b71e9-2e37-4d64-9d5d-61200108e111"
+      name: "Product Id"
+    }
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+  }
+  column {
+    id {
+      guid: "07ce2157-a395-4de3-9a72-bd97b4ebcbdd"
+      name: "Product Id"
+    }
+    output_id {
+      guid: "49146061-1992-4a45-ab86-68848627defc"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "2dda2f74-f9e3-436a-9f77-391ea513f7ae"
+      name: "Sum(Sale Cost)"
+    }
+    output_id {
+      guid: "ddb6c69d-e9b0-4117-a156-8f62af40518f"
+      name: "Sum(Sale Cost)"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  group_by {
+    id {
+      guid: "07ce2157-a395-4de3-9a72-bd97b4ebcbdd"
+      name: "Product Id"
+    }
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "23bbbfa1-6c20-4374-90b8-14340006f135"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+    description: "TABLE Viz Query for product cost sale cost product id"
+  }
+  column {
+    id {
+      guid: "f7b002dd-b778-4ca7-8681-6ab066e1f883"
+      name: "IfNull(Product Id,Product Id)"
+    }
+    output_id {
+      guid: "04e8e2cf-6e0f-386b-8380-41dfcec52479"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "6836f18b-6ecd-40c1-8bd4-01e149c8fdf1"
+      name: "IfNull(Sum(Product Cost),Constant_0)"
+    }
+    output_id {
+      guid: "00ee9d1b-4f36-36a1-89b9-905ce012b141"
+      name: "Total Product Cost"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "6782208d-e4b4-47d1-8124-fde1183efb8f"
+      name: "IfNull(Sum(Sale Cost),Constant_0)"
+    }
+    output_id {
+      guid: "d4a429c9-bbeb-36de-adba-a9af3801f58a"
+      name: "Total Sale Cost"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  order_by {
+    id {
+      guid: "f7b002dd-b778-4ca7-8681-6ab066e1f883"
+      name: "IfNull(Product Id,Product Id)"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "5cc0f8ba-55a8-4b1c-866f-58d14a1ed5ee"
+    name: "Viz [id: 5cc0f8ba-55a8-4b1c-866f-58d14a1ed5ee, name: Headline Total Product Cost]"
+    description: "HEADLINE Viz Query for product cost sale cost product id"
+  }
+  column {
+    id {
+      guid: "5e3cfb8a-4dcd-47a4-8a9e-53bdc8bbc4f5"
+      name: "Sum(Total Product Cost)"
+    }
+    output_id {
+      guid: "51e70a1b-e82d-3b1b-bfe7-3508e6b0334c"
+      name: "Sum(Product Cost)_SUM"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: true
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+join {
+  id {
+    guid: "3fcedeb3-00ce-3f98-877f-61df8b9a1a00"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0_Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+  }
+  source {
+    guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+  }
+  destination {
+    guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+  }
+  join_type: FULL_OUTER
+  source_column {
+    guid: "cade24ae-2eb3-4c5f-9784-52f8cffc0a5c"
+    name: "Product Id"
+  }
+  dest_column {
+    guid: "49146061-1992-4a45-ab86-68848627defc"
+    name: "Product Id"
+  }
+  join_nulls: true
+}
+
+2025-01-04 00:58:08.764 INFO  {validator-0-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec generated for 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and 5cc0f8ba-55a8-4b1c-866f-58d14a1ed5ee
+2025-01-04 00:58:08.903 INFO  {validator-0-0} [c.t.c.v.querygen.QuerygenValidator] : Falcon Request generated for GUID = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and VizId = 5cc0f8ba-55a8-4b1c-866f-58d14a1ed5ee
+2025-01-04 00:58:08.906 INFO  {validator-1-0} [c.t.c.v.querygen.QuerygenValidator] : Creating Falcon Query Spec for guid = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and vizID = 23bbbfa1-6c20-4374-90b8-14340006f135
+2025-01-04 00:58:08.916 INFO  {validator-1-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-04 00:58:08.916 INFO  {validator-1-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 5.15513E-4 ms
+2025-01-04 00:58:08.917 INFO  {validator-1-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-04 00:58:08.917 INFO  {validator-1-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 5.31043E-4 ms
+2025-01-04 00:58:08.917 INFO  {validator-1-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-04 00:58:08.917 INFO  {validator-1-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 5.50962E-4 ms
+2025-01-04 00:58:08.936 INFO  {validator-1-0} [c.t.c.d.q.metadata.MetadataProviderImpl] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for worksheet=[07a8af30-cd9d-4ab0-a58a-544a818ddac7] took #wsqspecgenlatency=2 ms 
+2025-01-04 00:58:08.943 INFO  {validator-1-0} [c.t.c.d.q.t.CohortColumnTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No cohort columns found. Skipping transformation.
+2025-01-04 00:58:09.003 INFO  {validator-1-0} [c.t.c.d.q.planner.QueryJoinPlanner] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Total shared columns between guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+ and guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+: 2
+2025-01-04 00:58:09.003 INFO  {validator-1-0} [c.t.c.d.q.planner.QueryJoinPlanner] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Adding edge:Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0 Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1 1
+2025-01-04 00:58:09.003 INFO  {validator-1-0} [c.t.c.d.q.planner.QueryJoinPlanner] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Joining guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+ and guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+
+2025-01-04 00:58:09.008 WARN  {validator-1-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "b27628f6-60cb-4384-8da9-cfb56fa9b615"
+name: "Product Id"
+
+2025-01-04 00:58:09.008 WARN  {validator-1-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "b27628f6-60cb-4384-8da9-cfb56fa9b615"
+name: "Product Id"
+
+2025-01-04 00:58:09.068 INFO  {validator-1-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-04 00:58:09.068 WARN  {validator-1-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=f7dd64e1-5cef-32f1-bb5c-665198a78dea found in index."
+
+2025-01-04 00:58:09.068 INFO  {validator-1-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-04 00:58:09.069 WARN  {validator-1-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=ec842a9d-7d81-32a0-8e8b-a3cb095cc039 found in index."
+
+2025-01-04 00:58:09.074 INFO  {validator-1-0} [c.t.c.d.q.t.MergeQueryTableTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No queries were able to be merged.
+2025-01-04 00:58:09.078 INFO  {validator-1-0} [c.t.c.d.q.t.MergeQueryTableTransformerV0] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a MergeQueryTableTransformer is enabled. Therefore skippingMergeQueryTableTransformerV0
+2025-01-04 00:58:09.089 INFO  {validator-1-0} [c.t.c.data.querygen.AnswerSpecQueryGen] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for answerspec=[186d5a92-d5f1-44a0-9793-7cadc6c8b4b1] took #answerspecqgenlatency=172 ms
+2025-01-04 00:58:09.090 INFO  {validator-1-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec for guid: "23bbbfa1-6c20-4374-90b8-14340006f135"
+name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+description: "TABLE Viz Query for product cost sale cost product id"
+/nquery_schema {
+  table {
+    alias {
+      guid: "2cbf9e19-ce7a-48d8-aa86-2fdabd8fa161"
+      name: "PRODUCTS"
+    }
+    table {
+      guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+      name: "PRODUCTS"
+    }
+    join_path {
+      root_table {
+        guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+        name: "PURCHASES"
+      }
+      leaf_table {
+        guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+        name: "PRODUCTS"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "4a4fa114-b819-4ddc-a64e-92ea438db7a8"
+          name: "Product Id - Product Id"
+        }
+        source {
+          guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+          name: "PURCHASES"
+        }
+        destination {
+          guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+          name: "PRODUCTS"
+        }
+        join_type: INNER
+        one_to_one: false
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "4d838eba-d27f-4e45-9377-2fbb6a774681"
+      name: "PRODUCTS"
+    }
+    table {
+      guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+      name: "PRODUCTS"
+    }
+    join_path {
+      root_table {
+        guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+        name: "SALES"
+      }
+      leaf_table {
+        guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+        name: "PRODUCTS"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "a650ef99-4c90-4d99-ae54-c0627a6ba925"
+          name: "Product Id - Product Id"
+        }
+        source {
+          guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+          name: "SALES"
+        }
+        destination {
+          guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+          name: "PRODUCTS"
+        }
+        join_type: INNER
+        one_to_one: false
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "bd3fa744-6279-4f69-88b7-214613a71b43"
+      name: "PURCHASES"
+    }
+    table {
+      guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+      name: "PURCHASES"
+    }
+    join_path {
+      root_table {
+        guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+        name: "PURCHASES"
+      }
+      leaf_table {
+        guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+        name: "PURCHASES"
+      }
+      is_connected: true
+    }
+  }
+  table {
+    alias {
+      guid: "2e97354f-8dd7-4911-9e3a-0e4c496c507e"
+      name: "SALES"
+    }
+    table {
+      guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+      name: "SALES"
+    }
+    join_path {
+      root_table {
+        guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+        name: "SALES"
+      }
+      leaf_table {
+        guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+        name: "SALES"
+      }
+      is_connected: true
+    }
+  }
+  table {
+    alias {
+      guid: "993122dd-161c-4caa-a6a1-9616485e54ba"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+    table {
+      guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+    join_path {
+      root_table {
+        guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+      }
+      leaf_table {
+        guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "3f1f11d4-fcd0-4ada-ad23-4e28b0b8d162"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+    table {
+      guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+    join_path {
+      root_table {
+        guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+      }
+      leaf_table {
+        guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+      }
+      join {
+        id {
+          guid: "3fcedeb3-00ce-3f98-877f-61df8b9a1a00"
+          name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0_Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+        }
+        source {
+          guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+          name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+        }
+        destination {
+          guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+          name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+        }
+        join_type: FULL_OUTER
+        source_column {
+          guid: "8263b99e-6f5a-4110-b29e-5917bf01dd1e"
+          name: "Product Id"
+        }
+        dest_column {
+          guid: "694d94f0-920c-4ed4-ac84-e4cba1f98521"
+          name: "Product Id"
+        }
+        join_nulls: true
+      }
+    }
+  }
+  column {
+    alias {
+      guid: "9729f133-292c-4d98-9201-c80f9020b42b"
+      name: "Product Cost"
+    }
+    column {
+      guid: "6e00ae7c-529e-424a-95ce-db79df6638ca"
+      name: "Product Cost"
+    }
+    table_alias {
+      guid: "bd3fa744-6279-4f69-88b7-214613a71b43"
+      name: "PURCHASES"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "d2cb453d-c8c3-464d-89d9-db6ded979ded"
+      name: "Sale Cost"
+    }
+    column {
+      guid: "28b9315c-ab1d-4a32-a1e9-bfbe9cfe3040"
+      name: "Sale Cost"
+    }
+    table_alias {
+      guid: "2e97354f-8dd7-4911-9e3a-0e4c496c507e"
+      name: "SALES"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "b27628f6-60cb-4384-8da9-cfb56fa9b615"
+      name: "Product Id"
+    }
+    column {
+      guid: "fae73f8f-c427-4362-a991-51a2da074bb0"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "2cbf9e19-ce7a-48d8-aa86-2fdabd8fa161"
+      name: "PRODUCTS"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "d54c5150-a955-4147-b75f-bccb39fe9483"
+      name: "Product Id"
+    }
+    column {
+      guid: "fae73f8f-c427-4362-a991-51a2da074bb0"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "4d838eba-d27f-4e45-9377-2fbb6a774681"
+      name: "PRODUCTS"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "4b9e45d9-c6b1-475e-90d6-3ea95f1f8865"
+      name: "Sum(Product Cost)"
+    }
+    column {
+      guid: "6f7317b4-1ad5-4664-89f4-b8c836e3699d"
+      name: "Sum(Product Cost)"
+    }
+    table_alias {
+      guid: "993122dd-161c-4caa-a6a1-9616485e54ba"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "6baef172-a4d3-4e54-94af-c104a3e46785"
+      name: "Sum(Sale Cost)"
+    }
+    column {
+      guid: "e6b70711-867c-474f-a08d-0f8e5e273b07"
+      name: "Sum(Sale Cost)"
+    }
+    table_alias {
+      guid: "3f1f11d4-fcd0-4ada-ad23-4e28b0b8d162"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "12dce3d1-1edf-4505-a7f1-f91cf2e7f6d4"
+      name: "Product Id"
+    }
+    column {
+      guid: "8263b99e-6f5a-4110-b29e-5917bf01dd1e"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "993122dd-161c-4caa-a6a1-9616485e54ba"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "c4166775-2fc3-409a-b96b-3a45688d7414"
+      name: "Product Id"
+    }
+    column {
+      guid: "694d94f0-920c-4ed4-ac84-e4cba1f98521"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "3f1f11d4-fcd0-4ada-ad23-4e28b0b8d162"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+    data_type: INT64
+  }
+  formula {
+    alias {
+      guid: "c2231e7e-9c84-44ad-9aeb-04581aad0a29"
+      name: "Sum(Sale Cost)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "d2cb453d-c8c3-464d-89d9-db6ded979ded"
+              name: "Sale Cost"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "2e97354f-8dd7-4911-9e3a-0e4c496c507e"
+      name: "SALES"
+    }
+  }
+  formula {
+    alias {
+      guid: "b01600b6-d75a-4565-8717-1ed687cbddb5"
+      name: "Sum(Product Cost)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "9729f133-292c-4d98-9201-c80f9020b42b"
+              name: "Product Cost"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "bd3fa744-6279-4f69-88b7-214613a71b43"
+      name: "PURCHASES"
+    }
+  }
+  formula {
+    alias {
+      guid: "6fae608c-3c51-49aa-9ea2-b4b6a0f80e9a"
+      name: "IfNull(Product Id,Product Id)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "IfNull"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "12dce3d1-1edf-4505-a7f1-f91cf2e7f6d4"
+              name: "Product Id"
+            }
+          }
+        }
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "c4166775-2fc3-409a-b96b-3a45688d7414"
+              name: "Product Id"
+            }
+          }
+        }
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "993122dd-161c-4caa-a6a1-9616485e54ba"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+  }
+  formula {
+    alias {
+      guid: "1ebf26e4-913c-4079-84ea-de57a547ee24"
+      name: "IfNull(Sum(Product Cost),Constant_0)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "IfNull"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "4b9e45d9-c6b1-475e-90d6-3ea95f1f8865"
+              name: "Sum(Product Cost)"
+            }
+          }
+        }
+        arguments {
+          expr_class: EXPR_CONSTANT
+          constant {
+            int_value: 0
+          }
+          data_type: INT64
+        }
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "993122dd-161c-4caa-a6a1-9616485e54ba"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+  }
+  formula {
+    alias {
+      guid: "a8442c7b-03fa-4fd0-a9a9-1fd9a1b39dc7"
+      name: "IfNull(Sum(Sale Cost),Constant_0)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "IfNull"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "6baef172-a4d3-4e54-94af-c104a3e46785"
+              name: "Sum(Sale Cost)"
+            }
+          }
+        }
+        arguments {
+          expr_class: EXPR_CONSTANT
+          constant {
+            int_value: 0
+          }
+          data_type: INT64
+        }
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "3f1f11d4-fcd0-4ada-ad23-4e28b0b8d162"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+  }
+}
+table {
+  id {
+    guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+  }
+  column {
+    id {
+      guid: "b27628f6-60cb-4384-8da9-cfb56fa9b615"
+      name: "Product Id"
+    }
+    output_id {
+      guid: "8263b99e-6f5a-4110-b29e-5917bf01dd1e"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "b01600b6-d75a-4565-8717-1ed687cbddb5"
+      name: "Sum(Product Cost)"
+    }
+    output_id {
+      guid: "6f7317b4-1ad5-4664-89f4-b8c836e3699d"
+      name: "Sum(Product Cost)"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  group_by {
+    id {
+      guid: "b27628f6-60cb-4384-8da9-cfb56fa9b615"
+      name: "Product Id"
+    }
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+  }
+  column {
+    id {
+      guid: "d54c5150-a955-4147-b75f-bccb39fe9483"
+      name: "Product Id"
+    }
+    output_id {
+      guid: "694d94f0-920c-4ed4-ac84-e4cba1f98521"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "c2231e7e-9c84-44ad-9aeb-04581aad0a29"
+      name: "Sum(Sale Cost)"
+    }
+    output_id {
+      guid: "e6b70711-867c-474f-a08d-0f8e5e273b07"
+      name: "Sum(Sale Cost)"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  group_by {
+    id {
+      guid: "d54c5150-a955-4147-b75f-bccb39fe9483"
+      name: "Product Id"
+    }
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "23bbbfa1-6c20-4374-90b8-14340006f135"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+    description: "TABLE Viz Query for product cost sale cost product id"
+  }
+  column {
+    id {
+      guid: "6fae608c-3c51-49aa-9ea2-b4b6a0f80e9a"
+      name: "IfNull(Product Id,Product Id)"
+    }
+    output_id {
+      guid: "04e8e2cf-6e0f-386b-8380-41dfcec52479"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "1ebf26e4-913c-4079-84ea-de57a547ee24"
+      name: "IfNull(Sum(Product Cost),Constant_0)"
+    }
+    output_id {
+      guid: "00ee9d1b-4f36-36a1-89b9-905ce012b141"
+      name: "Total Product Cost"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "a8442c7b-03fa-4fd0-a9a9-1fd9a1b39dc7"
+      name: "IfNull(Sum(Sale Cost),Constant_0)"
+    }
+    output_id {
+      guid: "d4a429c9-bbeb-36de-adba-a9af3801f58a"
+      name: "Total Sale Cost"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  order_by {
+    id {
+      guid: "6fae608c-3c51-49aa-9ea2-b4b6a0f80e9a"
+      name: "IfNull(Product Id,Product Id)"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: true
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+join {
+  id {
+    guid: "3fcedeb3-00ce-3f98-877f-61df8b9a1a00"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0_Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+  }
+  source {
+    guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+  }
+  destination {
+    guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+  }
+  join_type: FULL_OUTER
+  source_column {
+    guid: "8263b99e-6f5a-4110-b29e-5917bf01dd1e"
+    name: "Product Id"
+  }
+  dest_column {
+    guid: "694d94f0-920c-4ed4-ac84-e4cba1f98521"
+    name: "Product Id"
+  }
+  join_nulls: true
+}
+
+2025-01-04 00:58:09.091 INFO  {validator-1-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec generated for 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and 23bbbfa1-6c20-4374-90b8-14340006f135
+2025-01-04 00:58:09.095 INFO  {validator-1-0} [c.t.c.v.querygen.QuerygenValidator] : Falcon Request generated for GUID = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and VizId = 23bbbfa1-6c20-4374-90b8-14340006f135
+2025-01-04 00:58:09.096 INFO  {validator-2-0} [c.t.c.v.querygen.QuerygenValidator] : Creating Falcon Query Spec for guid = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and vizID = 388e6372-6939-4fce-9189-66bf6313330f
+2025-01-04 00:58:09.101 INFO  {validator-2-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-04 00:58:09.101 INFO  {validator-2-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 5.72663E-4 ms
+2025-01-04 00:58:09.102 INFO  {validator-2-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-04 00:58:09.102 INFO  {validator-2-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 5.875969999999999E-4 ms
+2025-01-04 00:58:09.157 INFO  {validator-2-0} [c.t.c.d.q.metadata.MetadataProviderImpl] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for worksheet=[07a8af30-cd9d-4ab0-a58a-544a818ddac7] took #wsqspecgenlatency=2 ms 
+2025-01-04 00:58:09.162 INFO  {validator-2-0} [c.t.c.d.q.t.CohortColumnTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No cohort columns found. Skipping transformation.
+2025-01-04 00:58:09.198 INFO  {validator-2-0} [c.t.c.d.q.planner.QueryJoinPlanner] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Total shared columns between guid: "90d0dfe7-0836-3c7e-9795-f7e8adc486ab"
+name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+ and guid: "8dc46a69-6c3c-3c9b-8895-ac436b22fc99"
+name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+: 2
+2025-01-04 00:58:09.198 INFO  {validator-2-0} [c.t.c.d.q.planner.QueryJoinPlanner] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Adding edge:6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0 6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1 1
+2025-01-04 00:58:09.198 INFO  {validator-2-0} [c.t.c.d.q.planner.QueryJoinPlanner] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Joining guid: "90d0dfe7-0836-3c7e-9795-f7e8adc486ab"
+name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+ and guid: "8dc46a69-6c3c-3c9b-8895-ac436b22fc99"
+name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+
+2025-01-04 00:58:09.202 WARN  {validator-2-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "211bb7d0-a43a-4212-943b-44869e26f43d"
+name: "Product Id"
+
+2025-01-04 00:58:09.203 WARN  {validator-2-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "211bb7d0-a43a-4212-943b-44869e26f43d"
+name: "Product Id"
+
+2025-01-04 00:58:09.256 INFO  {validator-2-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-04 00:58:09.257 WARN  {validator-2-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=90d0dfe7-0836-3c7e-9795-f7e8adc486ab found in index."
+
+2025-01-04 00:58:09.257 INFO  {validator-2-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-04 00:58:09.257 WARN  {validator-2-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=8dc46a69-6c3c-3c9b-8895-ac436b22fc99 found in index."
+
+2025-01-04 00:58:09.262 INFO  {validator-2-0} [c.t.c.d.q.t.MergeQueryTableTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No queries were able to be merged.
+2025-01-04 00:58:09.265 INFO  {validator-2-0} [c.t.c.d.q.t.MergeQueryTableTransformerV0] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a MergeQueryTableTransformer is enabled. Therefore skippingMergeQueryTableTransformerV0
+2025-01-04 00:58:09.276 INFO  {validator-2-0} [c.t.c.data.querygen.AnswerSpecQueryGen] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for answerspec=[186d5a92-d5f1-44a0-9793-7cadc6c8b4b1] took #answerspecqgenlatency=174 ms
+2025-01-04 00:58:09.277 INFO  {validator-2-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec for guid: "6a6ff6f9-a313-321f-96f1-ef57c63e6543"
+name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543"
+description: "Chart Viz Query for product cost sale cost product id"
+/nquery_schema {
+  table {
+    alias {
+      guid: "2cbf9e19-ce7a-48d8-aa86-2fdabd8fa161"
+      name: "PRODUCTS"
+    }
+    table {
+      guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+      name: "PRODUCTS"
+    }
+    join_path {
+      root_table {
+        guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+        name: "PURCHASES"
+      }
+      leaf_table {
+        guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+        name: "PRODUCTS"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "4a4fa114-b819-4ddc-a64e-92ea438db7a8"
+          name: "Product Id - Product Id"
+        }
+        source {
+          guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+          name: "PURCHASES"
+        }
+        destination {
+          guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+          name: "PRODUCTS"
+        }
+        join_type: INNER
+        one_to_one: false
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "4d838eba-d27f-4e45-9377-2fbb6a774681"
+      name: "PRODUCTS"
+    }
+    table {
+      guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+      name: "PRODUCTS"
+    }
+    join_path {
+      root_table {
+        guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+        name: "SALES"
+      }
+      leaf_table {
+        guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+        name: "PRODUCTS"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "a650ef99-4c90-4d99-ae54-c0627a6ba925"
+          name: "Product Id - Product Id"
+        }
+        source {
+          guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+          name: "SALES"
+        }
+        destination {
+          guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+          name: "PRODUCTS"
+        }
+        join_type: INNER
+        one_to_one: false
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "bd3fa744-6279-4f69-88b7-214613a71b43"
+      name: "PURCHASES"
+    }
+    table {
+      guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+      name: "PURCHASES"
+    }
+    join_path {
+      root_table {
+        guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+        name: "PURCHASES"
+      }
+      leaf_table {
+        guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+        name: "PURCHASES"
+      }
+      is_connected: true
+    }
+  }
+  table {
+    alias {
+      guid: "2e97354f-8dd7-4911-9e3a-0e4c496c507e"
+      name: "SALES"
+    }
+    table {
+      guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+      name: "SALES"
+    }
+    join_path {
+      root_table {
+        guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+        name: "SALES"
+      }
+      leaf_table {
+        guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+        name: "SALES"
+      }
+      is_connected: true
+    }
+  }
+  table {
+    alias {
+      guid: "205f28f0-64ba-474d-9404-f2d41141be24"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+    }
+    table {
+      guid: "90d0dfe7-0836-3c7e-9795-f7e8adc486ab"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+    }
+    join_path {
+      root_table {
+        guid: "90d0dfe7-0836-3c7e-9795-f7e8adc486ab"
+        name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+      }
+      leaf_table {
+        guid: "90d0dfe7-0836-3c7e-9795-f7e8adc486ab"
+        name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "68c71bde-ca7e-4432-9074-bc4242dc5f90"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+    }
+    table {
+      guid: "8dc46a69-6c3c-3c9b-8895-ac436b22fc99"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+    }
+    join_path {
+      root_table {
+        guid: "90d0dfe7-0836-3c7e-9795-f7e8adc486ab"
+        name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+      }
+      leaf_table {
+        guid: "8dc46a69-6c3c-3c9b-8895-ac436b22fc99"
+        name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+      }
+      join {
+        id {
+          guid: "f4474c28-e25f-3a01-bc25-c7f312b3fdf1"
+          name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0_6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+        }
+        source {
+          guid: "90d0dfe7-0836-3c7e-9795-f7e8adc486ab"
+          name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+        }
+        destination {
+          guid: "8dc46a69-6c3c-3c9b-8895-ac436b22fc99"
+          name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+        }
+        join_type: FULL_OUTER
+        source_column {
+          guid: "0b4995ba-6444-408c-89d8-903880d7fcf0"
+          name: "Product Id"
+        }
+        dest_column {
+          guid: "e2a2d6b5-3f1c-482a-86e7-19f5b2ca05d1"
+          name: "Product Id"
+        }
+        join_nulls: true
+      }
+    }
+  }
+  column {
+    alias {
+      guid: "9729f133-292c-4d98-9201-c80f9020b42b"
+      name: "Product Cost"
+    }
+    column {
+      guid: "6e00ae7c-529e-424a-95ce-db79df6638ca"
+      name: "Product Cost"
+    }
+    table_alias {
+      guid: "bd3fa744-6279-4f69-88b7-214613a71b43"
+      name: "PURCHASES"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "d2cb453d-c8c3-464d-89d9-db6ded979ded"
+      name: "Sale Cost"
+    }
+    column {
+      guid: "28b9315c-ab1d-4a32-a1e9-bfbe9cfe3040"
+      name: "Sale Cost"
+    }
+    table_alias {
+      guid: "2e97354f-8dd7-4911-9e3a-0e4c496c507e"
+      name: "SALES"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "211bb7d0-a43a-4212-943b-44869e26f43d"
+      name: "Product Id"
+    }
+    column {
+      guid: "fae73f8f-c427-4362-a991-51a2da074bb0"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "2cbf9e19-ce7a-48d8-aa86-2fdabd8fa161"
+      name: "PRODUCTS"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "68579fd6-a951-4f18-8690-e3d9bf07230e"
+      name: "Product Id"
+    }
+    column {
+      guid: "fae73f8f-c427-4362-a991-51a2da074bb0"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "4d838eba-d27f-4e45-9377-2fbb6a774681"
+      name: "PRODUCTS"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "00ab2938-332d-4e8b-9697-d55de0afa8d8"
+      name: "Sum(Product Cost)"
+    }
+    column {
+      guid: "36689cc1-3532-49af-a406-e64217ff84cf"
+      name: "Sum(Product Cost)"
+    }
+    table_alias {
+      guid: "205f28f0-64ba-474d-9404-f2d41141be24"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "6bab0493-194f-415e-a4b4-31989c65360a"
+      name: "Sum(Sale Cost)"
+    }
+    column {
+      guid: "11075d5a-ff11-4642-a57a-c4c85bde5c8e"
+      name: "Sum(Sale Cost)"
+    }
+    table_alias {
+      guid: "68c71bde-ca7e-4432-9074-bc4242dc5f90"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "19281622-098d-4896-a88e-099c5cf1b20c"
+      name: "Product Id"
+    }
+    column {
+      guid: "0b4995ba-6444-408c-89d8-903880d7fcf0"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "205f28f0-64ba-474d-9404-f2d41141be24"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "fcd9cb95-bbd2-4076-a6de-60fdb58bf5b6"
+      name: "Product Id"
+    }
+    column {
+      guid: "e2a2d6b5-3f1c-482a-86e7-19f5b2ca05d1"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "68c71bde-ca7e-4432-9074-bc4242dc5f90"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+    }
+    data_type: INT64
+  }
+  formula {
+    alias {
+      guid: "1abc5934-50ae-43bb-b96b-5ff62242d0e2"
+      name: "Sum(Sale Cost)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "d2cb453d-c8c3-464d-89d9-db6ded979ded"
+              name: "Sale Cost"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "2e97354f-8dd7-4911-9e3a-0e4c496c507e"
+      name: "SALES"
+    }
+  }
+  formula {
+    alias {
+      guid: "899b3e13-5fd5-4c38-82ab-b2088efed94b"
+      name: "Sum(Product Cost)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "9729f133-292c-4d98-9201-c80f9020b42b"
+              name: "Product Cost"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "bd3fa744-6279-4f69-88b7-214613a71b43"
+      name: "PURCHASES"
+    }
+  }
+  formula {
+    alias {
+      guid: "c1111a3a-f15c-4dc9-9059-b3317566578a"
+      name: "IfNull(Product Id,Product Id)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "IfNull"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "19281622-098d-4896-a88e-099c5cf1b20c"
+              name: "Product Id"
+            }
+          }
+        }
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "fcd9cb95-bbd2-4076-a6de-60fdb58bf5b6"
+              name: "Product Id"
+            }
+          }
+        }
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "205f28f0-64ba-474d-9404-f2d41141be24"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+    }
+  }
+  formula {
+    alias {
+      guid: "01337ccd-684c-4ca4-8c7c-b7de6c42b105"
+      name: "IfNull(Sum(Product Cost),Constant_0)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "IfNull"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "00ab2938-332d-4e8b-9697-d55de0afa8d8"
+              name: "Sum(Product Cost)"
+            }
+          }
+        }
+        arguments {
+          expr_class: EXPR_CONSTANT
+          constant {
+            int_value: 0
+          }
+          data_type: INT64
+        }
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "205f28f0-64ba-474d-9404-f2d41141be24"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+    }
+  }
+  formula {
+    alias {
+      guid: "4db3f4b4-1a58-45ef-8600-6ea53e023699"
+      name: "IfNull(Sum(Sale Cost),Constant_0)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "IfNull"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "6bab0493-194f-415e-a4b4-31989c65360a"
+              name: "Sum(Sale Cost)"
+            }
+          }
+        }
+        arguments {
+          expr_class: EXPR_CONSTANT
+          constant {
+            int_value: 0
+          }
+          data_type: INT64
+        }
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "68c71bde-ca7e-4432-9074-bc4242dc5f90"
+      name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+    }
+  }
+}
+table {
+  id {
+    guid: "90d0dfe7-0836-3c7e-9795-f7e8adc486ab"
+    name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+  }
+  column {
+    id {
+      guid: "211bb7d0-a43a-4212-943b-44869e26f43d"
+      name: "Product Id"
+    }
+    output_id {
+      guid: "0b4995ba-6444-408c-89d8-903880d7fcf0"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "899b3e13-5fd5-4c38-82ab-b2088efed94b"
+      name: "Sum(Product Cost)"
+    }
+    output_id {
+      guid: "36689cc1-3532-49af-a406-e64217ff84cf"
+      name: "Sum(Product Cost)"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  group_by {
+    id {
+      guid: "211bb7d0-a43a-4212-943b-44869e26f43d"
+      name: "Product Id"
+    }
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "8dc46a69-6c3c-3c9b-8895-ac436b22fc99"
+    name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+  }
+  column {
+    id {
+      guid: "68579fd6-a951-4f18-8690-e3d9bf07230e"
+      name: "Product Id"
+    }
+    output_id {
+      guid: "e2a2d6b5-3f1c-482a-86e7-19f5b2ca05d1"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "1abc5934-50ae-43bb-b96b-5ff62242d0e2"
+      name: "Sum(Sale Cost)"
+    }
+    output_id {
+      guid: "11075d5a-ff11-4642-a57a-c4c85bde5c8e"
+      name: "Sum(Sale Cost)"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  group_by {
+    id {
+      guid: "68579fd6-a951-4f18-8690-e3d9bf07230e"
+      name: "Product Id"
+    }
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "6a6ff6f9-a313-321f-96f1-ef57c63e6543"
+    name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543"
+    description: "Chart Viz Query for product cost sale cost product id"
+  }
+  column {
+    id {
+      guid: "c1111a3a-f15c-4dc9-9059-b3317566578a"
+      name: "IfNull(Product Id,Product Id)"
+    }
+    output_id {
+      guid: "498c14c4-53c3-3547-a843-071f3f2a5f22"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "01337ccd-684c-4ca4-8c7c-b7de6c42b105"
+      name: "IfNull(Sum(Product Cost),Constant_0)"
+    }
+    output_id {
+      guid: "32e68d85-34c8-3c9c-8335-51cfde60d3d4"
+      name: "Total Product Cost"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "4db3f4b4-1a58-45ef-8600-6ea53e023699"
+      name: "IfNull(Sum(Sale Cost),Constant_0)"
+    }
+    output_id {
+      guid: "4b18e118-874a-3808-b6e6-6c30219d417c"
+      name: "Total Sale Cost"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  order_by {
+    id {
+      guid: "c1111a3a-f15c-4dc9-9059-b3317566578a"
+      name: "IfNull(Product Id,Product Id)"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: true
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+join {
+  id {
+    guid: "f4474c28-e25f-3a01-bc25-c7f312b3fdf1"
+    name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0_6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+  }
+  source {
+    guid: "90d0dfe7-0836-3c7e-9795-f7e8adc486ab"
+    name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#0"
+  }
+  destination {
+    guid: "8dc46a69-6c3c-3c9b-8895-ac436b22fc99"
+    name: "6a6ff6f9-a313-321f-96f1-ef57c63e6543#leafQuery#1"
+  }
+  join_type: FULL_OUTER
+  source_column {
+    guid: "0b4995ba-6444-408c-89d8-903880d7fcf0"
+    name: "Product Id"
+  }
+  dest_column {
+    guid: "e2a2d6b5-3f1c-482a-86e7-19f5b2ca05d1"
+    name: "Product Id"
+  }
+  join_nulls: true
+}
+
+2025-01-04 00:58:09.278 INFO  {validator-2-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec generated for 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and 388e6372-6939-4fce-9189-66bf6313330f
+2025-01-04 00:58:09.284 INFO  {validator-2-0} [c.t.c.v.querygen.QuerygenValidator] : Falcon Request generated for GUID = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and VizId = 388e6372-6939-4fce-9189-66bf6313330f
+2025-01-04 00:58:09.286 INFO  {validator-3-0} [c.t.c.v.querygen.QuerygenValidator] : Creating Falcon Query Spec for guid = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and vizID = 9f2395d7-4cdc-4ad6-87e8-0bf1015c11b1
+2025-01-04 00:58:09.293 INFO  {validator-3-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-04 00:58:09.293 INFO  {validator-3-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 6.12382E-4 ms
+2025-01-04 00:58:09.293 INFO  {validator-3-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-04 00:58:09.294 INFO  {validator-3-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 6.34922E-4 ms
+2025-01-04 00:58:09.294 INFO  {validator-3-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-04 00:58:09.294 INFO  {validator-3-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 6.51161E-4 ms
+2025-01-04 00:58:09.341 INFO  {validator-3-0} [c.t.c.d.q.metadata.MetadataProviderImpl] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for worksheet=[07a8af30-cd9d-4ab0-a58a-544a818ddac7] took #wsqspecgenlatency=2 ms 
+2025-01-04 00:58:09.342 WARN  {validator-3-0} [c.t.c.m.m.l.AtlasLogicalSchemaStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Failed to retrieve table id for entity=d4a429c9-bbeb-36de-adba-a9af3801f58a, error=code: INVALID_EDGE_KEY
+msg: "No edge found key=[src=, name=table_to_column, destination=d4a429c9-bbeb-36de-adba-a9af3801f58a]"
+
+2025-01-04 00:58:09.347 WARN  {validator-3-0} [c.t.c.m.m.l.AtlasLogicalSchemaStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Failed to retrieve table id for entity=d4a429c9-bbeb-36de-adba-a9af3801f58a, error=code: INVALID_EDGE_KEY
+msg: "No edge found key=[src=, name=table_to_column, destination=d4a429c9-bbeb-36de-adba-a9af3801f58a]"
+
+2025-01-04 00:58:09.348 INFO  {validator-3-0} [c.t.c.d.q.t.CohortColumnTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No cohort columns found. Skipping transformation.
+2025-01-04 00:58:09.389 INFO  {validator-3-0} [c.t.c.d.q.planner.QueryJoinPlanner] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Total shared columns between guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+ and guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+: 2
+2025-01-04 00:58:09.389 INFO  {validator-3-0} [c.t.c.d.q.planner.QueryJoinPlanner] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Adding edge:Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0 Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1 1
+2025-01-04 00:58:09.389 INFO  {validator-3-0} [c.t.c.d.q.planner.QueryJoinPlanner] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Joining guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+ and guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+
+2025-01-04 00:58:09.394 WARN  {validator-3-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "420e13f8-9e3a-47c7-aece-9cc60041a0c1"
+name: "Product Id"
+
+2025-01-04 00:58:09.394 WARN  {validator-3-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "420e13f8-9e3a-47c7-aece-9cc60041a0c1"
+name: "Product Id"
+
+2025-01-04 00:58:09.471 INFO  {validator-3-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-04 00:58:09.471 WARN  {validator-3-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=23bbbfa1-6c20-4374-90b8-14340006f135 found in index."
+
+2025-01-04 00:58:09.471 INFO  {validator-3-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-04 00:58:09.471 WARN  {validator-3-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=f7dd64e1-5cef-32f1-bb5c-665198a78dea found in index."
+
+2025-01-04 00:58:09.472 INFO  {validator-3-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-04 00:58:09.472 WARN  {validator-3-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=ec842a9d-7d81-32a0-8e8b-a3cb095cc039 found in index."
+
+2025-01-04 00:58:09.479 INFO  {validator-3-0} [c.t.c.d.q.t.MergeQueryTableTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No queries were able to be merged.
+2025-01-04 00:58:09.482 INFO  {validator-3-0} [c.t.c.d.q.t.MergeQueryTableTransformerV0] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a MergeQueryTableTransformer is enabled. Therefore skippingMergeQueryTableTransformerV0
+2025-01-04 00:58:09.495 INFO  {validator-3-0} [c.t.c.data.querygen.AnswerSpecQueryGen] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for answerspec=[186d5a92-d5f1-44a0-9793-7cadc6c8b4b1] took #answerspecqgenlatency=202 ms
+2025-01-04 00:58:09.496 INFO  {validator-3-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec for guid: "9f2395d7-4cdc-4ad6-87e8-0bf1015c11b1"
+name: "Viz [id: 9f2395d7-4cdc-4ad6-87e8-0bf1015c11b1, name: Headline Total Sale Cost]"
+description: "HEADLINE Viz Query for product cost sale cost product id"
+/nquery_schema {
+  table {
+    alias {
+      guid: "dc833b86-331a-4f50-8a35-fe73cdeaca57"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+    }
+    table {
+      guid: "23bbbfa1-6c20-4374-90b8-14340006f135"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+      description: "TABLE Viz Query for product cost sale cost product id"
+    }
+    join_path {
+      root_table {
+        guid: "23bbbfa1-6c20-4374-90b8-14340006f135"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+        description: "TABLE Viz Query for product cost sale cost product id"
+      }
+      leaf_table {
+        guid: "23bbbfa1-6c20-4374-90b8-14340006f135"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+        description: "TABLE Viz Query for product cost sale cost product id"
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "2cbf9e19-ce7a-48d8-aa86-2fdabd8fa161"
+      name: "PRODUCTS"
+    }
+    table {
+      guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+      name: "PRODUCTS"
+    }
+    join_path {
+      root_table {
+        guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+        name: "PURCHASES"
+      }
+      leaf_table {
+        guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+        name: "PRODUCTS"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "4a4fa114-b819-4ddc-a64e-92ea438db7a8"
+          name: "Product Id - Product Id"
+        }
+        source {
+          guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+          name: "PURCHASES"
+        }
+        destination {
+          guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+          name: "PRODUCTS"
+        }
+        join_type: INNER
+        one_to_one: false
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "4d838eba-d27f-4e45-9377-2fbb6a774681"
+      name: "PRODUCTS"
+    }
+    table {
+      guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+      name: "PRODUCTS"
+    }
+    join_path {
+      root_table {
+        guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+        name: "SALES"
+      }
+      leaf_table {
+        guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+        name: "PRODUCTS"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "a650ef99-4c90-4d99-ae54-c0627a6ba925"
+          name: "Product Id - Product Id"
+        }
+        source {
+          guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+          name: "SALES"
+        }
+        destination {
+          guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+          name: "PRODUCTS"
+        }
+        join_type: INNER
+        one_to_one: false
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "bd3fa744-6279-4f69-88b7-214613a71b43"
+      name: "PURCHASES"
+    }
+    table {
+      guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+      name: "PURCHASES"
+    }
+    join_path {
+      root_table {
+        guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+        name: "PURCHASES"
+      }
+      leaf_table {
+        guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+        name: "PURCHASES"
+      }
+      is_connected: true
+    }
+  }
+  table {
+    alias {
+      guid: "2e97354f-8dd7-4911-9e3a-0e4c496c507e"
+      name: "SALES"
+    }
+    table {
+      guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+      name: "SALES"
+    }
+    join_path {
+      root_table {
+        guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+        name: "SALES"
+      }
+      leaf_table {
+        guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+        name: "SALES"
+      }
+      is_connected: true
+    }
+  }
+  table {
+    alias {
+      guid: "6a2093be-2e51-48b3-8c4f-561471d51ea5"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+    table {
+      guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+    join_path {
+      root_table {
+        guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+      }
+      leaf_table {
+        guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "babbadc3-8139-4982-9c36-7248f838b130"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+    table {
+      guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+    join_path {
+      root_table {
+        guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+      }
+      leaf_table {
+        guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+      }
+      join {
+        id {
+          guid: "3fcedeb3-00ce-3f98-877f-61df8b9a1a00"
+          name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0_Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+        }
+        source {
+          guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+          name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+        }
+        destination {
+          guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+          name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+        }
+        join_type: FULL_OUTER
+        source_column {
+          guid: "80caa9ab-7bc7-4e2a-a9a2-86a8ff4685bb"
+          name: "Product Id"
+        }
+        dest_column {
+          guid: "0b368210-a50f-4193-b8e1-6bf6fca5c3ab"
+          name: "Product Id"
+        }
+        join_nulls: true
+      }
+    }
+  }
+  column {
+    alias {
+      guid: "9a813879-270a-4c2d-9727-660f5f469f59"
+      name: "Total Sale Cost"
+    }
+    column {
+      guid: "d4a429c9-bbeb-36de-adba-a9af3801f58a"
+      name: "Total Sale Cost"
+    }
+    table_alias {
+      guid: "dc833b86-331a-4f50-8a35-fe73cdeaca57"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "9729f133-292c-4d98-9201-c80f9020b42b"
+      name: "Product Cost"
+    }
+    column {
+      guid: "6e00ae7c-529e-424a-95ce-db79df6638ca"
+      name: "Product Cost"
+    }
+    table_alias {
+      guid: "bd3fa744-6279-4f69-88b7-214613a71b43"
+      name: "PURCHASES"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "d2cb453d-c8c3-464d-89d9-db6ded979ded"
+      name: "Sale Cost"
+    }
+    column {
+      guid: "28b9315c-ab1d-4a32-a1e9-bfbe9cfe3040"
+      name: "Sale Cost"
+    }
+    table_alias {
+      guid: "2e97354f-8dd7-4911-9e3a-0e4c496c507e"
+      name: "SALES"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "420e13f8-9e3a-47c7-aece-9cc60041a0c1"
+      name: "Product Id"
+    }
+    column {
+      guid: "fae73f8f-c427-4362-a991-51a2da074bb0"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "2cbf9e19-ce7a-48d8-aa86-2fdabd8fa161"
+      name: "PRODUCTS"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "7bd549ea-111e-4533-ad6a-054a653c2903"
+      name: "Product Id"
+    }
+    column {
+      guid: "fae73f8f-c427-4362-a991-51a2da074bb0"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "4d838eba-d27f-4e45-9377-2fbb6a774681"
+      name: "PRODUCTS"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "a82f399c-07cf-4a82-8766-749c67fc0ce1"
+      name: "Sum(Product Cost)"
+    }
+    column {
+      guid: "f5d823a5-ed43-4841-ad26-e63e97757f7a"
+      name: "Sum(Product Cost)"
+    }
+    table_alias {
+      guid: "6a2093be-2e51-48b3-8c4f-561471d51ea5"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "b95ce5c0-b4ed-40da-a8cd-8e487fe57328"
+      name: "Sum(Sale Cost)"
+    }
+    column {
+      guid: "6ee04d0e-3246-4a8a-ba76-04b970d87ed0"
+      name: "Sum(Sale Cost)"
+    }
+    table_alias {
+      guid: "babbadc3-8139-4982-9c36-7248f838b130"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "99b89c2f-9617-492c-b176-f6c17703027c"
+      name: "Product Id"
+    }
+    column {
+      guid: "80caa9ab-7bc7-4e2a-a9a2-86a8ff4685bb"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "6a2093be-2e51-48b3-8c4f-561471d51ea5"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "274c7b5c-7545-4e1a-a866-124f4c0bb78c"
+      name: "Product Id"
+    }
+    column {
+      guid: "0b368210-a50f-4193-b8e1-6bf6fca5c3ab"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "babbadc3-8139-4982-9c36-7248f838b130"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+    data_type: INT64
+  }
+  formula {
+    alias {
+      guid: "9ca38604-69f8-4d42-b9fb-4d107a7c1981"
+      name: "Sum(Total Sale Cost)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "9a813879-270a-4c2d-9727-660f5f469f59"
+              name: "Total Sale Cost"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "dc833b86-331a-4f50-8a35-fe73cdeaca57"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+    }
+  }
+  formula {
+    alias {
+      guid: "85852b50-5505-4b30-ac12-a9a062f6ca8e"
+      name: "Sum(Sale Cost)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "d2cb453d-c8c3-464d-89d9-db6ded979ded"
+              name: "Sale Cost"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "2e97354f-8dd7-4911-9e3a-0e4c496c507e"
+      name: "SALES"
+    }
+  }
+  formula {
+    alias {
+      guid: "3b4f5db5-3ec4-402b-8fed-218d991397db"
+      name: "Sum(Product Cost)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "9729f133-292c-4d98-9201-c80f9020b42b"
+              name: "Product Cost"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "bd3fa744-6279-4f69-88b7-214613a71b43"
+      name: "PURCHASES"
+    }
+  }
+  formula {
+    alias {
+      guid: "938ce0c4-4562-49aa-b8b0-7bf414c1ae82"
+      name: "IfNull(Product Id,Product Id)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "IfNull"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "99b89c2f-9617-492c-b176-f6c17703027c"
+              name: "Product Id"
+            }
+          }
+        }
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "274c7b5c-7545-4e1a-a866-124f4c0bb78c"
+              name: "Product Id"
+            }
+          }
+        }
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "6a2093be-2e51-48b3-8c4f-561471d51ea5"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+  }
+  formula {
+    alias {
+      guid: "1de16545-ec40-4d70-b3fa-ac6f4dd9c061"
+      name: "IfNull(Sum(Product Cost),Constant_0)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "IfNull"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "a82f399c-07cf-4a82-8766-749c67fc0ce1"
+              name: "Sum(Product Cost)"
+            }
+          }
+        }
+        arguments {
+          expr_class: EXPR_CONSTANT
+          constant {
+            int_value: 0
+          }
+          data_type: INT64
+        }
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "6a2093be-2e51-48b3-8c4f-561471d51ea5"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+  }
+  formula {
+    alias {
+      guid: "070780eb-ef0a-43a7-b26c-9a0becd8b390"
+      name: "IfNull(Sum(Sale Cost),Constant_0)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "IfNull"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "b95ce5c0-b4ed-40da-a8cd-8e487fe57328"
+              name: "Sum(Sale Cost)"
+            }
+          }
+        }
+        arguments {
+          expr_class: EXPR_CONSTANT
+          constant {
+            int_value: 0
+          }
+          data_type: INT64
+        }
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "babbadc3-8139-4982-9c36-7248f838b130"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+  }
+}
+table {
+  id {
+    guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+  }
+  column {
+    id {
+      guid: "420e13f8-9e3a-47c7-aece-9cc60041a0c1"
+      name: "Product Id"
+    }
+    output_id {
+      guid: "80caa9ab-7bc7-4e2a-a9a2-86a8ff4685bb"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "3b4f5db5-3ec4-402b-8fed-218d991397db"
+      name: "Sum(Product Cost)"
+    }
+    output_id {
+      guid: "f5d823a5-ed43-4841-ad26-e63e97757f7a"
+      name: "Sum(Product Cost)"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  group_by {
+    id {
+      guid: "420e13f8-9e3a-47c7-aece-9cc60041a0c1"
+      name: "Product Id"
+    }
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+  }
+  column {
+    id {
+      guid: "7bd549ea-111e-4533-ad6a-054a653c2903"
+      name: "Product Id"
+    }
+    output_id {
+      guid: "0b368210-a50f-4193-b8e1-6bf6fca5c3ab"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "85852b50-5505-4b30-ac12-a9a062f6ca8e"
+      name: "Sum(Sale Cost)"
+    }
+    output_id {
+      guid: "6ee04d0e-3246-4a8a-ba76-04b970d87ed0"
+      name: "Sum(Sale Cost)"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  group_by {
+    id {
+      guid: "7bd549ea-111e-4533-ad6a-054a653c2903"
+      name: "Product Id"
+    }
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "23bbbfa1-6c20-4374-90b8-14340006f135"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+    description: "TABLE Viz Query for product cost sale cost product id"
+  }
+  column {
+    id {
+      guid: "938ce0c4-4562-49aa-b8b0-7bf414c1ae82"
+      name: "IfNull(Product Id,Product Id)"
+    }
+    output_id {
+      guid: "04e8e2cf-6e0f-386b-8380-41dfcec52479"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "1de16545-ec40-4d70-b3fa-ac6f4dd9c061"
+      name: "IfNull(Sum(Product Cost),Constant_0)"
+    }
+    output_id {
+      guid: "00ee9d1b-4f36-36a1-89b9-905ce012b141"
+      name: "Total Product Cost"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "070780eb-ef0a-43a7-b26c-9a0becd8b390"
+      name: "IfNull(Sum(Sale Cost),Constant_0)"
+    }
+    output_id {
+      guid: "d4a429c9-bbeb-36de-adba-a9af3801f58a"
+      name: "Total Sale Cost"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  order_by {
+    id {
+      guid: "938ce0c4-4562-49aa-b8b0-7bf414c1ae82"
+      name: "IfNull(Product Id,Product Id)"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "9f2395d7-4cdc-4ad6-87e8-0bf1015c11b1"
+    name: "Viz [id: 9f2395d7-4cdc-4ad6-87e8-0bf1015c11b1, name: Headline Total Sale Cost]"
+    description: "HEADLINE Viz Query for product cost sale cost product id"
+  }
+  column {
+    id {
+      guid: "9ca38604-69f8-4d42-b9fb-4d107a7c1981"
+      name: "Sum(Total Sale Cost)"
+    }
+    output_id {
+      guid: "3efadd02-3433-3555-8a4f-0201938bc09f"
+      name: "Sum(Sale Cost)_SUM"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: true
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+join {
+  id {
+    guid: "3fcedeb3-00ce-3f98-877f-61df8b9a1a00"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0_Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+  }
+  source {
+    guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+  }
+  destination {
+    guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+  }
+  join_type: FULL_OUTER
+  source_column {
+    guid: "80caa9ab-7bc7-4e2a-a9a2-86a8ff4685bb"
+    name: "Product Id"
+  }
+  dest_column {
+    guid: "0b368210-a50f-4193-b8e1-6bf6fca5c3ab"
+    name: "Product Id"
+  }
+  join_nulls: true
+}
+
+2025-01-04 00:58:09.497 INFO  {validator-3-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec generated for 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and 9f2395d7-4cdc-4ad6-87e8-0bf1015c11b1
+2025-01-04 00:58:09.502 INFO  {validator-3-0} [c.t.c.v.querygen.QuerygenValidator] : Falcon Request generated for GUID = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and VizId = 9f2395d7-4cdc-4ad6-87e8-0bf1015c11b1
+2025-01-04 00:58:09.503 INFO  {validator-4-0} [c.t.c.v.querygen.QuerygenValidator] : Creating Falcon Query Spec for guid = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and vizID = 0c53d6cc-c27d-4399-903e-700d730b5738
+2025-01-04 00:58:09.535 INFO  {validator-4-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-04 00:58:09.535 INFO  {validator-4-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 6.79771E-4 ms
+2025-01-04 00:58:09.535 INFO  {validator-4-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-04 00:58:09.535 INFO  {validator-4-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 6.94791E-4 ms
+2025-01-04 00:58:09.536 INFO  {validator-4-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-04 00:58:09.536 INFO  {validator-4-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 7.12245E-4 ms
+2025-01-04 00:58:09.557 INFO  {validator-4-0} [c.t.c.d.q.metadata.MetadataProviderImpl] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for worksheet=[07a8af30-cd9d-4ab0-a58a-544a818ddac7] took #wsqspecgenlatency=2 ms 
+2025-01-04 00:58:09.558 WARN  {validator-4-0} [c.t.c.m.m.l.AtlasLogicalSchemaStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Failed to retrieve table id for entity=04e8e2cf-6e0f-386b-8380-41dfcec52479, error=code: INVALID_EDGE_KEY
+msg: "No edge found key=[src=, name=table_to_column, destination=04e8e2cf-6e0f-386b-8380-41dfcec52479]"
+
+2025-01-04 00:58:09.561 WARN  {validator-4-0} [c.t.c.m.m.l.AtlasLogicalSchemaStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Failed to retrieve table id for entity=04e8e2cf-6e0f-386b-8380-41dfcec52479, error=code: INVALID_EDGE_KEY
+msg: "No edge found key=[src=, name=table_to_column, destination=04e8e2cf-6e0f-386b-8380-41dfcec52479]"
+
+2025-01-04 00:58:09.562 INFO  {validator-4-0} [c.t.c.d.q.t.CohortColumnTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No cohort columns found. Skipping transformation.
+2025-01-04 00:58:09.590 INFO  {validator-4-0} [c.t.c.d.q.planner.QueryJoinPlanner] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Total shared columns between guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+ and guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+: 2
+2025-01-04 00:58:09.590 INFO  {validator-4-0} [c.t.c.d.q.planner.QueryJoinPlanner] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Adding edge:Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0 Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1 1
+2025-01-04 00:58:09.590 INFO  {validator-4-0} [c.t.c.d.q.planner.QueryJoinPlanner] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Joining guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+ and guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+
+2025-01-04 00:58:09.593 WARN  {validator-4-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "340d340f-7c86-4c17-abb7-d3647f075f4c"
+name: "Product Id"
+
+2025-01-04 00:58:09.594 WARN  {validator-4-0} [c.t.c.d.q.t.ComplexQueryTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Arbitrarily picking mapping for guid: "5e572450-90e7-434a-88b9-0ded9ccddaee"
+name: "Product Id"
+ out of 2 choices. Chosen: guid: "340d340f-7c86-4c17-abb7-d3647f075f4c"
+name: "Product Id"
+
+2025-01-04 00:58:09.696 INFO  {validator-4-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-04 00:58:09.696 WARN  {validator-4-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=23bbbfa1-6c20-4374-90b8-14340006f135 found in index."
+
+2025-01-04 00:58:09.696 INFO  {validator-4-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-04 00:58:09.696 WARN  {validator-4-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=f7dd64e1-5cef-32f1-bb5c-665198a78dea found in index."
+
+2025-01-04 00:58:09.697 INFO  {validator-4-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-04 00:58:09.697 WARN  {validator-4-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=ec842a9d-7d81-32a0-8e8b-a3cb095cc039 found in index."
+
+2025-01-04 00:58:09.702 INFO  {validator-4-0} [c.t.c.d.q.t.MergeQueryTableTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No queries were able to be merged.
+2025-01-04 00:58:09.705 INFO  {validator-4-0} [c.t.c.d.q.t.MergeQueryTableTransformerV0] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a MergeQueryTableTransformer is enabled. Therefore skippingMergeQueryTableTransformerV0
+2025-01-04 00:58:09.715 INFO  {validator-4-0} [c.t.c.data.querygen.AnswerSpecQueryGen] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for answerspec=[186d5a92-d5f1-44a0-9793-7cadc6c8b4b1] took #answerspecqgenlatency=180 ms
+2025-01-04 00:58:09.717 INFO  {validator-4-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec for guid: "0c53d6cc-c27d-4399-903e-700d730b5738"
+name: "Viz [id: 0c53d6cc-c27d-4399-903e-700d730b5738, name: Headline Product Id]"
+description: "HEADLINE Viz Query for product cost sale cost product id"
+/nquery_schema {
+  table {
+    alias {
+      guid: "2d9bf938-2632-4e05-96fc-31de3eb0d286"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+    }
+    table {
+      guid: "23bbbfa1-6c20-4374-90b8-14340006f135"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+      description: "TABLE Viz Query for product cost sale cost product id"
+    }
+    join_path {
+      root_table {
+        guid: "23bbbfa1-6c20-4374-90b8-14340006f135"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+        description: "TABLE Viz Query for product cost sale cost product id"
+      }
+      leaf_table {
+        guid: "23bbbfa1-6c20-4374-90b8-14340006f135"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+        description: "TABLE Viz Query for product cost sale cost product id"
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "2cbf9e19-ce7a-48d8-aa86-2fdabd8fa161"
+      name: "PRODUCTS"
+    }
+    table {
+      guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+      name: "PRODUCTS"
+    }
+    join_path {
+      root_table {
+        guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+        name: "PURCHASES"
+      }
+      leaf_table {
+        guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+        name: "PRODUCTS"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "4a4fa114-b819-4ddc-a64e-92ea438db7a8"
+          name: "Product Id - Product Id"
+        }
+        source {
+          guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+          name: "PURCHASES"
+        }
+        destination {
+          guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+          name: "PRODUCTS"
+        }
+        join_type: INNER
+        one_to_one: false
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "4d838eba-d27f-4e45-9377-2fbb6a774681"
+      name: "PRODUCTS"
+    }
+    table {
+      guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+      name: "PRODUCTS"
+    }
+    join_path {
+      root_table {
+        guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+        name: "SALES"
+      }
+      leaf_table {
+        guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+        name: "PRODUCTS"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "a650ef99-4c90-4d99-ae54-c0627a6ba925"
+          name: "Product Id - Product Id"
+        }
+        source {
+          guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+          name: "SALES"
+        }
+        destination {
+          guid: "862d0126-7ffe-48c6-816f-8ef7b7c80248"
+          name: "PRODUCTS"
+        }
+        join_type: INNER
+        one_to_one: false
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "bd3fa744-6279-4f69-88b7-214613a71b43"
+      name: "PURCHASES"
+    }
+    table {
+      guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+      name: "PURCHASES"
+    }
+    join_path {
+      root_table {
+        guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+        name: "PURCHASES"
+      }
+      leaf_table {
+        guid: "0a7604c8-984c-4f06-95a0-fa253b7535a3"
+        name: "PURCHASES"
+      }
+      is_connected: true
+    }
+  }
+  table {
+    alias {
+      guid: "2e97354f-8dd7-4911-9e3a-0e4c496c507e"
+      name: "SALES"
+    }
+    table {
+      guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+      name: "SALES"
+    }
+    join_path {
+      root_table {
+        guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+        name: "SALES"
+      }
+      leaf_table {
+        guid: "c4a99dda-666e-4ed6-96b2-18a60d7f00cd"
+        name: "SALES"
+      }
+      is_connected: true
+    }
+  }
+  table {
+    alias {
+      guid: "6e531547-d2f8-4d30-91c2-0228d821dd37"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+    table {
+      guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+    join_path {
+      root_table {
+        guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+      }
+      leaf_table {
+        guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "18b66cbc-273c-4203-9859-62e9c4a52dfb"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+    table {
+      guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+    join_path {
+      root_table {
+        guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+      }
+      leaf_table {
+        guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+        name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+      }
+      join {
+        id {
+          guid: "3fcedeb3-00ce-3f98-877f-61df8b9a1a00"
+          name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0_Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+        }
+        source {
+          guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+          name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+        }
+        destination {
+          guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+          name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+        }
+        join_type: FULL_OUTER
+        source_column {
+          guid: "63022434-73ef-421e-8715-f9eb10d4fbfc"
+          name: "Product Id"
+        }
+        dest_column {
+          guid: "fa05e9a2-214d-4517-bd38-ac0a476c5952"
+          name: "Product Id"
+        }
+        join_nulls: true
+      }
+    }
+  }
+  column {
+    alias {
+      guid: "a176a3af-0593-44fa-ba75-cccc9ff10e11"
+      name: "Product Id"
+    }
+    column {
+      guid: "04e8e2cf-6e0f-386b-8380-41dfcec52479"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "2d9bf938-2632-4e05-96fc-31de3eb0d286"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "9729f133-292c-4d98-9201-c80f9020b42b"
+      name: "Product Cost"
+    }
+    column {
+      guid: "6e00ae7c-529e-424a-95ce-db79df6638ca"
+      name: "Product Cost"
+    }
+    table_alias {
+      guid: "bd3fa744-6279-4f69-88b7-214613a71b43"
+      name: "PURCHASES"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "d2cb453d-c8c3-464d-89d9-db6ded979ded"
+      name: "Sale Cost"
+    }
+    column {
+      guid: "28b9315c-ab1d-4a32-a1e9-bfbe9cfe3040"
+      name: "Sale Cost"
+    }
+    table_alias {
+      guid: "2e97354f-8dd7-4911-9e3a-0e4c496c507e"
+      name: "SALES"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "340d340f-7c86-4c17-abb7-d3647f075f4c"
+      name: "Product Id"
+    }
+    column {
+      guid: "fae73f8f-c427-4362-a991-51a2da074bb0"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "2cbf9e19-ce7a-48d8-aa86-2fdabd8fa161"
+      name: "PRODUCTS"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "e14821d6-414c-4b41-9869-ced43d415aeb"
+      name: "Product Id"
+    }
+    column {
+      guid: "fae73f8f-c427-4362-a991-51a2da074bb0"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "4d838eba-d27f-4e45-9377-2fbb6a774681"
+      name: "PRODUCTS"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "00459967-ab58-4330-9f93-56ab96c436db"
+      name: "Sum(Product Cost)"
+    }
+    column {
+      guid: "d892eb78-4fab-464e-9537-5fb4c64ee1a9"
+      name: "Sum(Product Cost)"
+    }
+    table_alias {
+      guid: "6e531547-d2f8-4d30-91c2-0228d821dd37"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "f7293ea5-dac8-4fe8-9a77-a18607647054"
+      name: "Sum(Sale Cost)"
+    }
+    column {
+      guid: "57eedc8c-4fd3-42b9-abea-83e5f0a6616b"
+      name: "Sum(Sale Cost)"
+    }
+    table_alias {
+      guid: "18b66cbc-273c-4203-9859-62e9c4a52dfb"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "295c3b68-343c-4f36-9239-f3f3d4e3bc6a"
+      name: "Product Id"
+    }
+    column {
+      guid: "63022434-73ef-421e-8715-f9eb10d4fbfc"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "6e531547-d2f8-4d30-91c2-0228d821dd37"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "bf90e4ab-29c6-44c3-89e8-c99157e67e8e"
+      name: "Product Id"
+    }
+    column {
+      guid: "fa05e9a2-214d-4517-bd38-ac0a476c5952"
+      name: "Product Id"
+    }
+    table_alias {
+      guid: "18b66cbc-273c-4203-9859-62e9c4a52dfb"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+    data_type: INT64
+  }
+  formula {
+    alias {
+      guid: "b4bd8e95-dda5-4cb4-a731-3bbcd5447ef7"
+      name: "UniqueCount(Product Id)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "UniqueCount"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "a176a3af-0593-44fa-ba75-cccc9ff10e11"
+              name: "Product Id"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "2d9bf938-2632-4e05-96fc-31de3eb0d286"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+    }
+  }
+  formula {
+    alias {
+      guid: "dde96e40-05bf-4fb2-9700-ed55d23c211c"
+      name: "Sum(Sale Cost)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "d2cb453d-c8c3-464d-89d9-db6ded979ded"
+              name: "Sale Cost"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "2e97354f-8dd7-4911-9e3a-0e4c496c507e"
+      name: "SALES"
+    }
+  }
+  formula {
+    alias {
+      guid: "0203da10-d50f-454e-b8c8-3acdb747b80d"
+      name: "Sum(Product Cost)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "9729f133-292c-4d98-9201-c80f9020b42b"
+              name: "Product Cost"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "bd3fa744-6279-4f69-88b7-214613a71b43"
+      name: "PURCHASES"
+    }
+  }
+  formula {
+    alias {
+      guid: "6fca2557-926f-4674-ba60-21ca58fbd989"
+      name: "IfNull(Product Id,Product Id)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "IfNull"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "295c3b68-343c-4f36-9239-f3f3d4e3bc6a"
+              name: "Product Id"
+            }
+          }
+        }
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "bf90e4ab-29c6-44c3-89e8-c99157e67e8e"
+              name: "Product Id"
+            }
+          }
+        }
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "6e531547-d2f8-4d30-91c2-0228d821dd37"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+  }
+  formula {
+    alias {
+      guid: "314a2c3a-8e89-4191-a82e-6bab4d49d6a5"
+      name: "IfNull(Sum(Product Cost),Constant_0)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "IfNull"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "00459967-ab58-4330-9f93-56ab96c436db"
+              name: "Sum(Product Cost)"
+            }
+          }
+        }
+        arguments {
+          expr_class: EXPR_CONSTANT
+          constant {
+            int_value: 0
+          }
+          data_type: INT64
+        }
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "6e531547-d2f8-4d30-91c2-0228d821dd37"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+    }
+  }
+  formula {
+    alias {
+      guid: "134d30a0-561b-4b4a-bf7a-f607617e1598"
+      name: "IfNull(Sum(Sale Cost),Constant_0)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "IfNull"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "f7293ea5-dac8-4fe8-9a77-a18607647054"
+              name: "Sum(Sale Cost)"
+            }
+          }
+        }
+        arguments {
+          expr_class: EXPR_CONSTANT
+          constant {
+            int_value: 0
+          }
+          data_type: INT64
+        }
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "18b66cbc-273c-4203-9859-62e9c4a52dfb"
+      name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+    }
+  }
+}
+table {
+  id {
+    guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+  }
+  column {
+    id {
+      guid: "340d340f-7c86-4c17-abb7-d3647f075f4c"
+      name: "Product Id"
+    }
+    output_id {
+      guid: "63022434-73ef-421e-8715-f9eb10d4fbfc"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "0203da10-d50f-454e-b8c8-3acdb747b80d"
+      name: "Sum(Product Cost)"
+    }
+    output_id {
+      guid: "d892eb78-4fab-464e-9537-5fb4c64ee1a9"
+      name: "Sum(Product Cost)"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  group_by {
+    id {
+      guid: "340d340f-7c86-4c17-abb7-d3647f075f4c"
+      name: "Product Id"
+    }
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+  }
+  column {
+    id {
+      guid: "e14821d6-414c-4b41-9869-ced43d415aeb"
+      name: "Product Id"
+    }
+    output_id {
+      guid: "fa05e9a2-214d-4517-bd38-ac0a476c5952"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "dde96e40-05bf-4fb2-9700-ed55d23c211c"
+      name: "Sum(Sale Cost)"
+    }
+    output_id {
+      guid: "57eedc8c-4fd3-42b9-abea-83e5f0a6616b"
+      name: "Sum(Sale Cost)"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  group_by {
+    id {
+      guid: "e14821d6-414c-4b41-9869-ced43d415aeb"
+      name: "Product Id"
+    }
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "23bbbfa1-6c20-4374-90b8-14340006f135"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]"
+    description: "TABLE Viz Query for product cost sale cost product id"
+  }
+  column {
+    id {
+      guid: "6fca2557-926f-4674-ba60-21ca58fbd989"
+      name: "IfNull(Product Id,Product Id)"
+    }
+    output_id {
+      guid: "04e8e2cf-6e0f-386b-8380-41dfcec52479"
+      name: "Product Id"
+    }
+    column_type: ATTRIBUTE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "314a2c3a-8e89-4191-a82e-6bab4d49d6a5"
+      name: "IfNull(Sum(Product Cost),Constant_0)"
+    }
+    output_id {
+      guid: "00ee9d1b-4f36-36a1-89b9-905ce012b141"
+      name: "Total Product Cost"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  column {
+    id {
+      guid: "134d30a0-561b-4b4a-bf7a-f607617e1598"
+      name: "IfNull(Sum(Sale Cost),Constant_0)"
+    }
+    output_id {
+      guid: "d4a429c9-bbeb-36de-adba-a9af3801f58a"
+      name: "Total Sale Cost"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  order_by {
+    id {
+      guid: "6fca2557-926f-4674-ba60-21ca58fbd989"
+      name: "IfNull(Product Id,Product Id)"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "0c53d6cc-c27d-4399-903e-700d730b5738"
+    name: "Viz [id: 0c53d6cc-c27d-4399-903e-700d730b5738, name: Headline Product Id]"
+    description: "HEADLINE Viz Query for product cost sale cost product id"
+  }
+  column {
+    id {
+      guid: "b4bd8e95-dda5-4cb4-a731-3bbcd5447ef7"
+      name: "UniqueCount(Product Id)"
+    }
+    output_id {
+      guid: "91054c4b-be73-3de0-8b93-13c96487688d"
+      name: "Product Id_COUNT_DISTINCT"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: true
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+join {
+  id {
+    guid: "3fcedeb3-00ce-3f98-877f-61df8b9a1a00"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0_Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+  }
+  source {
+    guid: "f7dd64e1-5cef-32f1-bb5c-665198a78dea"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#0"
+  }
+  destination {
+    guid: "ec842a9d-7d81-32a0-8e8b-a3cb095cc039"
+    name: "Viz [id: 23bbbfa1-6c20-4374-90b8-14340006f135, name: Table Viz product cost sale cost product id]#leafQuery#1"
+  }
+  join_type: FULL_OUTER
+  source_column {
+    guid: "63022434-73ef-421e-8715-f9eb10d4fbfc"
+    name: "Product Id"
+  }
+  dest_column {
+    guid: "fa05e9a2-214d-4517-bd38-ac0a476c5952"
+    name: "Product Id"
+  }
+  join_nulls: true
+}
+
+2025-01-04 00:58:09.718 INFO  {validator-4-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec generated for 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and 0c53d6cc-c27d-4399-903e-700d730b5738
+2025-01-04 00:58:09.721 INFO  {validator-4-0} [c.t.c.v.querygen.QuerygenValidator] : Falcon Request generated for GUID = 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 and VizId = 0c53d6cc-c27d-4399-903e-700d730b5738
+2025-01-04 00:58:09.736 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Answer errors = {}
+2025-01-04 00:58:09.737 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Fetching guids by view count. type = PINBOARD_ANSWER_BOOK, remainingGuids = 0
+2025-01-04 00:58:09.737 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : No more guids needed, continuing.
+2025-01-04 00:58:09.737 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Fetching guids by last date modified. type = PINBOARD_ANSWER_BOOK, remainingGuids = 0
+2025-01-04 00:58:09.737 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : No more guids needed, continuing.
+2025-01-04 00:58:09.737 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Found 0 guids
+2025-01-04 00:58:09.737 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : List of guids
+2025-01-04 00:58:09.738 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : end of guids
+2025-01-04 00:58:09.738 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Invoking all threads
+2025-01-04 00:58:09.745 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Pinboard errors = {}
+2025-01-04 00:58:09.745 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Run ended in: 3717 ms
+2025-01-04 00:58:09.747 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Backend Request Fetcher finished successfully

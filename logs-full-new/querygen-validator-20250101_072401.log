@@ -1,0 +1,1052 @@
+2025-01-01 07:24:01.787 INFO  {main} [c.t.c.common.orion.OrionMasterManager] : About to track znode for orion master with znode of 
+2025-01-01 07:24:02.276 INFO  {main} [c.t.c.common.orion.OrionMasterManager] : Updating orion master address...
+2025-01-01 07:24:02.286 INFO  {main} [c.t.c.common.orion.OrionMasterManager] : Updated orion master address to: host_port {
+  host: "172.32.27.151"
+  port: 2200
+}
+
+2025-01-01 07:24:02.771 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Got config override of : true for key: isSoftware
+2025-01-01 07:24:02.771 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Overriding value for property: isSoftware with value true
+2025-01-01 07:24:02.772 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Got config override of : true for key: firstTimePasswordForceReset
+2025-01-01 07:24:02.772 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Overriding value for property: firstTimePasswordForceReset with value true
+2025-01-01 07:24:02.772 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Got config override of : false for key: objectsUpgraderConfig.isVersionControlUpgradeNeeded
+2025-01-01 07:24:02.772 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Overriding value for property: objectsUpgraderConfig.isVersionControlUpgradeNeeded with value false
+2025-01-01 07:24:04.174 INFO  {main} [c.t.callosum.common.config.ConfigInfo] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a orgPerCustomEmbedUrl fetched flag value: false
+2025-01-01 07:24:05.584 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : S3 info not set, skipping upload/download from S3.
+2025-01-01 07:24:05.624 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Setting up initial configuration.
+2025-01-01 07:24:05.624 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Initializing Atlas client.
+2025-01-01 07:24:07.950 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Initializing Munshi client.
+2025-01-01 07:24:07.982 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Initializing MetadataProvider.
+2025-01-01 07:24:08.065 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.MetadataManagerFactory] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a MMF using thick atlas client
+2025-01-01 07:24:08.089 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.p.DummyPhysicalModelManager] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Initializing DummyPhysicalModelManager
+2025-01-01 07:24:08.097 ERROR {BackendRequestFetcherMain-0-0} [c.t.c.m.m.f.FeedbackManagerMunshiImpl] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Exception when creating znode: com.thoughtspot.common.ThoughtSpotException: ORION_SERVICE_NAME property not set
+2025-01-01 07:24:08.157 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.MetadataManagerFactory] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Connecting to DB store since not connected yet.
+2025-01-01 07:24:08.968 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataRepository] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not initializing already available physical model manager
+2025-01-01 07:24:08.968 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataRepository] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not initializing as the mv status manager is available already.
+2025-01-01 07:24:08.968 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataRepository] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not initializing as the cluster stats manager is available.
+2025-01-01 07:24:08.970 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataRepository] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Pinned snapshot token=05418314-eb06-4401-a9bd-4c5caac6a4ce
+2025-01-01 07:24:09.033 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Enabling AtlasStorableCache with caches (request: true, object: true, redis: false)
+2025-01-01 07:24:09.295 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.MetadataManagerFactory] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Metadata schema version read from store: 4
+2025-01-01 07:24:09.295 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.MetadataManagerFactory] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Installed Metadata schema version read from store: 4.4.0
+2025-01-01 07:24:09.295 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataSnapshot] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin close snapshot=05418314-eb06-4401-a9bd-4c5caac6a4ce
+2025-01-01 07:24:09.296 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataSnapshot] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a End close snapshot=05418314-eb06-4401-a9bd-4c5caac6a4ce
+2025-01-01 07:24:09.297 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.manager.AtlasMetadataRepository] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Pinned snapshot token=6abf7bae-391e-4fc1-95c8-42153a690d87
+2025-01-01 07:24:09.297 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Enabling AtlasStorableCache with caches (request: true, object: true, redis: false)
+2025-01-01 07:24:09.401 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.l.UnsecuredLogicalModelManager] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin UnsecuredLogicalModelManager::getDataSourceLiteObjects
+2025-01-01 07:24:09.401 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getDataSourceLiteObjects guids=1, hidden=true
+2025-01-01 07:24:09.402 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Retrieved nodes=1
+2025-01-01 07:24:09.402 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin DataSourceLiteReader::read id=43121d86-347a-4dbb-bea8-5e5bb899e427, name=Default
+2025-01-01 07:24:09.405 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a End DataSourceLiteReader::read id=43121d86-347a-4dbb-bea8-5e5bb899e427, name=Default
+2025-01-01 07:24:09.418 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Parsed dataSourceLites=1
+2025-01-01 07:24:09.419 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a End getDataSourceLiteObjects
+2025-01-01 07:24:09.420 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=0 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getDataSourceLiteObjects guids=0, hidden=true
+2025-01-01 07:24:09.420 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=0 user=59481331-ee53-42be-a548-bd87be6ddd4a Retrieved nodes=0
+2025-01-01 07:24:09.420 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=0 user=59481331-ee53-42be-a548-bd87be6ddd4a Parsed dataSourceLites=0
+2025-01-01 07:24:09.420 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.d.AtlasDataSourceStore] : orgId=0 user=59481331-ee53-42be-a548-bd87be6ddd4a End getDataSourceLiteObjects
+2025-01-01 07:24:09.445 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-01 07:24:09.597 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Object cache write : LOGICAL_TABLEa7316e8d-d4dd-4eaf-9294-396db951b422
+2025-01-01 07:24:09.601 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.m.m.c.CustomCalendarMetadataManagerImpl] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Global available calendars size : 1
+2025-01-01 07:24:09.605 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : exportTML program arg is set to False. Skipping TML export of failed or changed objects.
+2025-01-01 07:24:09.605 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Fetching backend request objects.
+2025-01-01 07:24:09.605 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Fetching guids by view count. type = QUESTION_ANSWER_BOOK, remainingGuids = -1
+2025-01-01 07:24:09.605 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : No more guids needed, continuing.
+2025-01-01 07:24:09.605 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Fetching guids by last date modified. type = QUESTION_ANSWER_BOOK, remainingGuids = -1
+2025-01-01 07:24:09.605 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : No more guids needed, continuing.
+2025-01-01 07:24:09.605 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Found 1 guids
+2025-01-01 07:24:09.605 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : List of guids
+2025-01-01 07:24:09.606 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : end of guids
+2025-01-01 07:24:09.608 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Invoking all threads
+2025-01-01 07:24:09.614 INFO  {write-artifacts-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-01 07:24:09.949 INFO  {write-artifacts-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-01 07:24:10.063 INFO  {write-artifacts-0-0} [c.t.c.m.m.l.AtlasLogicalSchemaStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Parsed tables=1
+2025-01-01 07:24:10.073 INFO  {write-artifacts-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Object cache write : LOGICAL_TABLE2445fe81-30d6-46fa-9f42-f6b1b4e01623
+2025-01-01 07:24:10.076 INFO  {write-artifacts-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Object cache write : LOGICAL_TABLEa7fc012e-bdb3-4e75-9ce4-b3f731d90136
+2025-01-01 07:24:10.105 INFO  {write-artifacts-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Object cache write : ANSWER_SPEC12289fad-f230-485e-8c65-e36082eebf44
+2025-01-01 07:24:10.123 INFO  {validator-0-0} [c.t.c.v.querygen.QuerygenValidator] : Creating Falcon Query Spec for guid = 12289fad-f230-485e-8c65-e36082eebf44 and vizID = 8c87ec3d-9926-4e85-838f-c1ec2a1eac6b
+2025-01-01 07:24:10.176 WARN  {validator-0-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-01 07:24:10.190 INFO  {validator-0-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-01 07:24:10.193 INFO  {validator-0-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 0.001631454 ms
+2025-01-01 07:24:10.241 INFO  {validator-0-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-01 07:24:10.241 INFO  {validator-0-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 0.00168617 ms
+2025-01-01 07:24:10.253 INFO  {validator-0-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-01 07:24:10.254 INFO  {validator-0-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 0.001728682 ms
+2025-01-01 07:24:10.590 INFO  {validator-0-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-01 07:24:10.590 WARN  {validator-0-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb found in index."
+
+2025-01-01 07:24:10.609 INFO  {validator-0-0} [c.t.c.d.q.t.MergeQueryTableTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No queries were able to be merged.
+2025-01-01 07:24:10.611 INFO  {validator-0-0} [c.t.c.d.q.t.MergeQueryTableTransformerV0] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a MergeQueryTableTransformer is enabled. Therefore skippingMergeQueryTableTransformerV0
+2025-01-01 07:24:10.620 INFO  {validator-0-0} [c.t.c.data.querygen.AnswerSpecQueryGen] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for answerspec=[12289fad-f230-485e-8c65-e36082eebf44] took #answerspecqgenlatency=380 ms
+2025-01-01 07:24:10.622 INFO  {validator-0-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec for guid: "8c87ec3d-9926-4e85-838f-c1ec2a1eac6b"
+name: "Viz [id: 8c87ec3d-9926-4e85-838f-c1ec2a1eac6b, name: Headline Viz revenue color]"
+description: "HEADLINE Viz Query for revenue color"
+/nquery_schema {
+  table {
+    alias {
+      guid: "994fa5cf-d3aa-4366-bb32-a00fca042355"
+      name: "PART"
+    }
+    table {
+      guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+      name: "PART"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+        name: "PART"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "a573955f-2fa2-44ce-b2c7-73c8778251de"
+          name: "Lineorder PartKey"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+          name: "PART"
+        }
+        join_type: INNER
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "1ea8542c-d34c-49cc-8774-fcbb5064cb10"
+      name: "LINEORDER"
+    }
+    table {
+      guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+      name: "LINEORDER"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      is_connected: true
+    }
+  }
+  table {
+    alias {
+      guid: "c84f83a2-b57a-4838-ad6c-46255ec796d1"
+      name: "Viz [id: c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb, name: Table Viz revenue color]"
+    }
+    table {
+      guid: "c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb"
+      name: "Viz [id: c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb, name: Table Viz revenue color]"
+      description: "TABLE Viz Query for revenue color"
+    }
+    join_path {
+      root_table {
+        guid: "c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb"
+        name: "Viz [id: c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb, name: Table Viz revenue color]"
+        description: "TABLE Viz Query for revenue color"
+      }
+      leaf_table {
+        guid: "c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb"
+        name: "Viz [id: c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb, name: Table Viz revenue color]"
+        description: "TABLE Viz Query for revenue color"
+      }
+    }
+  }
+  column {
+    alias {
+      guid: "807833fe-372a-4ab5-8784-21299b1a8311"
+      name: "Color"
+    }
+    column {
+      guid: "498c6665-c50b-4df7-9308-ea63f298df58"
+      name: "Color"
+    }
+    table_alias {
+      guid: "994fa5cf-d3aa-4366-bb32-a00fca042355"
+      name: "PART"
+    }
+    data_type: CHAR
+  }
+  column {
+    alias {
+      guid: "78478060-3661-4e80-83d8-da2f49cf4adf"
+      name: "Revenue"
+    }
+    column {
+      guid: "d8cd8978-bd01-4d57-910d-4781e8b33123"
+      name: "Revenue"
+    }
+    table_alias {
+      guid: "1ea8542c-d34c-49cc-8774-fcbb5064cb10"
+      name: "LINEORDER"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "a2b41cbd-904d-4070-bc2f-ce7ecaf59689"
+      name: "Color"
+    }
+    column {
+      guid: "3e090ddc-2190-3ca3-870a-ae4ad79cb311"
+      name: "Color"
+    }
+    table_alias {
+      guid: "c84f83a2-b57a-4838-ad6c-46255ec796d1"
+      name: "Viz [id: c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb, name: Table Viz revenue color]"
+    }
+    data_type: CHAR
+  }
+  formula {
+    alias {
+      guid: "110b8769-8b1d-4d8b-a876-0ef446509373"
+      name: "Sum(Revenue)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "78478060-3661-4e80-83d8-da2f49cf4adf"
+              name: "Revenue"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "1ea8542c-d34c-49cc-8774-fcbb5064cb10"
+      name: "LINEORDER"
+    }
+  }
+  formula {
+    alias {
+      guid: "9531924a-cca3-4a96-b797-cc3fc4a34e18"
+      name: "UniqueCount(Color)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "UniqueCount"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: CHAR
+          expr_ref {
+            ref_id {
+              guid: "a2b41cbd-904d-4070-bc2f-ce7ecaf59689"
+              name: "Color"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "c84f83a2-b57a-4838-ad6c-46255ec796d1"
+      name: "Viz [id: c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb, name: Table Viz revenue color]"
+    }
+  }
+}
+table {
+  id {
+    guid: "c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb"
+    name: "Viz [id: c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb, name: Table Viz revenue color]"
+    description: "TABLE Viz Query for revenue color"
+  }
+  column {
+    id {
+      guid: "807833fe-372a-4ab5-8784-21299b1a8311"
+      name: "Color"
+    }
+    output_id {
+      guid: "3e090ddc-2190-3ca3-870a-ae4ad79cb311"
+      name: "Color"
+    }
+    column_type: ATTRIBUTE
+    data_type: CHAR
+  }
+  column {
+    id {
+      guid: "110b8769-8b1d-4d8b-a876-0ef446509373"
+      name: "Sum(Revenue)"
+    }
+    output_id {
+      guid: "42cabcc2-a305-3cec-a30b-7ac616538c54"
+      name: "Total Revenue"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  group_by {
+    id {
+      guid: "807833fe-372a-4ab5-8784-21299b1a8311"
+      name: "Color"
+    }
+  }
+  order_by {
+    id {
+      guid: "807833fe-372a-4ab5-8784-21299b1a8311"
+      name: "Color"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "8c87ec3d-9926-4e85-838f-c1ec2a1eac6b"
+    name: "Viz [id: 8c87ec3d-9926-4e85-838f-c1ec2a1eac6b, name: Headline Viz revenue color]"
+    description: "HEADLINE Viz Query for revenue color"
+  }
+  column {
+    id {
+      guid: "9531924a-cca3-4a96-b797-cc3fc4a34e18"
+      name: "UniqueCount(Color)"
+    }
+    output_id {
+      guid: "44ed2521-521f-39d6-af85-80c920354593"
+      name: "Color_COUNT_DISTINCT"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: true
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+
+2025-01-01 07:24:10.623 INFO  {validator-0-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec generated for 12289fad-f230-485e-8c65-e36082eebf44 and 8c87ec3d-9926-4e85-838f-c1ec2a1eac6b
+2025-01-01 07:24:10.754 INFO  {validator-0-0} [c.t.c.v.querygen.QuerygenValidator] : Falcon Request generated for GUID = 12289fad-f230-485e-8c65-e36082eebf44 and VizId = 8c87ec3d-9926-4e85-838f-c1ec2a1eac6b
+2025-01-01 07:24:10.756 INFO  {validator-1-0} [c.t.c.v.querygen.QuerygenValidator] : Creating Falcon Query Spec for guid = 12289fad-f230-485e-8c65-e36082eebf44 and vizID = 764493af-3991-4d00-9e42-04f064df5fb0
+2025-01-01 07:24:10.759 WARN  {validator-1-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-01 07:24:10.760 INFO  {validator-1-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-01 07:24:10.761 INFO  {validator-1-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 0.0017460000000000002 ms
+2025-01-01 07:24:10.761 INFO  {validator-1-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-01 07:24:10.761 INFO  {validator-1-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 0.0017611960000000002 ms
+2025-01-01 07:24:10.761 INFO  {validator-1-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-01 07:24:10.761 INFO  {validator-1-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 0.0017738070000000003 ms
+2025-01-01 07:24:10.976 INFO  {validator-1-0} [c.t.c.m.m.l.AtlasStorableCache] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not using redis client false, null
+2025-01-01 07:24:10.976 WARN  {validator-1-0} [c.t.c.metadata.manager.AtlasMetadataUtil] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Status=code: INVALID_NODE_ID
+msg: "No node with id=c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb found in index."
+
+2025-01-01 07:24:10.982 INFO  {validator-1-0} [c.t.c.d.q.t.MergeQueryTableTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No queries were able to be merged.
+2025-01-01 07:24:10.985 INFO  {validator-1-0} [c.t.c.d.q.t.MergeQueryTableTransformerV0] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a MergeQueryTableTransformer is enabled. Therefore skippingMergeQueryTableTransformerV0
+2025-01-01 07:24:11.036 INFO  {validator-1-0} [c.t.c.data.querygen.AnswerSpecQueryGen] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for answerspec=[12289fad-f230-485e-8c65-e36082eebf44] took #answerspecqgenlatency=275 ms
+2025-01-01 07:24:11.037 INFO  {validator-1-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec for guid: "764493af-3991-4d00-9e42-04f064df5fb0"
+name: "Viz [id: 764493af-3991-4d00-9e42-04f064df5fb0, name: Headline Viz revenue color]"
+description: "HEADLINE Viz Query for revenue color"
+/nquery_schema {
+  table {
+    alias {
+      guid: "3fa428c5-22e0-47e9-938d-48bd15f45f2e"
+      name: "PART"
+    }
+    table {
+      guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+      name: "PART"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+        name: "PART"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "a573955f-2fa2-44ce-b2c7-73c8778251de"
+          name: "Lineorder PartKey"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+          name: "PART"
+        }
+        join_type: INNER
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "5e206aa3-f9c5-4a52-b618-7a175c73314c"
+      name: "LINEORDER"
+    }
+    table {
+      guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+      name: "LINEORDER"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      is_connected: true
+    }
+  }
+  table {
+    alias {
+      guid: "6812c584-51a9-4d3c-92de-71a20a814542"
+      name: "Viz [id: c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb, name: Table Viz revenue color]"
+    }
+    table {
+      guid: "c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb"
+      name: "Viz [id: c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb, name: Table Viz revenue color]"
+      description: "TABLE Viz Query for revenue color"
+    }
+    join_path {
+      root_table {
+        guid: "c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb"
+        name: "Viz [id: c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb, name: Table Viz revenue color]"
+        description: "TABLE Viz Query for revenue color"
+      }
+      leaf_table {
+        guid: "c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb"
+        name: "Viz [id: c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb, name: Table Viz revenue color]"
+        description: "TABLE Viz Query for revenue color"
+      }
+    }
+  }
+  column {
+    alias {
+      guid: "f7e626fb-1e9b-4f27-a9d2-3403e314ba3c"
+      name: "Color"
+    }
+    column {
+      guid: "498c6665-c50b-4df7-9308-ea63f298df58"
+      name: "Color"
+    }
+    table_alias {
+      guid: "3fa428c5-22e0-47e9-938d-48bd15f45f2e"
+      name: "PART"
+    }
+    data_type: CHAR
+  }
+  column {
+    alias {
+      guid: "1e32cef3-6d8d-4103-867a-71b235d3b6e9"
+      name: "Revenue"
+    }
+    column {
+      guid: "d8cd8978-bd01-4d57-910d-4781e8b33123"
+      name: "Revenue"
+    }
+    table_alias {
+      guid: "5e206aa3-f9c5-4a52-b618-7a175c73314c"
+      name: "LINEORDER"
+    }
+    data_type: INT64
+  }
+  column {
+    alias {
+      guid: "243314a6-1069-4792-974e-d2ef2bda5f6a"
+      name: "Total Revenue"
+    }
+    column {
+      guid: "42cabcc2-a305-3cec-a30b-7ac616538c54"
+      name: "Total Revenue"
+    }
+    table_alias {
+      guid: "6812c584-51a9-4d3c-92de-71a20a814542"
+      name: "Viz [id: c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb, name: Table Viz revenue color]"
+    }
+    data_type: INT64
+  }
+  formula {
+    alias {
+      guid: "e0684ba3-12fa-412a-bc55-d2d177de945a"
+      name: "Sum(Revenue)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "1e32cef3-6d8d-4103-867a-71b235d3b6e9"
+              name: "Revenue"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "5e206aa3-f9c5-4a52-b618-7a175c73314c"
+      name: "LINEORDER"
+    }
+  }
+  formula {
+    alias {
+      guid: "149f33eb-0e33-4deb-a18d-05e99cdb41c6"
+      name: "Sum(Total Revenue)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "243314a6-1069-4792-974e-d2ef2bda5f6a"
+              name: "Total Revenue"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "6812c584-51a9-4d3c-92de-71a20a814542"
+      name: "Viz [id: c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb, name: Table Viz revenue color]"
+    }
+  }
+}
+table {
+  id {
+    guid: "c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb"
+    name: "Viz [id: c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb, name: Table Viz revenue color]"
+    description: "TABLE Viz Query for revenue color"
+  }
+  column {
+    id {
+      guid: "f7e626fb-1e9b-4f27-a9d2-3403e314ba3c"
+      name: "Color"
+    }
+    output_id {
+      guid: "3e090ddc-2190-3ca3-870a-ae4ad79cb311"
+      name: "Color"
+    }
+    column_type: ATTRIBUTE
+    data_type: CHAR
+  }
+  column {
+    id {
+      guid: "e0684ba3-12fa-412a-bc55-d2d177de945a"
+      name: "Sum(Revenue)"
+    }
+    output_id {
+      guid: "42cabcc2-a305-3cec-a30b-7ac616538c54"
+      name: "Total Revenue"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  group_by {
+    id {
+      guid: "f7e626fb-1e9b-4f27-a9d2-3403e314ba3c"
+      name: "Color"
+    }
+  }
+  order_by {
+    id {
+      guid: "f7e626fb-1e9b-4f27-a9d2-3403e314ba3c"
+      name: "Color"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: false
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+table {
+  id {
+    guid: "764493af-3991-4d00-9e42-04f064df5fb0"
+    name: "Viz [id: 764493af-3991-4d00-9e42-04f064df5fb0, name: Headline Viz revenue color]"
+    description: "HEADLINE Viz Query for revenue color"
+  }
+  column {
+    id {
+      guid: "149f33eb-0e33-4deb-a18d-05e99cdb41c6"
+      name: "Sum(Total Revenue)"
+    }
+    output_id {
+      guid: "54349e33-a53b-3f30-99d3-3e5b3efaf762"
+      name: "Sum(Revenue)_SUM"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: true
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+
+2025-01-01 07:24:11.038 INFO  {validator-1-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec generated for 12289fad-f230-485e-8c65-e36082eebf44 and 764493af-3991-4d00-9e42-04f064df5fb0
+2025-01-01 07:24:11.040 INFO  {validator-1-0} [c.t.c.v.querygen.QuerygenValidator] : Falcon Request generated for GUID = 12289fad-f230-485e-8c65-e36082eebf44 and VizId = 764493af-3991-4d00-9e42-04f064df5fb0
+2025-01-01 07:24:11.042 INFO  {validator-2-0} [c.t.c.v.querygen.QuerygenValidator] : Creating Falcon Query Spec for guid = 12289fad-f230-485e-8c65-e36082eebf44 and vizID = c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb
+2025-01-01 07:24:11.046 WARN  {validator-2-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-01 07:24:11.047 INFO  {validator-2-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-01 07:24:11.048 INFO  {validator-2-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 0.0017902070000000003 ms
+2025-01-01 07:24:11.048 INFO  {validator-2-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-01 07:24:11.048 INFO  {validator-2-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 0.0018052140000000003 ms
+2025-01-01 07:24:11.048 INFO  {validator-2-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-01 07:24:11.049 INFO  {validator-2-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 0.0018180470000000004 ms
+2025-01-01 07:24:11.142 INFO  {validator-2-0} [c.t.c.d.q.t.MergeQueryTableTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No queries were able to be merged.
+2025-01-01 07:24:11.144 INFO  {validator-2-0} [c.t.c.d.q.t.MergeQueryTableTransformerV0] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a MergeQueryTableTransformer is enabled. Therefore skippingMergeQueryTableTransformerV0
+2025-01-01 07:24:11.151 INFO  {validator-2-0} [c.t.c.data.querygen.AnswerSpecQueryGen] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for answerspec=[12289fad-f230-485e-8c65-e36082eebf44] took #answerspecqgenlatency=103 ms
+2025-01-01 07:24:11.152 INFO  {validator-2-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec for guid: "c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb"
+name: "Viz [id: c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb, name: Table Viz revenue color]"
+description: "TABLE Viz Query for revenue color"
+/nquery_schema {
+  table {
+    alias {
+      guid: "f52ad84f-107c-4242-9df6-124a3db23c33"
+      name: "PART"
+    }
+    table {
+      guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+      name: "PART"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+        name: "PART"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "a573955f-2fa2-44ce-b2c7-73c8778251de"
+          name: "Lineorder PartKey"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+          name: "PART"
+        }
+        join_type: INNER
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "4a64325a-fac4-40a5-8536-9af544e6786d"
+      name: "LINEORDER"
+    }
+    table {
+      guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+      name: "LINEORDER"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      is_connected: true
+    }
+  }
+  column {
+    alias {
+      guid: "fbc236ee-54f4-4d2b-9a9e-40747bb703e0"
+      name: "Color"
+    }
+    column {
+      guid: "498c6665-c50b-4df7-9308-ea63f298df58"
+      name: "Color"
+    }
+    table_alias {
+      guid: "f52ad84f-107c-4242-9df6-124a3db23c33"
+      name: "PART"
+    }
+    data_type: CHAR
+  }
+  column {
+    alias {
+      guid: "8afa5b9f-69c3-4e07-b006-153758694c29"
+      name: "Revenue"
+    }
+    column {
+      guid: "d8cd8978-bd01-4d57-910d-4781e8b33123"
+      name: "Revenue"
+    }
+    table_alias {
+      guid: "4a64325a-fac4-40a5-8536-9af544e6786d"
+      name: "LINEORDER"
+    }
+    data_type: INT64
+  }
+  formula {
+    alias {
+      guid: "2b452953-0cab-42d1-bde1-080042566cd7"
+      name: "Sum(Revenue)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "8afa5b9f-69c3-4e07-b006-153758694c29"
+              name: "Revenue"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "4a64325a-fac4-40a5-8536-9af544e6786d"
+      name: "LINEORDER"
+    }
+  }
+}
+table {
+  id {
+    guid: "c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb"
+    name: "Viz [id: c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb, name: Table Viz revenue color]"
+    description: "TABLE Viz Query for revenue color"
+  }
+  column {
+    id {
+      guid: "fbc236ee-54f4-4d2b-9a9e-40747bb703e0"
+      name: "Color"
+    }
+    output_id {
+      guid: "3e090ddc-2190-3ca3-870a-ae4ad79cb311"
+      name: "Color"
+    }
+    column_type: ATTRIBUTE
+    data_type: CHAR
+  }
+  column {
+    id {
+      guid: "2b452953-0cab-42d1-bde1-080042566cd7"
+      name: "Sum(Revenue)"
+    }
+    output_id {
+      guid: "42cabcc2-a305-3cec-a30b-7ac616538c54"
+      name: "Total Revenue"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  group_by {
+    id {
+      guid: "fbc236ee-54f4-4d2b-9a9e-40747bb703e0"
+      name: "Color"
+    }
+  }
+  order_by {
+    id {
+      guid: "fbc236ee-54f4-4d2b-9a9e-40747bb703e0"
+      name: "Color"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: true
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+
+2025-01-01 07:24:11.153 INFO  {validator-2-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec generated for 12289fad-f230-485e-8c65-e36082eebf44 and c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb
+2025-01-01 07:24:11.158 INFO  {validator-2-0} [c.t.c.v.querygen.QuerygenValidator] : Falcon Request generated for GUID = 12289fad-f230-485e-8c65-e36082eebf44 and VizId = c0281ca6-ccd4-4538-8c9d-a4c451b0c6cb
+2025-01-01 07:24:11.159 INFO  {validator-3-0} [c.t.c.v.querygen.QuerygenValidator] : Creating Falcon Query Spec for guid = 12289fad-f230-485e-8c65-e36082eebf44 and vizID = 9a819ebd-0eb3-49be-a920-2f7a90ba6cdc
+2025-01-01 07:24:11.164 WARN  {validator-3-0} [c.t.c.metadata.entitylib.AnswerSpecUtils] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Not applying runtime filters and sorts as more than one logical table is used.
+2025-01-01 07:24:11.166 INFO  {validator-3-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-01 07:24:11.166 INFO  {validator-3-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 0.0018351840000000003 ms
+2025-01-01 07:24:11.167 INFO  {validator-3-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Begin getParameters guids=0, hidden=true
+2025-01-01 07:24:11.167 INFO  {validator-3-0} [c.t.c.m.m.parameter.AtlasParameterStore] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a getParameters took 0.0018576530000000003 ms
+2025-01-01 07:24:11.261 INFO  {validator-3-0} [c.t.c.d.q.t.MergeQueryTableTransformer] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a No queries were able to be merged.
+2025-01-01 07:24:11.263 INFO  {validator-3-0} [c.t.c.d.q.t.MergeQueryTableTransformerV0] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a MergeQueryTableTransformer is enabled. Therefore skippingMergeQueryTableTransformerV0
+2025-01-01 07:24:11.268 INFO  {validator-3-0} [c.t.c.data.querygen.AnswerSpecQueryGen] : orgId=-1 user=59481331-ee53-42be-a548-bd87be6ddd4a Queryspec generation for answerspec=[12289fad-f230-485e-8c65-e36082eebf44] took #answerspecqgenlatency=101 ms
+2025-01-01 07:24:11.269 INFO  {validator-3-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec for guid: "5c7b4fb2-b028-37fb-a040-1901c0a669d8"
+name: "5c7b4fb2-b028-37fb-a040-1901c0a669d8"
+description: "Chart Viz Query for revenue color"
+/nquery_schema {
+  table {
+    alias {
+      guid: "939fe914-f6a8-495d-a156-fbe08316054f"
+      name: "PART"
+    }
+    table {
+      guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+      name: "PART"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+        name: "PART"
+      }
+      is_connected: true
+      join {
+        id {
+          guid: "a573955f-2fa2-44ce-b2c7-73c8778251de"
+          name: "Lineorder PartKey"
+        }
+        source {
+          guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+          name: "LINEORDER"
+        }
+        destination {
+          guid: "a7fc012e-bdb3-4e75-9ce4-b3f731d90136"
+          name: "PART"
+        }
+        join_type: INNER
+      }
+    }
+  }
+  table {
+    alias {
+      guid: "53e43247-ae03-44bc-99d2-1adbcba039fe"
+      name: "LINEORDER"
+    }
+    table {
+      guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+      name: "LINEORDER"
+    }
+    join_path {
+      root_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      leaf_table {
+        guid: "2445fe81-30d6-46fa-9f42-f6b1b4e01623"
+        name: "LINEORDER"
+      }
+      is_connected: true
+    }
+  }
+  column {
+    alias {
+      guid: "a062f516-999f-429d-9915-6287d1522ad6"
+      name: "Color"
+    }
+    column {
+      guid: "498c6665-c50b-4df7-9308-ea63f298df58"
+      name: "Color"
+    }
+    table_alias {
+      guid: "939fe914-f6a8-495d-a156-fbe08316054f"
+      name: "PART"
+    }
+    data_type: CHAR
+  }
+  column {
+    alias {
+      guid: "bd84499e-9240-4f23-a712-eb54d6940aae"
+      name: "Revenue"
+    }
+    column {
+      guid: "d8cd8978-bd01-4d57-910d-4781e8b33123"
+      name: "Revenue"
+    }
+    table_alias {
+      guid: "53e43247-ae03-44bc-99d2-1adbcba039fe"
+      name: "LINEORDER"
+    }
+    data_type: INT64
+  }
+  formula {
+    alias {
+      guid: "a00f4493-2b8e-4fb8-9063-152c5858c52c"
+      name: "Sum(Revenue)"
+    }
+    expr {
+      expr_class: EXPR_FUNCTION
+      function {
+        name: "Sum"
+        arguments {
+          expr_class: EXPR_COLUMN
+          data_type: INT64
+          expr_ref {
+            ref_id {
+              guid: "bd84499e-9240-4f23-a712-eb54d6940aae"
+              name: "Revenue"
+            }
+          }
+        }
+        is_aggregate: true
+      }
+      data_type: INT64
+    }
+    table_alias {
+      guid: "53e43247-ae03-44bc-99d2-1adbcba039fe"
+      name: "LINEORDER"
+    }
+  }
+}
+table {
+  id {
+    guid: "5c7b4fb2-b028-37fb-a040-1901c0a669d8"
+    name: "5c7b4fb2-b028-37fb-a040-1901c0a669d8"
+    description: "Chart Viz Query for revenue color"
+  }
+  column {
+    id {
+      guid: "a062f516-999f-429d-9915-6287d1522ad6"
+      name: "Color"
+    }
+    output_id {
+      guid: "7083d308-e098-35f0-a88a-9195e61a6ffb"
+      name: "Color"
+    }
+    column_type: ATTRIBUTE
+    data_type: CHAR
+  }
+  column {
+    id {
+      guid: "a00f4493-2b8e-4fb8-9063-152c5858c52c"
+      name: "Sum(Revenue)"
+    }
+    output_id {
+      guid: "5158ffff-eca4-35af-ac4d-f0409cc83837"
+      name: "Total Revenue"
+    }
+    column_type: MEASURE
+    data_type: INT64
+  }
+  group_by {
+    id {
+      guid: "a062f516-999f-429d-9915-6287d1522ad6"
+      name: "Color"
+    }
+  }
+  order_by {
+    id {
+      guid: "a062f516-999f-429d-9915-6287d1522ad6"
+      name: "Color"
+    }
+    ascending: true
+    is_explicit_sort: false
+  }
+  [sage.FalconQueryPropsProto.falcon_query_props] {
+    return_result: true
+    pagination_info {
+      pagination_start: -1
+      pagination_size: -1
+      pagination_limit: -1
+      pagination_continue: false
+    }
+    deadline_ms: 60000
+    cache_result: true
+    return_case_strings: true
+    return_checksum: false
+    only_return_checksum: false
+  }
+}
+
+2025-01-01 07:24:11.270 INFO  {validator-3-0} [c.t.c.v.querygen.QuerygenValidator] : QuerySpec generated for 12289fad-f230-485e-8c65-e36082eebf44 and 9a819ebd-0eb3-49be-a920-2f7a90ba6cdc
+2025-01-01 07:24:11.275 INFO  {validator-3-0} [c.t.c.v.querygen.QuerygenValidator] : Falcon Request generated for GUID = 12289fad-f230-485e-8c65-e36082eebf44 and VizId = 9a819ebd-0eb3-49be-a920-2f7a90ba6cdc
+2025-01-01 07:24:11.280 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Answer errors = {}
+2025-01-01 07:24:11.280 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Fetching guids by view count. type = PINBOARD_ANSWER_BOOK, remainingGuids = 0
+2025-01-01 07:24:11.280 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : No more guids needed, continuing.
+2025-01-01 07:24:11.280 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Fetching guids by last date modified. type = PINBOARD_ANSWER_BOOK, remainingGuids = 0
+2025-01-01 07:24:11.280 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : No more guids needed, continuing.
+2025-01-01 07:24:11.280 WARN  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Found 0 guids
+2025-01-01 07:24:11.280 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : List of guids
+2025-01-01 07:24:11.281 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : end of guids
+2025-01-01 07:24:11.281 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Invoking all threads
+2025-01-01 07:24:11.288 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Pinboard errors = {}
+2025-01-01 07:24:11.288 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Run ended in: 1683 ms
+2025-01-01 07:24:11.290 INFO  {BackendRequestFetcherMain-0-0} [c.t.c.v.querygen.QuerygenValidator] : Backend Request Fetcher finished successfully
