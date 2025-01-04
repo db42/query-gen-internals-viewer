@@ -1,4 +1,6 @@
 // static/viewer.js
+// viewer.js
+
 
 // Global state
 let transformerData = null;
@@ -304,25 +306,166 @@ function updateCurrentView() {
 function updateDiffView(currentTransformer, prevId) {
     const container = document.getElementById('diff-view');
     
-    // if (currentIndex === 0) {
-    //     container.innerHTML = '<div class="diff-message">Initial transformation</div>';
-    //     return;
-    // }
+    const prevContent = JSON.stringify(transformerData[prevId].content, null, 2);
+    const currentContent = JSON.stringify(transformerData[currentTransformer].content, null, 2);
     
-    const prevData = transformerData[prevId].content;
-    const currentData = transformerData[currentTransformer].content;
+    const diff = Diff.createTwoFilesPatch( // Use createTwoFilesPatch for cleaner output
+     "Previous Version",  // File name for the previous version (optional)
+        "Current Version", // File name for the current version (optional)
+        prevContent,
+        currentContent,
+        "", // Optional: previous file header lines
+        "", // Optional: current file header lines,
+        {
+            context: 3 // Number of lines of context around changes (adjust as needed)
+        }
+    );
+
+    const diffHtml = Diff2Html.html(diff, {
+        drawFileList: false, // Don't show the file list
+        matching: 'lines',
+        outputFormat: 'side-by-side',
+        // Add more diff2html options for styling or customization as needed
+    });
     
-    // Debug logs
-    console.log('Previous id:', prevId);
-    console.log('Current id:', currentTransformer);
-    console.log('Previous:', prevData);
-    console.log('Current:', currentData);
+    container.innerHTML = diffHtml;
+}
+
+// function updateDiffView(currentTransformer, prevId) {
+//     const container = document.getElementById('diff-view');
+//     container.innerHTML = '';
+
+//     // Create side-by-side container
+//     const sideContainer = document.createElement('div');
+//     sideContainer.className = 'side-by-side-container';
+
+//     const prevContent = transformerData[prevId].content;
+//     const currentContent = transformerData[currentTransformer].content;
+
+//     // Convert objects to formatted JSON strings
+//     const prevLines = JSON.stringify(prevContent, null, 2).split('\n');
+//     const currentLines = JSON.stringify(currentContent, null, 2).split('\n');
+
+//     // Create panes with access to both line arrays
+//     const prevPane = createDiffPane('Previous Step', prevLines, currentLines, true);
+//     const currentPane = createDiffPane('Current Step', currentLines, prevLines, false);
+
+//     sideContainer.appendChild(prevPane);
+//     sideContainer.appendChild(currentPane);
+//     container.appendChild(sideContainer);
+// }
+
+function createDiffPane(title, lines, compareLines, isPrev) {
+    const pane = document.createElement('div');
+    pane.className = 'diff-pane';
+
+    const header = document.createElement('div');
+    header.className = 'diff-header';
+    header.textContent = title;
+    pane.appendChild(header);
+
+    const content = document.createElement('div');
+    content.className = 'diff-content';
+
+    const pre = document.createElement('pre');
+    pre.className = 'diff-pre';
+
+    lines.forEach((line, index) => {
+        const lineDiv = document.createElement('div');
+        lineDiv.className = 'diff-line';
+
+        // Add line number
+        const lineNum = document.createElement('span');
+        lineNum.className = 'diff-line-number';
+        lineNum.textContent = (index + 1).toString();
+        lineDiv.appendChild(lineNum);
+
+        // Add line content
+        const lineContent = document.createElement('span');
+        lineContent.className = 'diff-line-content';
+        lineContent.textContent = line;
+        lineDiv.appendChild(lineContent);
+
+        // Determine if line is added/removed/unchanged
+        if (!compareLines.includes(line)) {
+            lineDiv.classList.add(isPrev ? 'diff-removed' : 'diff-added');
+        }
+
+        pre.appendChild(lineDiv);
+    });
+
+    content.appendChild(pre);
+    pane.appendChild(content);
+    return pane;
+}
+
+function renderTreeWithHighlights(content, compareContent) {
+    const container = document.createElement('div');
+    container.className = 'tree-view';
     
-    const diff = generateDiff(prevData, currentData);
+    function renderNode(key, value, compareTo = null, path = '') {
+        const nodeDiv = document.createElement('div');
+        nodeDiv.className = 'tree-node';
+        
+        // Determine if this node has changed
+        if (compareTo !== null) {
+            if (!(key in compareTo)) {
+                nodeDiv.classList.add('diff-added');
+            } else if (JSON.stringify(value) !== JSON.stringify(compareTo[key])) {
+                nodeDiv.classList.add('diff-modified');
+            }
+        }
+        
+        if (typeof value === 'object' && value !== null) {
+            // Object/Array node
+            const keySpan = document.createElement('span');
+            keySpan.className = 'node-key';
+            keySpan.textContent = key;
+            
+            const toggle = document.createElement('span');
+            toggle.className = 'node-toggle';
+            toggle.innerHTML = '&#9656; ';
+            toggle.onclick = () => {
+                const content = nodeDiv.querySelector('.node-content');
+                toggle.innerHTML = content.style.display === 'none' ? '&#9656; ' : '&#9662; ';
+                content.style.display = content.style.display === 'none' ? 'block' : 'none';
+            };
+            
+            nodeDiv.appendChild(toggle);
+            nodeDiv.appendChild(keySpan);
+            
+            const content = document.createElement('div');
+            content.className = 'node-content';
+            content.style.display = 'none';
+            
+            const compareObj = compareTo?.[key] ?? null;
+            Object.entries(value).forEach(([k, v]) => {
+                content.appendChild(renderNode(k, v, compareObj, `${path}.${k}`));
+            });
+            
+            nodeDiv.appendChild(content);
+        } else {
+            // Leaf node
+            const keySpan = document.createElement('span');
+            keySpan.className = 'node-key';
+            keySpan.textContent = `${key}: `;
+            
+            const valueSpan = document.createElement('span');
+            valueSpan.className = 'node-value';
+            valueSpan.textContent = JSON.stringify(value);
+            
+            nodeDiv.appendChild(keySpan);
+            nodeDiv.appendChild(valueSpan);
+        }
+        
+        return nodeDiv;
+    }
     
-    // Clear and append
-    container.innerHTML = '';
-    container.appendChild(diff);
+    Object.entries(content).forEach(([key, value]) => {
+        container.appendChild(renderNode(key, value, compareContent?.[key], key));
+    });
+    
+    return container;
 }
 
 function setViewMode(mode) {

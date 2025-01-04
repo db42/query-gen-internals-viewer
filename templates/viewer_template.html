@@ -4,6 +4,16 @@
     <title>Query Spec Transformer Viewer</title>
     <link rel="stylesheet" href="static/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/diff2html/bundles/css/diff2html.min.css" />
+
+    <!-- Javascripts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html/bundles/js/diff2html.min.js"></script>
+    
+    <script src="static/diff.js"></script>
+    <script src="static/viewer.js"></script>
+
 </head>
 <body>
     <div class="app-container">
@@ -38,12 +48,10 @@
                 <div class="panel-header">
                     <span>Changes from Previous Step</span>
                 </div>
-                <div id="diff-view" class="panel-content">
-                    <div class="no-selection">No transformer selected</div>
+                <div id="diff-view" class="panel-content" style="overflow-x: auto;">
                 </div>
             </div>
         </div>
     </div>
-    <script src="static/viewer.js"></script>
 </body>
 </html>

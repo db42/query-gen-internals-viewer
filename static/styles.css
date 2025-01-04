@@ -10,7 +10,7 @@ body {
 /* Main layout */
 .app-container {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 300px 1290px; /* 300px 1fr; to fix */
     height: 100vh;
     overflow: hidden;
 }
@@ -39,27 +39,60 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1;
 }
 
 /* Panel content */
 .panel-content {
     flex: 1;
-    overflow-y: auto;
+    overflow: auto;
     padding: 16px;
     min-height: 0;
 }
 
-/* Query panel and diff panel */
-.query-panel, .diff-panel {
+/* Query panel */
+.query-panel {
     flex: 1;
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #e0e0e0;
     overflow: hidden;
     min-height: 0;
+}
+
+/* Diff panel */
+.diff-panel {
+    flex: 1;            /* Allow diff-panel to grow */
+    overflow: hidden;   /* This is important to contain the scroll */
+}
+
+.diff-panel .panel-content {
+    flex: 1;        /* Allow panel-content to take up available space */
+    overflow: auto;  /* Enable scrolling for the panel content itself */
+    height: 100%;   /* Or:  min-height: 0;   (depending on your layout needs) */
+}
+
+.side-by-side-container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: #f0f0f0;
+    height: 100%;  /* Ensure the grid container takes the full height */
+    width: 100%;    /* Might be necessary. If issues remain, try adding this too*/
+}
+
+.diff-pane {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Contain the content of the individual panes if needed */
+    height: 100%;   /* Ensure the pane takes up all available height*/
+
+}
+
+.diff-content {
+    flex: 1;
+    overflow: auto; /* Enable scrolling for the diff content if needed*/
+    height: 100%;  /* Ensure it takes the full height available inside the pane */
 }
 
 /* Chain content */
@@ -72,13 +105,13 @@ body {
 
 /* Transformer nodes */
 .transformer-node {
+    padding: 12px;
     border-bottom: 1px solid #eee;
     cursor: pointer;
-    background: white;
 }
 
-.transformer-content {
-    padding: 12px;
+.transformer-nested {
+    margin-left: 24px;
 }
 
 .transformer-name {
@@ -88,10 +121,6 @@ body {
 .transformer-timestamp {
     font-size: 12px;
     color: #666;
-}
-
-.transformer-node:hover {
-    background: #f5f5f5;
 }
 
 /* View mode toggle buttons */
@@ -108,13 +137,6 @@ body {
     background: #1a73e8;
     color: white;
     border-color: #1a73e8;
-}
-
-/* No selection message */
-.no-selection {
-    color: #666;
-    text-align: center;
-    padding: 20px;
 }
 
 /* Tree view styles */
@@ -142,28 +164,95 @@ body {
     color: #666;
 }
 
-/* Diff view styles */
-.diff-view {
-    font-family: monospace;
-    white-space: pre-wrap;
-    font-size: 14px;
-    line-height: 1.5;
+/* Side by side diff styles */
+.diff-pane {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-.diff-message {
-    padding: 10px;
-    color: #666;
-    font-style: italic;
+.diff-header {
+    padding: 8px 12px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.diff-pre {
+    margin: 0;
+    padding: 0;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+    font-size: 12px;
+    line-height: 20px;
+    tab-size: 2;
+    background: white;
+    min-width: 100%;
+}
+
+.diff-line {
+    display: flex;
+    padding: 0 8px;
+    white-space: pre;
+}
+
+.diff-line-number {
+    color: #6e7781;
+    width: 40px;
+    padding-right: 8px;
+    text-align: right;
+    user-select: none;
+}
+
+.diff-line-content {
+    flex: 1;
+}
+
+.diff-empty {
+    background: #fafafa;
 }
 
 .diff-added {
     background: #e6ffec;
+}
+
+.diff-added .diff-line-number::before {
+    content: '+';
     color: #1a7f37;
-    padding: 3px 6px;
 }
 
 .diff-removed {
     background: #ffebe9;
+}
+
+.diff-removed .diff-line-number::before {
+    content: '-';
     color: #cf222e;
-    padding: 3px 6px;
+}
+
+/* No selection message */
+.no-selection {
+    color: #666;
+    text-align: center;
+    padding: 20px;
+}
+
+#diff-view {
+    width: 100%;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.diff2html {
+    font-family: monospace;
+}
+
+.diff2html .d2h-file-wrapper {
+    margin: 0;
+    width: 100%;
+}
+
+.diff2html .d2h-side-by-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
