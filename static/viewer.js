@@ -317,7 +317,7 @@ function updateDiffView(currentTransformer, prevId) {
         "", // Optional: previous file header lines
         "", // Optional: current file header lines,
         {
-            context: 3 // Number of lines of context around changes (adjust as needed)
+            context: 1000 // Number of lines of context around changes (adjust as needed)
         }
     );
 
