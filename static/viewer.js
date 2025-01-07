@@ -33,11 +33,12 @@ function renderTransformerChain(transformerTree) {
     container.innerHTML = '';
     
     function renderNode(node, depth = 0) {
+        const transformerId = `${node.name}Transformer_after_${node.endTimestamp}`;
         // Create node element
         const nodeElement = document.createElement('div');
         nodeElement.className = 'transformer-node';
         nodeElement.style.paddingLeft = `${depth * 24}px`;  // 24px = 2 spaces worth of indentation
-        nodeElement.id = `transformer-${node.name}-${node.start}`;
+        nodeElement.id = transformerId;
         
         // Create content wrapper
         const contentWrapper = document.createElement('div');
@@ -50,7 +51,7 @@ function renderTransformerChain(transformerTree) {
         
         // Create timestamp element
         const timeDiv = document.createElement('div');
-        timeDiv.className = 'transformer-timestamp';
+        timeDiv.className = 'transformer-timestamp'; 
         timeDiv.textContent = `t+${node.start}ms`;
         
         contentWrapper.appendChild(nameDiv);
@@ -60,9 +61,8 @@ function renderTransformerChain(transformerTree) {
         // Add click handler
         nodeElement.onclick = (e) => {
             e.stopPropagation(); // Prevent triggering parent handlers
+            
             const prevTransformerId = `${node.name}Transformer_before_${node.startTimestamp}`;
-            const transformerId = `${node.name}Transformer_after_${node.endTimestamp}`;
-            // const transformerId = `${node.name}Transformer_after_${node.start}`;
             selectTransformer(transformerId, prevTransformerId);
         };
         
@@ -487,16 +487,16 @@ function selectTransformer(id, prevId) {
         node.classList.remove('active');
     });
     
-    const selectedNode = document.getElementById(`transformer-${id}`);
+    const selectedNode = document.getElementById(`${id}`);
     if (selectedNode) {
         selectedNode.classList.add('active');
         
         // Update header
         const transformer = transformerData[id];
-        document.getElementById('current-transformer').textContent = 
-            transformer.name || 'Selected Transformer';
-        document.getElementById('transformer-time').textContent = 
-            `t+${transformer.timestamp}ms`;
+        // document.getElementById('current-transformer').textContent = 
+        //     transformer.name || 'Selected Transformer';
+        // document.getElementById('transformer-time').textContent = 
+        //     `t+${transformer.timestamp}ms`;
     }
     
     // Update views

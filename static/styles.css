@@ -23,6 +23,11 @@ body {
     background: white;
     max-height: 100vh;
 }
+.transformer-node.active {
+    background-color: #e0e0e0;
+    border-left: 4px solid #2196F3;
+}
+
 
 /* Right panels container */
 .main-panels {
