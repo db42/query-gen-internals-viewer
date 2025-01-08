@@ -28,6 +28,14 @@ const parseLogs = (logLines) => {
 };
 
 // New JSON parser
+//add sample input here in comments
+// {
+//     "Transformer1_before_1000": {
+//         "content": "value1",
+//     },
+//     "Transformer1_after_2000": {
+//         "content": "value1",
+//     },
 const parseTransformerJSON = async (jsonPath) => {
     try {
         const jsonContent = await fs.promises.readFile(jsonPath, { encoding: 'utf8' });
@@ -73,8 +81,8 @@ const buildTransformerTree = (logs) => {
     const stack = [];
     
     for (const log of sortedLogs) {
-        const relativeMs = (log.timestamp - startTime) % 1000;
-        
+        const relativeMs = (log.timestamp - startTime) / 1000;
+
         if (log.type === 'before') {
             const node = {
                 name: log.transformer,

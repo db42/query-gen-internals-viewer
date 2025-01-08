@@ -112,8 +112,10 @@ function parseTransformers(content) {
   query_spec_str = '';
   start_capture_query_spec = false;
   
-  content.split('\n').forEach(line => {
+  const lines = content.split('\n');
+  for (const [index, line] of lines.entries()) {
     const trimmed = line.trim();
+    const isLastLine = index === lines.length - 1;
     
     // Start of a transformer
     if (trimmed.includes('::transform"')) {
@@ -145,13 +147,16 @@ function parseTransformers(content) {
         // console.log(content);
       } else if (trimmed.startsWith('query_spec {')) {
         start_capture_query_spec = true
-      } else if (trimmed.startsWith('child {')) { //todo: or last line in content
+      } else if (isLastLine || trimmed.startsWith('child {')) { //todo: or last line in content
 
         // If we have all info, add to transformers
         if (currentTransformer.name && currentTransformer.start_us && currentTransformer.duration_us) {
-          const key = `${currentTransformer.name}_${currentTransformer.start_us}_${currentTransformer.duration_us}`;
+          const key1 = `${currentTransformer.name}_before_${currentTransformer.start_us}`;
+          endTimeUS = currentTransformer.start_us + currentTransformer.duration_us;
+          const key2 = `${currentTransformer.name}_after_${endTimeUS}`;
           query_spec_dict=parseProtoText(query_spec_str);
-          transformers[key] = { content: query_spec_dict };
+          transformers[key1] = { content: query_spec_dict };
+          transformers[key2] = { content: query_spec_dict };
           currentTransformer = null;
         }
         fs.writeFileSync('last_spec.json', query_spec_str);
@@ -163,7 +168,7 @@ function parseTransformers(content) {
         query_spec_str = query_spec_str + '\n' + trimmed;
       }
     }
-  });
+  };
   
   return transformers;
 }

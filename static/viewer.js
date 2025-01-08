@@ -156,7 +156,7 @@ const buildTransformerTree = (transformerData) => {
     const stack = [];
     
     for (const log of sortedLogs) {
-        const relativeMs = (log.timestamp - startTime) % 1000;
+        const relativeMs = (log.timestamp - startTime) / 1000;
         
         if (log.type === 'before') {
             const node = {
