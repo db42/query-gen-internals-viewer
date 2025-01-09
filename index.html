@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Spec Transformer Viewer</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/diff2html/bundles/css/diff2html.min.css" />
+
+    <!-- Javascripts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html/bundles/js/diff2html.min.js"></script>
+    
+    <script src="static/diff.js"></script>
+    <script src="static/viewer.js"></script>
+
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Panel -->
+        <div class="transformer-chain">
+            <div class="panel-header">
+                <span>Transformer Chain</span>
+            </div>
+            <div id="transformer-chain" class="chain-content"></div>
+        </div>
+
+        <!-- Right Panels -->
+        <div class="main-panels">
+            <!-- Query Spec View -->
+            <div class="query-panel">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        Select a transformer to view query spec
+                    </div>
+                    <div class="file-upload">
+                        <input type="file" id="file-upload" style="display: none;" accept=".json">
+                        <button id="upload-button" onclick="document.getElementById('file-upload').click()">Upload File</button>
+                    </div>
+                    <div class="view-mode-toggle">
+                        <button id="btn-tree" class="active" onclick="setViewMode('tree')">Tree View</button>
+                        <button id="btn-raw" onclick="setViewMode('raw')">Raw View</button>
+                    </div>
+                </div>
+                <div id="current-view" class="panel-content">
+                    <div class="no-selection">No transformer selected</div>
+                </div>
+            </div>
+
+            <!-- Diff View -->
+            <div class="diff-panel">
+                <div class="panel-header">
+                    <span>Changes from Previous Step</span>
+                </div>
+                <div id="diff-view" class="panel-content" style="overflow-x: auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

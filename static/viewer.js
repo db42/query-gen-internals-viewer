@@ -729,10 +729,10 @@ async function init() {
     document.getElementById('file-upload').addEventListener('change', handleFileUpload);
 
     // Load transformer data
-    transformerData = await loadTransformerData();
-    if (!transformerData) return;
+    // transformerData = await loadTransformerData();
+    // if (!transformerData) return;
     
-    loadTransformerJSONData();
+    // loadTransformerJSONData();
 }
 
 // Start the application when loaded
