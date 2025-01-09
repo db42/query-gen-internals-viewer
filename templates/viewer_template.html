@@ -33,6 +33,10 @@
                     <div class="panel-title">
                         Select a transformer to view query spec
                     </div>
+                    <div class="file-upload">
+                        <input type="file" id="file-upload" style="display: none;" accept=".json">
+                        <button id="upload-button" onclick="document.getElementById('file-upload').click()">Upload File</button>
+                    </div>
                     <div class="view-mode-toggle">
                         <button id="btn-tree" class="active" onclick="setViewMode('tree')">Tree View</button>
                         <button id="btn-raw" onclick="setViewMode('raw')">Raw View</button>
