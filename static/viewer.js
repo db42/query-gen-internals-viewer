@@ -5,6 +5,7 @@
 // Global state
 let transformerData = null;
 let currentTransformer = null;
+let sortedTransformerKeys = null;
 let viewMode = 'tree';
 
 // First, let's create interfaces for type clarity
@@ -239,8 +240,10 @@ function renderTransformerChain(transformerTree) {
         // Add click handler
         nodeElement.onclick = (e) => {
             e.stopPropagation(); // Prevent triggering parent handlers
+            idToSearch = `${node.name}Transformer_before_${node.startTimestamp}`;
+            const prevTransformerId = sortedTransformerKeys[sortedTransformerKeys.indexOf(idToSearch) - 1];
             
-            const prevTransformerId = `${node.name}Transformer_before_${node.startTimestamp}`;
+            // const prevTransformerId = `${node.name}Transformer_before_${node.startTimestamp}`;
             selectTransformer(transformerId, prevTransformerId);
         };
         
@@ -328,6 +331,9 @@ const buildTransformerTree = (transformerData) => {
 
 
     const sortedLogs = _.sortBy(logs, ['timestamp', log => log.type !== 'before']);
+    //create an array of sortedTransformerKeys from sortedLogs
+    sortedTransformerKeys = sortedLogs.map(log => `${log.transformer}Transformer_${log.type}_${log.timestamp}`);
+    console.log(sortedTransformerKeys);
     const startTime = sortedLogs[0]?.timestamp ?? 0;
     
     const root = { transformers: [] };
@@ -658,6 +664,7 @@ function setViewMode(mode) {
 }
 
 function selectTransformer(id, prevId) {
+    console.log('select transformer:', id, prevId);
     currentTransformer = id;
     
     // Update UI
