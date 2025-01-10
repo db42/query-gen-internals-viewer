@@ -494,7 +494,7 @@ function updateDiffView(currentTransformer, prevId) {
     const currentContent = JSON.stringify(transformerData[currentTransformer].content, null, 2);
     
     const diff = Diff.createPatch(
-        "RENAMED",
+        "Query spec changes:",
         prevContent,
         currentContent,
         "", // Optional: previous file header lines
@@ -508,7 +508,7 @@ function updateDiffView(currentTransformer, prevId) {
         drawFileList: false,
         matching: 'none',
         outputFormat: 'side-by-side',
-        renderNothingWhenEmpty: true
+        renderNothingWhenEmpty: false
     });
 
     container.innerHTML = diffHtml;
