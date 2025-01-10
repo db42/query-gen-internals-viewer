@@ -1,16 +1,15 @@
-/* Base styles */
+/* Base layout */
 body {
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     height: 100vh;
     overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Main layout */
 .app-container {
     display: grid;
-    grid-template-columns: 300px 1fr; /* 300px 1fr; to fix */
+    grid-template-columns: 300px 1fr;
     height: 100vh;
     overflow: hidden;
 }
@@ -18,102 +17,27 @@ body {
 /* Left panel */
 .transformer-chain {
     border-right: 1px solid #e0e0e0;
-    display: flex;
-    flex-direction: column;
-    background: white;
-    max-height: 100vh;
-}
-.transformer-node.active {
-    background-color: #e0e0e0;
-    border-left: 4px solid #2196F3;
-}
-
-
-/* Right panels container */
-.main-panels {
-    display: flex;
-    flex-direction: column;
-    max-height: 100vh;
-    width: 100%; /* Added to ensure full width usage */
-}
-
-/* Panel headers */
-.panel-header {
-    padding: 16px;
-    background: #f5f5f5;
-    border-bottom: 1px solid #e0e0e0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Panel content */
-.panel-content {
-    flex: 1;
-    overflow: auto;
-    padding: 16px;
-    min-height: 0;
-}
-
-/* Query panel */
-.query-panel {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid #e0e0e0;
-    overflow: hidden;
-    min-height: 0;
-}
-
-/* Diff panel */
-.diff-panel {
-    flex: 1;            /* Allow diff-panel to grow */
-    overflow: hidden;   /* This is important to contain the scroll */
-}
-
-.diff-panel .panel-content {
-    flex: 1;        /* Allow panel-content to take up available space */
-    overflow: auto;  /* Enable scrolling for the panel content itself */
-    height: 100%;   /* Or:  min-height: 0;   (depending on your layout needs) */
-}
-
-.side-by-side-container {  
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: #f0f0f0;
-    height: 100%;  /* Ensure the grid container takes the full height */
-    width: 100%;    /* Might be necessary. If issues remain, try adding this too*/
-}
-
-.diff-pane {
     background: white;
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Contain the content of the individual panes if needed */
-    height: 100%;   /* Ensure the pane takes up all available height*/
-
 }
 
-.diff-content {
-    flex: 1;
-    overflow: auto; /* Enable scrolling for the diff content if needed*/
-    height: 100%;  /* Ensure it takes the full height available inside the pane */
-}
-
-/* Chain content */
 .chain-content {
     flex: 1;
     overflow-y: auto;
     padding: 16px;
-    min-height: 0;
 }
 
-/* Transformer nodes */
+/* Transformer nodes styling */
 .transformer-node {
     padding: 12px;
     border-bottom: 1px solid #eee;
     cursor: pointer;
+}
+
+.transformer-node.active {
+    background-color: #e0e0e0;
+    border-left: 4px solid #2196F3;
 }
 
 .transformer-nested {
@@ -129,21 +53,32 @@ body {
     color: #666;
 }
 
-/* File upload button styles */
-.file-upload button {
-    padding: 6px 12px;
-    border: 1px solid #e0e0e0;
-    background: white;
-    cursor: pointer;
-    border-radius: 4px;
-    margin: 0 8px;
+/* Right panels */
+.main-panels {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-width: 0;
 }
 
-.file-upload button:hover {
+/* Common panel styles */
+.panel-header {
+    padding: 8px 16px;
     background: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* View mode toggle buttons */
+/* Query panel */
+.query-panel {
+    flex: 1;
+    overflow: hidden;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* View mode toggle */
 .view-mode-toggle button {
     padding: 6px 12px;
     border: 1px solid #e0e0e0;
@@ -159,11 +94,73 @@ body {
     border-color: #1a73e8;
 }
 
-/* Tree view styles */
+/* File upload */
+.file-upload button {
+    padding: 6px 12px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Diff panel */
+.diff-panel {
+    flex: 1;
+    overflow: hidden;
+}
+
+#diff-view {
+    padding: 0;
+    overflow: auto;
+    height: calc(100% - 37px);
+}
+
+/* Diff2Html styles */
+.d2h-wrapper {
+    text-align: left;
+}
+
+.d2h-file-header {
+    display: none;
+}
+
+.d2h-files-diff {
+    display: flex;
+    width: 100%;
+}
+
+.d2h-file-side-diff {
+    width: 50%;
+    margin: 0;
+}
+
+.d2h-code-line-ctn {
+    padding: 0;
+    font-family: monospace;
+}
+
+.d2h-code-linenumber,
+.d2h-code-side-linenumber {
+    border: none;
+    color: rgba(27, 31, 35, 0.3);
+    width: 35px;
+    font-family: monospace;
+}
+
+.d2h-del {
+    background-color: #ffebe9;
+}
+
+.d2h-ins {
+    background-color: #e6ffec;
+}
+
+/* Tree view */
 .tree-view {
     font-family: monospace;
     font-size: 14px;
     line-height: 1.5;
+    padding: 16px;
 }
 
 .tree-node {
@@ -182,127 +179,4 @@ body {
     cursor: pointer;
     user-select: none;
     color: #666;
-}
-
-/* Side by side diff styles */
-.diff-pane {
-    background: white;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.diff-header {
-    padding: 8px 12px;
-    background: #f5f5f5;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.diff-pre {
-    margin: 0;
-    padding: 0;
-    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
-    font-size: 12px;
-    line-height: 20px;
-    tab-size: 2;
-    background: white;
-    min-width: 100%;
-}
-
-.diff-line {
-    display: flex;
-    padding: 0 8px;
-    white-space: pre;
-}
-
-.diff-line-number {
-    color: #6e7781;
-    width: 40px;
-    padding-right: 8px;
-    text-align: right;
-    user-select: none;
-}
-
-.diff-line-content {
-    flex: 1;
-}
-
-.diff-empty {
-    background: #fafafa;
-}
-
-.diff-added {
-    background: #e6ffec;
-}
-
-.diff-added .diff-line-number::before {
-    content: '+';
-    color: #1a7f37;
-}
-
-.diff-removed {
-    background: #ffebe9;
-}
-
-.diff-removed .diff-line-number::before {
-    content: '-';
-    color: #cf222e;
-}
-
-/* No selection message */
-.no-selection {
-    color: #666;
-    text-align: center;
-    padding: 20px;
-}
-
-#diff-view {
-    width: 100%;
-    overflow-x: auto;
-    padding: 10px;
-}
-
-/* Diff2Html specific styles */
-.d2h-wrapper {
-    max-width: 100%;
-}
-
-.d2h-file-diff {
-    overflow-x: auto;
-    max-width: 100%;
-}
-
-.d2h-diff-table {
-    width: 100%;
-    table-layout: fixed;
-}
-
-.d2h-code-line {
-    white-space: pre-wrap; /* Allow long lines to wrap */
-}
-
-.d2h-code-line-ctn {
-    word-wrap: break-word;
-    white-space: pre-wrap;
-}
-
-/* Make the diff tables fit within the container */
-.d2h-files-diff {
-    width: 100%;
-    display: flex;
-    overflow-x: auto;
-}
-
-.d2h-file-wrapper {
-    margin: 0;
-    width: 100%;
-}
-
-/* Ensure code content wraps appropriately */
-.d2h-code-linenumber {
-    width: 50px; /* Fixed width for line numbers */
-}
-
-.d2h-code-side-linenumber {
-    width: 50px; /* Fixed width for line numbers */
 }

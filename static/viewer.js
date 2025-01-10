@@ -493,9 +493,8 @@ function updateDiffView(currentTransformer, prevId) {
     const prevContent = JSON.stringify(transformerData[prevId].content, null, 2);
     const currentContent = JSON.stringify(transformerData[currentTransformer].content, null, 2);
     
-    const diff = Diff.createTwoFilesPatch( // Use createTwoFilesPatch for cleaner output
-     "Previous Version",  // File name for the previous version (optional)
-        "Current Version", // File name for the current version (optional)
+    const diff = Diff.createPatch(
+        "RENAMED",
         prevContent,
         currentContent,
         "", // Optional: previous file header lines
@@ -506,12 +505,12 @@ function updateDiffView(currentTransformer, prevId) {
     );
 
     const diffHtml = Diff2Html.html(diff, {
-        drawFileList: false, // Don't show the file list
-        matching: 'lines',
+        drawFileList: false,
+        matching: 'none',
         outputFormat: 'side-by-side',
-        // Add more diff2html options for styling or customization as needed
+        renderNothingWhenEmpty: true
     });
-    
+
     container.innerHTML = diffHtml;
 }
 
