@@ -10,7 +10,7 @@ body {
 /* Main layout */
 .app-container {
     display: grid;
-    grid-template-columns: 300px 1290px; /* 300px 1fr; to fix */
+    grid-template-columns: 300px 1fr; /* 300px 1fr; to fix */
     height: 100vh;
     overflow: hidden;
 }
@@ -34,6 +34,7 @@ body {
     display: flex;
     flex-direction: column;
     max-height: 100vh;
+    width: 100%; /* Added to ensure full width usage */
 }
 
 /* Panel headers */
@@ -261,17 +262,47 @@ body {
     padding: 10px;
 }
 
-.diff2html {
-    font-family: monospace;
+/* Diff2Html specific styles */
+.d2h-wrapper {
+    max-width: 100%;
 }
 
-.diff2html .d2h-file-wrapper {
+.d2h-file-diff {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.d2h-diff-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.d2h-code-line {
+    white-space: pre-wrap; /* Allow long lines to wrap */
+}
+
+.d2h-code-line-ctn {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+/* Make the diff tables fit within the container */
+.d2h-files-diff {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+}
+
+.d2h-file-wrapper {
     margin: 0;
     width: 100%;
 }
 
-.diff2html .d2h-side-by-side {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+/* Ensure code content wraps appropriately */
+.d2h-code-linenumber {
+    width: 50px; /* Fixed width for line numbers */
+}
+
+.d2h-code-side-linenumber {
+    width: 50px; /* Fixed width for line numbers */
 }
