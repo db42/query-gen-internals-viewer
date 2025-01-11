@@ -76,6 +76,33 @@ body {
     flex: 1;
     overflow: hidden;
     border-bottom: 1px solid #e0e0e0;
+    min-height: 100px; /* Minimum height */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.panel-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.copy-button {
+    padding: 6px 12px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.copy-button:hover {
+    background: #f5f5f5;
+}
+
+/* Success state */
+.copy-button.success {
+    background: #4caf50;
+    color: white;
+    border-color: #4caf50;
 }
 
 /* View mode toggle */
@@ -101,6 +128,19 @@ body {
     background: white;
     cursor: pointer;
     border-radius: 4px;
+}
+
+/* Resize handle */
+.resize-handle {
+    height: 8px;
+    background: #f5f5f5;
+    cursor: row-resize;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.resize-handle:hover {
+    background: #e0e0e0;
 }
 
 /* Diff panel */

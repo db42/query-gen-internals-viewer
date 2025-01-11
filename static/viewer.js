@@ -730,6 +730,38 @@ function loadTransformerJSONData() {
     }
 }
 
+function copyContent() {
+    const currentView = document.getElementById('current-view');
+    const copyButton = document.getElementById('copy-button');
+    let contentToCopy;
+
+    if (currentTransformer && transformerData[currentTransformer]) {
+        contentToCopy = JSON.stringify(transformerData[currentTransformer].content, null, 2);
+    }
+
+    if (contentToCopy) {
+        // Copy to clipboard
+        navigator.clipboard.writeText(contentToCopy).then(() => {
+            // Show success state
+            copyButton.classList.add('success');
+            copyButton.textContent = 'Copied!';
+
+            // Reset button after 2 seconds
+            setTimeout(() => {
+                copyButton.classList.remove('success');
+                copyButton.textContent = 'Copy';
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+            // Show error state
+            copyButton.textContent = 'Failed to copy';
+            setTimeout(() => {
+                copyButton.textContent = 'Copy';
+            }, 2000);
+        });
+    }
+}
+
 // Initialization
 async function init() {
     document.getElementById('file-upload').addEventListener('change', handleFileUpload);
@@ -739,6 +771,43 @@ async function init() {
     // if (!transformerData) return;
     
     // loadTransformerJSONData();
+    // document.addEventListener('DOMContentLoaded', function() {
+        const handle = document.getElementById('resize-handle');
+        const queryPanel = document.querySelector('.query-panel');
+        let isResizing = false;
+        let startY;
+        let startHeight;
+    
+        handle.addEventListener('mousedown', function(e) {
+            isResizing = true;
+            startY = e.clientY;
+            startHeight = queryPanel.offsetHeight;
+            
+            // Add temporary event listeners
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', onMouseUp);
+            
+            // Prevent text selection while resizing
+            document.body.style.userSelect = 'none';
+        });
+    
+        function onMouseMove(e) {
+            if (!isResizing) return;
+    
+            const deltaY = e.clientY - startY;
+            const newHeight = Math.max(100, startHeight + deltaY); // Minimum 100px height
+            
+            queryPanel.style.flex = 'none';
+            queryPanel.style.height = newHeight + 'px';
+        }
+    
+        function onMouseUp() {
+            isResizing = false;
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseup', onMouseUp);
+            document.body.style.userSelect = '';
+        }
+    // });
 }
 
 // Start the application when loaded
