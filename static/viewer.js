@@ -1,7 +1,6 @@
 // static/viewer.js
 // viewer.js
 
-
 // Global state
 let transformerData = null;
 let currentTransformer = null;
@@ -163,7 +162,7 @@ function parseTransformers(content) {
             const key2 = `${topTransformer.name}_after_${endTimeUS}`;
             // query_spec_str = query_spec_str.split('\n').slice(0, -4).join('\n');
             query_spec_dict=parseProtoText(query_spec_str);
-            transformers[key1] = { content: query_spec_dict };
+            transformers[key1] = { content: '' };
             transformers[key2] ={ content: query_spec_dict };
               console.log('pop', topTransformer.name);
               // console.log('STRING');
@@ -187,6 +186,7 @@ function parseTransformers(content) {
       }
     };
     
+    // fs.writeFileSync('transformers.json', JSON.stringify(transformers));
     console.log('transformer_stack', transformer_stack);
     return transformers;
 }
