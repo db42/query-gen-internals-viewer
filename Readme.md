@@ -31,7 +31,9 @@ Currently this POC is done by running the query-gen-validator tool.
 
 Deployed using netlify (app.netlify.com) at https://query-gen-internals-viewer.netlify.app/ 
 
-Netlify auto fetches from the linked github repo
+Netlify auto fetches from the linked github repo.
+
+Also, deployed using github-pages on https://db42.github.io/query-gen-internals-viewer/
 
 ## How to run
 
