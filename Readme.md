@@ -23,12 +23,23 @@ Currently this POC is done by running the query-gen-validator tool.
 ## Todo
 0. Become queryspec expert by using this - WIP
 1. when debug=true, provide one option inside the i icon to visualize and debug query-gen-engine for an answer. Collect all the info in memory and pass it to this tool via a file.
-2. Triage this bug where number of transfomers logged in qgen-validator is more than what we get from traces
-3. Triage why cohortColumnTranformer is seen in traces but not in qgen-validator logs
-4. this tool can also consume just the traces
+2. Triage why cohortColumnTranformer is seen in traces but not in qgen-validator logs - DONE
+3. this tool can also consume just the traces - DONE
+4. Provide an option from trace viewer to open this directly
+
+## Deployment
+
+Deployed using netlify (app.netlify.com) at https://query-gen-internals-viewer.netlify.app/ 
+
+Netlify auto fetches from the linked github repo
 
 ## How to run
 
+### support logs from traces
+
+Just open index.html which is a copy of template/viewer_template.html. User can upload the traces as a file and see the visualizations.
+
+### Deprecated - fetch logs from cluster
 On local
 ```
 gradle :callosum-upgrade:buildRequestFetcherJar -x test
