@@ -62,4 +62,7 @@ scp callosum/upgrade/target/libs/query-generation-validator.jar admin@172.32.27.
   scp admin@172.32.27.151:logs.zip ~/Downloads/logs-full-new.zip
   # move and extract in query-spec-generator folder
  python3 query-spec-generator.py logs-full-new
+
+ # goto output directory and run
+ python3 -m http.server 8000
   ```
