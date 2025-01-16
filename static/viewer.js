@@ -106,7 +106,7 @@ function parseTransformers(content) {
       const isLastLine = index === lines.length - 1;
       
       // Start of a transformer
-      if (trimmed.includes('::transform"') && !trimmed.includes('CohortColumnTransformer')) {
+      if (trimmed.includes('::transform"')) {
         const nameMatch = trimmed.match(/name: "(.*?)::transform"/);
         if (nameMatch) {
           let transformer = {
