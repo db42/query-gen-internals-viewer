@@ -692,6 +692,8 @@ function selectTransformer(id, prevId) {
 async function handleFileUpload(event) {
     const file = event.target.files[0];
     if (!file) return;
+
+    document.getElementById('file-name').textContent = file.name;
     
     try {
         // Method 1: Using File API (modern approach)

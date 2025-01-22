@@ -143,6 +143,12 @@ body {
     border-radius: 4px;
 }
 
+.file-name {
+    font-size: 14px;
+    color: #666;
+    font-family: monospace;
+}
+
 /* Resize handle */
 .resize-handle {
     height: 8px;
