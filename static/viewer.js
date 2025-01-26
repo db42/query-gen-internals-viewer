@@ -380,7 +380,7 @@ function createTreeView(data, level = 0) {
     Object.entries(data).forEach(([key, value]) => {
         const node = document.createElement('div');
         node.className = 'tree-node';
-        node.style.marginLeft = `${level * 20}px`;
+        node.style.marginLeft = '10px';
         
         if (typeof value === 'object' && value !== null) {
             const toggle = document.createElement('span');
@@ -482,7 +482,14 @@ function updateCurrentView() {
     if (viewMode === 'tree') {
         container.innerHTML = '';
         container.appendChild(createTreeView(data));
+    } else if (viewMode === 'resolved-tree') {
+        container.innerHTML = '';
+        container.appendChild(createTreeView(resolveReferences(data)));
+    } else if (viewMode === 'graph') {
+        container.innerHTML = `<div class="mermaid">${generateMermaidDiagram(data)}</div>`;
+        mermaid.init();
     } else {
+        container.innerHTML = `<pre>${JSON.stringify(resolveReferences(data), null, 2)}</pre>`;
         container.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
     }
 }
@@ -656,6 +663,7 @@ function setViewMode(mode) {
     
     // Update buttons
     document.getElementById('btn-tree').classList.toggle('active', mode === 'tree');
+    document.getElementById('btn-resolved-tree').classList.toggle('active', mode === 'resolved-tree');
     document.getElementById('btn-raw').classList.toggle('active', mode === 'raw');
     
     // Update view
@@ -766,6 +774,24 @@ function copyContent() {
 
 // Initialization
 async function init() {
+    const traceId = getUrlParameter('traceId');
+    
+    if (traceId) {
+        try {
+            document.getElementById('file-name').textContent = traceId;
+            const traceData = await getTraceById(traceId);
+            if (traceData) {
+                console.log('Found trace data for ID:', traceId);
+                transformerData = parseTransformers(traceData);
+                loadTransformerJSONData();
+            } else {
+                console.log('No trace data found for ID:', traceId);
+            }
+        } catch (error) {
+            console.error('Error loading from IndexedDB:', error);
+        }
+    }
+
     document.getElementById('file-upload').addEventListener('change', handleFileUpload);
 
     // Load transformer data

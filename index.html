@@ -10,7 +10,21 @@
 
     <!-- Javascripts -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html/bundles/js/diff2html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+    <script>
+    mermaid.initialize({ 
+        startOnLoad: true,
+        theme: 'default',
+        flowchart: {
+            useMaxWidth: true,
+            htmlLabels: true
+        }
+    });
+    </script>
     
+    <script src="static/inline-json.js"></script>
+    <script src="static/mermaid-graph.js"></script>
+    <script src="static/db.js"></script>
     <script src="static/diff.js"></script>
     <script src="static/viewer.js"></script>
 
@@ -40,8 +54,10 @@
                     Copy
                     </button>
                     <div class="view-mode-toggle">
-                        <button id="btn-tree" class="active" onclick="setViewMode('tree')">Tree View</button>
-                        <button id="btn-raw" onclick="setViewMode('raw')">Raw View</button>
+                        <button id="btn-tree" class="active" onclick="setViewMode('tree')">Tree</button>
+                        <button id="btn-resolved-tree" onclick="setViewMode('resolved-tree')">Resolved Tree</button>
+                        <button id="btn-raw" onclick="setViewMode('raw')">Raw</button>
+                        <button id="btn-graph" onclick="setViewMode('graph')">Graph View</button>
                     </div>
                 </div>
                 <div id="current-view" class="panel-content">

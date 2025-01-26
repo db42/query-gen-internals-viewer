@@ -221,11 +221,11 @@ body {
     font-family: monospace;
     font-size: 14px;
     line-height: 1.5;
-    padding: 16px;
+    padding: 10px;
 }
 
 .tree-node {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .node-key {
@@ -240,4 +240,45 @@ body {
     cursor: pointer;
     user-select: none;
     color: #666;
+}
+
+/* Add to styles.css */
+
+/* Graph view styles */
+.mermaid {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.mermaid svg {
+    height: auto;
+    width: 100%;
+}
+
+/* Adjust panel content for graph view */
+.panel-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make graph view responsive */
+.panel-content .mermaid {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style graph nodes */
+.mermaid .node rect {
+    stroke-width: 2px;
+}
+
+.mermaid .edgeLabel {
+    background-color: white;
 }
