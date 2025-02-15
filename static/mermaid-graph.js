@@ -1,162 +1,179 @@
-// Complete implementation of generateMermaidDiagram
-function generateMermaidDiagram(querySpec) {
-    let nodes = new Set();
-    let edges = new Set();
-    let mermaidCode = 'flowchart TD\n';
+// Utility functions
+function sanitizeId(guid) {
+    return guid.replace(/-/g, '_');
+  }
+  
+  function createNodeLabel(title, details) {
+    return `["${title}<br/>${details}"]`;
+  }
+  
+  /**
+   * Generates a Mermaid flowchart specification from a query specification
+   * Handles multiple tables in the spec
+   */
+  function generateMermaidSpec(spec) {
+    let nodes = [];
+    let edges = [];
+    let styles = [];
     
-    // Helper functions
-    function createNodeId(guid) {
-        return `n${guid.replace(/-/g, '_')}`;
-    }
+    // Handle both single table and array of tables
+    const tables = Array.isArray(spec.table) ? spec.table : [spec.table];
     
-    function addNode(guid, label) {
-        const nodeId = createNodeId(guid);
-        const safeLabel = label.replace(/"/g, '\\"').replace(/\n/g, '<br/>');
-        const nodeStr = `    ${nodeId}["${safeLabel}"]\n`;
-        nodes.add(nodeStr);
-        return nodeId;
-    }
-    
-    function addEdge(fromId, toId, label = '') {
-        const safeLabel = label ? label.replace(/"/g, '\\"') : '';
-        const edgeStr = safeLabel ? 
-            `    ${fromId} -->|${safeLabel}| ${toId}\n` :
-            `    ${fromId} --> ${toId}\n`;
-        edges.add(edgeStr);
-    }
-
-    // Process schema sections
-    function processQuerySchemaTables(tables) {
-        if (!Array.isArray(tables)) return;
+    tables.forEach(table => {
+      if (!table.id || !table.column) return; // Skip invalid table entries
+  
+      // Add table node
+      const tableId = sanitizeId(table.id.guid);
+      pushNode(nodes,`${tableId}${createNodeLabel('Query Table', 
+        `GUID: ${table.id.guid}<br/>${table.id.description || ''}`)}`);
+      styles.push(`class ${tableId} table`);
+  
+      const columns = Array.isArray(table.column) ? table.column : [table.column];
+      // Process columns for this table
+      columns.forEach(col => {
+        if (!col.id || !col.output_id) return;
         
-        tables.forEach(tableInfo => {
-            const tableNode = addNode(tableInfo.alias.guid, 
-                `Table: ${tableInfo.alias.name}`);
-            
-            if (tableInfo.join_path?.join) {
-                const join = tableInfo.join_path.join;
-                const destTableNode = addNode(join.destination.guid,
-                    `Table: ${join.destination.name}`);
-                addEdge(tableNode, destTableNode, join.join_type);
-            }
-        });
-    }
-
-    function processQuerySchemaColumns(columns) {
-        if (!Array.isArray(columns)) return;
+        const resolved = col.id._resolved;
+        const colId = sanitizeId(col.id.guid);
         
-        columns.forEach(colInfo => {
-            const colNode = addNode(colInfo.alias.guid,
-                `Column: ${colInfo.alias.name}<br/>Type: ${colInfo.data_type}`);
-            
-            if (colInfo.table_alias) {
-                const tableNode = createNodeId(colInfo.table_alias.guid);
-                addEdge(tableNode, colNode);
-            }
-        });
-    }
-
-    function processExpression(expr, parentNodeId, context = '') {
-        if (!expr) return;
-
-        // Handle function expressions
-        if (expr.expr_class === 'EXPR_FUNCTION') {
-            const funcNode = addNode(`${parentNodeId}_func_${context}`, 
-                `Function: ${expr.function.name}<br/>Aggregate: ${expr.function.is_aggregate}`);
-            addEdge(parentNodeId, funcNode);
-            
-            if (Array.isArray(expr.function.arguments)) {
-                expr.function.arguments.forEach((arg, idx) => {
-                    processExpression(arg, funcNode, `arg${idx}`);
-                });
-            } else if (expr.function.arguments) {
-                processExpression(expr.function.arguments, funcNode, 'arg');
-            }
+        // Add column node
+        pushNode(nodes,`${colId}${createNodeLabel(col.id.name,
+          `Output: ${col.output_id.name}<br/>GUID: ${col.id.guid}<br/>Type: ${col.column_type}<br/>DataType: ${col.data_type}`)}`);
+        styles.push(`class ${colId} column`);
+        edges.push(`${tableId} --> ${colId}`);
+  
+        if (resolved) {
+          // Process function-based columns
+          if (resolved.expr?.expr_class === 'EXPR_FUNCTION') {
+            processFunctionColumn(resolved, colId, nodes, edges, styles);
+          } 
+          // Process direct column references
+          else if (resolved.column) {
+            processDirectColumn(resolved, colId, nodes, edges, styles);
+          }
         }
-
-        // Handle column references
-        if (expr.expr_ref?.ref_id) {
-            const refNode = addNode(expr.expr_ref.ref_id.guid,
-                `Reference: ${expr.expr_ref.ref_id.name}`);
-            addEdge(parentNodeId, refNode);
-        }
-
-        // Handle constants
-        if (expr.expr_class === 'EXPR_CONSTANT') {
-            const value = expr.constant.str_value || expr.constant.int_value || expr.constant.boolean_value;
-            const constNode = addNode(`${parentNodeId}_const_${context}`,
-                `Constant: ${value}<br/>Type: ${expr.data_type}`);
-            addEdge(parentNodeId, constNode);
-        }
-    }
-
-    function processFormulas(formulas) {
-        if (!Array.isArray(formulas)) return;
+      });
+    });
+  
+    // Generate the complete Mermaid specification
+    spec =  `flowchart TD
+      %% Style definitions
+      classDef table fill:#ffd7f5,color:#000
+      classDef function fill:#e6e6ff,color:#000
+      classDef column fill:#bfb
+      classDef resolved fill:#f0f0f0,stroke-dasharray: 5 5
+  
+      %% Nodes
+      ${nodes.join('\n    ')}
+  
+      %% Relationships
+      ${edges.join('\n    ')}
+  
+      %% Styling
+      ${styles.join('\n    ')}`;
+    console.log(spec);
+    return spec;
+  }
+  
+  function processFunctionColumn(resolved, parentId, nodes, edges, styles) {
+    // Add expression node
+    // const expressionId = resolved.expr.expression_id;
+    const expressionId = `${parentId}_expr`;
+    pushNode(nodes,`${expressionId}${createNodeLabel('Function',
+      `Name: ${resolved.expr.function.name}<br/>Is Aggregate: ${resolved.expr.function.is_aggregate}<br/>Type: ${resolved.expr.data_type}`)}`);
+    styles.push(`class ${expressionId} function`);
+    edges.push(`${parentId} --> ${expressionId}`);
+  
+    // Process function argument
+    const f = resolved.expr.function;
+    const args = Array.isArray(f.arguments) ? f.arguments : [f.arguments];
+    for (const arg of args) {
+        if (arg?.expr_ref?.ref_id) {
+            //Add function node
+            const argId = sanitizeId(arg.expr_ref.ref_id.guid);
+            pushNode(nodes,`${argId}${createNodeLabel(arg.expr_ref.ref_id.name,
+                `GUID: ${arg.expr_ref.ref_id.guid}<br/>Type: ${arg.data_type}`)}`);
+            edges.push(`${expressionId} --> ${argId}`);
+            styles.push(`class ${argId} resolved`);
         
-        formulas.forEach(formula => {
-            const formulaNode = addNode(formula.alias.guid,
-                `Formula: ${formula.alias.name}`);
-            
-            if (formula.expr) {
-                processExpression(formula.expr, formulaNode);
+            // Process argument resolution
+            if (arg.expr_ref.ref_id._resolved) {
+                // Process function-based columns
+                resolved = arg.expr_ref.ref_id._resolved;
+                if (resolved.expr?.expr_class === 'EXPR_FUNCTION') {
+                    processFunctionColumn(resolved, argId, nodes, edges, styles);
+                }
+            } else if (arg.expr_ref._resolved) {
+                // Process direct column references
+                processDirectColumn(arg.expr_ref._resolved, argId, nodes, edges, styles);
             }
-            
-            if (formula.table_alias) {
-                const tableNode = createNodeId(formula.table_alias.guid);
-                addEdge(tableNode, formulaNode);
-            }
-        });
-    }
-
-    // Process table section
-    function processQuerySpecTable(table) {
-        if (!table) return;
-
-        const queryNode = addNode(table.id.guid,
-            `Query: ${table.id.name}`);
-        
-        // Process filter
-        if (table.filter?.id) {
-            const filterNode = addNode(table.filter.id.guid,
-                `Filter: ${table.filter.id.name}`);
-            addEdge(queryNode, filterNode);
-        }
-        
-        // Process column
-        if (table.column?.id) {
-            const colNode = addNode(table.column.id.guid,
-                `Output: ${table.column.id.name}`);
-            addEdge(queryNode, colNode);
-            
-            if (table.column.output_id) {
-                const outputNode = addNode(table.column.output_id.guid,
-                    `Output ID: ${table.column.output_id.name}`);
-                addEdge(colNode, outputNode);
-            }
+        } else if (arg.expr_class === 'EXPR_CONSTANT') {
+            // Process constant nodes
+            processConstantColumn(arg, expressionId, nodes, edges, styles);
         }
     }
+  }
 
-    // Main processing
-    if (querySpec.query_schema) {
-        processQuerySchemaTables(querySpec.query_schema.table);
-        processQuerySchemaColumns(querySpec.query_schema.column);
-        processFormulas(querySpec.query_schema.formula);
-    }
-    
-    if (querySpec.table) {
-        processQuerySpecTable(querySpec.table);
-    }
+  function pushNode(nodes, label) {
+    console.log(label);
+    nodes.push(label);
+  }
+  
+  function processDirectColumn(resolved, colId, nodes, edges, styles) {
+    if (!resolved.column?.guid || !resolved.table_alias?.guid) return;
+  
+    // Add resolved column node
+    const resolvedId = sanitizeId(resolved.column.guid);
+    pushNode(nodes,`${resolvedId}${createNodeLabel('Resolved Column',
+      `Name: ${resolved.column.name}<br/>GUID: ${resolved.column.guid}<br/>Type: ${resolved.data_type}`)}`);
+    edges.push(`${colId} --> ${resolvedId}`);
+    styles.push(`class ${resolvedId} column`);
+  
+    // Add table reference
+    const tableId = sanitizeId(resolved.table_alias.guid);
+    pushNode(nodes,`${tableId}${createNodeLabel('Table',
+      `Name: ${resolved.table_alias.name}<br/>GUID: ${resolved.table_alias.guid}`)}`);
+    edges.push(`${resolvedId} --> ${tableId}`);
+    styles.push(`class ${tableId} table`);
+  }
 
-    // Combine everything
-    mermaidCode += Array.from(nodes).join('') +
-                  Array.from(edges).join('') +
-                  '\n    %% Style nodes\n' +
-                  '    classDef table fill:#f9f,stroke:#333\n' +
-                  '    classDef function fill:#bbf,stroke:#333\n' +
-                  '    classDef column fill:#bfb,stroke:#333\n' +
-                  '    classDef constant fill:#ddd,stroke:#333\n' +
-                  '    classDef formula fill:#fdb,stroke:#333\n' +
-                  '    classDef query fill:#f9f,stroke:#333\n';
-    
-    return mermaidCode;
-}
+  function processConstantColumn(argument, parentId, nodes, edges, styles) {
+    // {
+    //     "expr_class": "EXPR_CONSTANT",
+    //     "constant": {
+    //       "int_value": 1
+    //     },
+    //     "data_type": "INT64"
+    //   }
+    const constantId = `${parentId}_const`;
+    const constValue = encodeURI(JSON.stringify(argument.constant));
+    const nodeDetails = `Value: ${constValue}<br/>Type: ${argument.data_type}`;
+    pushNode(nodes,`${constantId}${createNodeLabel('Constant',nodeDetails)}`);
+    edges.push(`${parentId} --> ${constantId}`);
+    styles.push(`class ${constantId} constant`);
+  }
+  
+  
+  // Example usage:
+  /*
+  const querySpec = {
+    table: [
+      {
+        id: {...},
+        column: [...]
+      },
+      {
+        id: {...},
+        column: [...]
+      }
+    ]
+    // Or single table:
+    // table: {
+    //   id: {...},
+    //   column: [...]
+    // }
+  };
+  
+  const mermaidDiagram = generateMermaidSpec(querySpec);
+  console.log(mermaidDiagram);
+  */

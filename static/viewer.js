@@ -486,8 +486,19 @@ function updateCurrentView() {
         container.innerHTML = '';
         container.appendChild(createTreeView(resolveReferences(data)));
     } else if (viewMode === 'graph') {
-        container.innerHTML = `<div class="mermaid">${generateMermaidDiagram(data)}</div>`;
-        mermaid.init();
+        mermaidSpec = generateMermaidSpec(resolveReferences(data));
+        container.innerHTML = `<div class="mermaid">${mermaidSpec}</div>`;
+        return mermaid.init();
+
+        // getMermaidDiagram(data)
+        // .then(mermaidDiagram => {
+        //     container.innerHTML = `<div class="mermaid">${mermaidDiagram}</div>`;
+        //     return mermaid.init();
+        // })
+        // .catch(error => {
+        //     console.error('Error rendering Mermaid diagram:', error);
+        //     container.innerHTML = `<div class="error">Error rendering diagram: ${error.message}</div>`;
+        // });
     } else {
         container.innerHTML = `<pre>${JSON.stringify(resolveReferences(data), null, 2)}</pre>`;
         container.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
@@ -665,6 +676,7 @@ function setViewMode(mode) {
     document.getElementById('btn-tree').classList.toggle('active', mode === 'tree');
     document.getElementById('btn-resolved-tree').classList.toggle('active', mode === 'resolved-tree');
     document.getElementById('btn-raw').classList.toggle('active', mode === 'raw');
+    document.getElementById('btn-graph').classList.toggle('active', mode === 'graph');
     
     // Update view
     updateCurrentView();
@@ -745,8 +757,14 @@ function copyContent() {
     const copyButton = document.getElementById('copy-button');
     let contentToCopy;
 
+    if (viewMode === 'resolved-tree') {
+        data = resolveReferences(transformerData[currentTransformer].content);
+    } else {
+        data = transformerData[currentTransformer].content;
+    }
+
     if (currentTransformer && transformerData[currentTransformer]) {
-        contentToCopy = JSON.stringify(transformerData[currentTransformer].content, null, 2);
+        contentToCopy = JSON.stringify(data, null, 2);
     }
 
     if (contentToCopy) {

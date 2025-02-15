@@ -1,5 +1,5 @@
 function resolveReferences(data) {
-    querySpec = data.query_spec;
+    let querySpec = data.query_spec;
     // Create lookup maps
     const lookupMaps = new Map();
     

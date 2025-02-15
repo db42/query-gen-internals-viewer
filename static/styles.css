@@ -282,3 +282,23 @@ body {
 .mermaid .edgeLabel {
     background-color: white;
 }
+
+/* Add to styles.css */
+
+/* Make sure panel content is scrollable */
+.panel-content {
+    overflow: auto;
+    padding: 16px;
+}
+
+/* Ensure mermaid diagram doesn't shrink */
+.mermaid {
+    min-width: fit-content;
+    min-height: fit-content;
+}
+
+/* Make sure SVG maintains its size */
+.mermaid svg {
+    width: auto !important;
+    height: auto !important;
+}
