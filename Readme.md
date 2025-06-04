@@ -1,68 +1,35 @@
-Goal is to make it easy to reason and understand what’s happening in query generation engine.
+The goal of this project is to provide a clear understanding of the processes within a query generation engine.
 
-Query generation engine. Here input and output are of QuerySpecProto. This is a kind of platform agnostic SQL.
+The query generation engine processes QuerySpecProto objects as both input and output. QuerySpecProto is a platform-agnostic SQL representation.
 
-Inside, there are a bunch of tranformers each of which transforms the QuerySpec.
+Internally, it utilizes a series of transformers, each modifying the QuerySpec.
 
-Here’s the main logic:
-* Main logic calls transformers serially in a chained manner
-* One transformer can also call other transformers
+The main logic flow is as follows:
+* The main logic calls transformers serially in a chained manner.
+* One transformer can also call other transformers.
 
-With this project, we'll log the transformed query spec before and after each transformation in a file with this naming format:
+This project logs the QuerySpec before and after each transformation. These logs are stored in files named `<transformerName_timestamp.txt>` (e.g., `AggregateConstantExpressionTransformer_before_1735719877570.txt`).
+The tool then uses these logs to create a visualization that helps to:
+1. See the nesting and order of transformers.
+2. For each transformer, view the QuerySpec before and after its execution.
+3. For each transformer, observe the diff in the QuerySpec.
 
-<transformerName_timestamp.txt>
-e.g. AggregateConstantExpressionTransformer_before_1735719877570.txt
-
-This tool will then create a visualization  to
-1. see the nesting and order of transformers
-2. For each transformer, see the queryspec before and after running the transformer
-3. For each transformer, see the diff in the queryspec
-
-Currently this POC is done by running the query-gen-validator tool.
+This tool visualizes query generation traces by processing these log files that capture the state of QuerySpecProto.
 
 ## Todo
-0. Become queryspec expert by using this - WIP
-1. when debug=true, provide one option inside the i icon to visualize and debug query-gen-engine for an answer. Collect all the info in memory and pass it to this tool via a file.
-2. Triage why cohortColumnTranformer is seen in traces but not in qgen-validator logs - DONE
-3. this tool can also consume just the traces - DONE
-4. Provide an option from trace viewer to open this directly
+0. Understand QuerySpec transformations using this tool.
+1. When debug=true, provide an option (e.g., within an info icon) to visualize and debug the query generation engine for a specific answer. This would involve collecting all necessary information in memory and passing it to this tool via a file.
 
 ## Deployment
 
-Deployed using netlify (app.netlify.com) at https://query-gen-internals-viewer.netlify.app/ 
+Deployed using Netlify at https://query-gen-internals-viewer.netlify.app/. Netlify automatically fetches from the linked GitHub repository.
 
-Netlify auto fetches from the linked github repo.
+Also, deployed using GitHub Pages at https://db42.github.io/query-gen-internals-viewer/.
 
-Also, deployed using github-pages on https://db42.github.io/query-gen-internals-viewer/
+## How to Run
 
-## How to run
+To visualize query generation traces:
 
-### support logs from traces
-
-Just open index.html which is a copy of template/viewer_template.html. User can upload the traces as a file and see the visualizations.
-
-### Deprecated - fetch logs from cluster
-On local
-```
-gradle :callosum-upgrade:buildRequestFetcherJar -x test
-scp callosum/upgrade/target/libs/query-generation-validator.jar admin@172.32.27.151:~/validator-full.jar
-```
-
- On nebula
-
- ```
- #home directory
- rm -rf /export/querygen-validator/logs/*.txt
- time java -Dthoughtspot_log_dir=/export/querygen-validator/logs/ -jar validator-full.jar fetch --topObjects 0 --answerGuids 186d5a92-d5f1-44a0-9793-7cadc6c8b4b1 --output pre_upgrade --zooServer 127.0.0.1:2181 --clusterName ${ORION_CLUSTER_NAME} --logLevel ERROR
- zip -r logs.zip /export/querygen-validator/logs
- ```
-
- From local machine
- ```
-  scp admin@172.32.27.151:logs.zip ~/Downloads/logs-full-new.zip
-  # move and extract in query-spec-generator folder
- python3 query-spec-generator.py logs-full-new
-
- # goto output directory and run
- python3 -m http.server 8000
-  ```
+1. Open the `index.html` file (located in the root of this project) in your web browser.
+2. Upload the trace file when prompted by the application.
+3. The tool will then display the visualizations, allowing you to inspect the transformation steps.
